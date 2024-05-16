@@ -1,0 +1,102 @@
+/*Landing page stuff*/
+
+/*I use EB Garamond for titles, and OSWALD for body*/
+
+/*Formatting the heading of the landing page*/
+.landHeading 
+{
+  line-height: 200px;
+  height: 200px;
+  text-align: center;
+  font-family: "Oswald", serif;
+  font-weight: 600;
+}
+
+/*Formatting the description of the landing page*/
+.landDescrip 
+{
+  line-height: 5px;
+  height: 200px;
+  text-align: center;
+  font-family: "EB Garamond", serif;
+}
+
+/*Formatting the hyperlinks of the landing page*/
+.landHyper 
+{
+  display: block; 
+  text-align: center; 
+  padding: 10px; 
+  color: blue; 
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "EB Garamond", serif;
+}
+
+.landHyper:hover 
+{
+  text-decoration: underline; 
+  color: darkblue; 
+}
+
+.landEmailFooter
+{
+  position: fixed;
+  left: 5px;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+  color: gray;
+  text-align: right;
+  font-family: "EB Garamond", serif;
+}
+
+.landGitFooter
+{
+  position: fixed;
+  right: 5px;
+  bottom: 20px;
+  width: 100%;
+  color: gray;
+  text-align: left;
+  font-family: "EB Garamond", serif;
+}
+
+
+/*Contacts Page stuff*/
+
+/*Formatting the heading of the contacts page*/
+.contactsHeading
+{
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  font-family: "Oswald", serif; 
+}
+.contactsLink
+{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-family: "EB Garamond", serif;
+}
+
+/*About Page Stuff*/
+
+/*Formatting the heading of the contacts page*/
+.aboutHeading
+{
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  font-family: "Oswald", serif;
+}
+
+/*Formatting the about paragraph of the contacts page*/
+.aboutDescription
+{
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  font-family: "EB Garamond", serif;
+}
