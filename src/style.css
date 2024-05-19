@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 /*Landing page stuff*/
 
 /*I use EB Garamond for titles, and OSWALD for body*/
@@ -132,3 +137,4 @@
     font-size: 4vw;
   }
 }
+
