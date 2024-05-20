@@ -2,14 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Oswald:wght@400;600&display=swap');
 
-/*Landing page stuff*/
+@layer base {
+  @font-face {
+    font-family: 'EB Garamond';
+    src: url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+  }
 
-/*I use EB Garamond for titles, and OSWALD for body*/
+  @font-face {
+    font-family: 'Oswald';
+    src: url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+  }
+}
 
-/*Formatting the heading of the landing page*/
-.landHeading 
-{
+/* Landing page styles */
+.landHeading {
   line-height: 1.25em;
   height: auto;
   text-align: center;
@@ -19,9 +27,7 @@
   margin-top: 20px;
 }
 
-/*Formatting the description of the landing page*/
-.landDescrip 
-{
+.landDescrip {
   line-height: 1.5em;
   height: auto;
   text-align: center;
@@ -31,62 +37,25 @@
   margin-top: 20px;
 }
 
-/*Formatting the hyperlinks of the landing page*/
-.landHyper 
-{
-  display: block; 
+.landEmail,
+.landGit {
+  width: 100%;
   text-align: center;
-  height: auto;
-  padding: 10px; 
-  color: brown; 
-  text-decoration: none;
-  font-weight: bold;
+  margin-top: 10px;
   font-family: "EB Garamond", serif;
+  color: brown;
 }
 
-.landHyper:hover 
-{
-  text-decoration: underline; 
-  color: darkblue; 
-}
-
-.landEmailFooter
-{
-  position: fixed;
-  left: 5px;
-  bottom: 20px;
-  text-align: right;
-  width: 48%;
-  color: gray;
-  text-align: right;
-  font-family: "EB Garamond", serif;
-}
-
-.landGitFooter
-{
-  position: fixed;
-  right: 5px;
-  bottom: 20px;
-  width: 48%;
-  color: gray;
-  text-align: left;
-  font-family: "EB Garamond", serif;
-}
-
-
-/*Contacts Page stuff*/
-
-/*Formatting the heading of the contacts page*/
-.contactsHeading
-{
+/* Contacts Page styles */
+.contactsHeading {
   line-height: 50px;
   height: 50px;
   text-align: center;
   font-family: "Oswald", serif;
   font-size: 3vw;
 }
-.contactsLink
-{
+
+.contactsLink {
   display: block;
   text-align: center;
   font-weight: bold;
@@ -94,11 +63,8 @@
   font-size: 2vw;
 }
 
-/*About Page Stuff*/
-
-/*Formatting the heading of the contacts page*/
-.aboutHeading
-{
+/* About Page styles */
+.aboutHeading {
   line-height: 50px;
   height: 50px;
   text-align: center;
@@ -106,9 +72,7 @@
   font-size: 3vw;
 }
 
-/*Formatting the about paragraph of the contacts page*/
-.aboutDescription
-{
+.aboutDescription {
   line-height: 50px;
   height: 50px;
   text-align: center;
@@ -116,25 +80,70 @@
   font-size: 1.5vw;
 }
 
-/*Formatting for other devices*/
-
-@media(max-width: 768px)
-{
-  .landHeading
-  {
-    font-size:8vw;
+/* Responsive adjustments */
+@media(max-width: 768px) {
+  .landHeading {
+    font-size: 8vw;
   }
-  .landDescrip
-  {
+  .landDescrip {
     font-size: 4vw;
   }
-  .contactsHeading, .aboutHeading
-  {
+  .contactsHeading,
+  .aboutHeading {
     font-size: 6vw;
   }
-  .contactsLink, .aboutDescription
-  {
+  .contactsLink,
+  .aboutDescription {
     font-size: 4vw;
   }
 }
 
+/* Index.jsx styles */
+@layer components {
+  .font-garamond {
+    font-family: 'EB Garamond', serif;
+  }
+  .font-oswald {
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .parentContainer {
+    @apply flex items-center justify-center h-screen;
+  }
+
+  .sidebar-icon {
+    @apply relative flex items-center justify-center h-12 w-12 text-gray-700 bg-gray-300 hover:bg-gray-400 rounded-3xl hover:rounded-xl transition-all;
+  }
+
+  .sidebar-tooltip {
+    @apply absolute bottom-14 w-auto p-2 m-2 min-w-max rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-bottom;
+  }
+
+  .group:hover .sidebar-tooltip {
+    @apply scale-100;
+  }
+
+  .sidebarFormat {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+    font-family: "EB Garamond", serif;
+    color: gray;
+  }
+
+  .sidebarFormat ul {
+    @apply p-0 list-none flex justify-center;
+  }
+
+  .sidebarFormat li {
+    @apply flex justify-center mb-2;
+  }
+
+  .sidebarFormat a {
+    @apply no-underline flex flex-col items-center;
+  }
+}
