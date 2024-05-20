@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Oswald:wght@400;600&display=swap');
+
+@layer base {
+  @font-face {
+    font-family: 'EB Garamond';
+    src: url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Oswald';
+    src: url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+  }
+}
+
+/* Landing page styles */
+.landHeading {
+  line-height: 1.25em;
+  height: auto;
+  text-align: center;
+  font-family: "Oswald", serif;
+  font-size: 80px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.landDescrip {
+  line-height: 1.5em;
+  height: auto;
+  text-align: center;
+  font-family: "EB Garamond", serif;
+  color: gray;
+  font-size: 2vw;
+  margin-top: 20px;
+}
+
+.landEmail,
+.landGit {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  font-family: "EB Garamond", serif;
+  color: brown;
+}
+
+/* Contacts Page styles */
+.contactsHeading {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  font-family: "Oswald", serif;
+  font-size: 3vw;
+}
+
+.contactsLink {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-family: "EB Garamond", serif;
+  font-size: 2vw;
+}
+
+/* About Page styles */
+.aboutHeading {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  font-family: "Oswald", serif;
+  font-size: 3vw;
+}
+
+.aboutDescription {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  font-family: "EB Garamond", serif;
+  font-size: 1.5vw;
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+  .landHeading {
+    font-size: 8vw;
+  }
+  .landDescrip {
+    font-size: 4vw;
+  }
+  .contactsHeading,
+  .aboutHeading {
+    font-size: 6vw;
+  }
+  .contactsLink,
+  .aboutDescription {
+    font-size: 4vw;
+  }
+}
+
+/* Index.jsx styles */
+@layer components {
+  .font-garamond {
+    font-family: 'EB Garamond', serif;
+  }
+  .font-oswald {
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .parentContainer {
+    @apply flex items-center justify-center h-screen;
+  }
+
+  .sidebar-icon {
+    @apply relative flex items-center justify-center h-12 w-12 text-gray-700 bg-gray-300 hover:bg-gray-400 rounded-3xl hover:rounded-xl transition-all;
+  }
+
+  .sidebar-tooltip {
+    @apply absolute bottom-14 w-auto p-2 m-2 min-w-max rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-bottom;
+  }
+
+  .group:hover .sidebar-tooltip {
+    @apply scale-100;
+  }
+
+  .sidebarFormat {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+    font-family: "EB Garamond", serif;
+    color: gray;
+  }
+
+  .sidebarFormat ul {
+    @apply p-0 list-none flex justify-center;
+  }
+
+  .sidebarFormat li {
+    @apply flex justify-center mb-2;
+  }
+
+  .sidebarFormat a {
+    @apply no-underline flex flex-col items-center;
+  }
+}
