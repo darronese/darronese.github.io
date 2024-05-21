@@ -43,7 +43,14 @@
   text-align: center;
   margin-top: 10px;
   font-family: "EB Garamond", serif;
-  color: brown;
+  color: gray;
+}
+
+.landEmail:hover {
+  color:blue;
+}
+.landGit:hover {
+  color: blue;
 }
 
 /* Contacts Page styles */
@@ -63,6 +70,10 @@
   font-weight: bold;
   font-family: "EB Garamond", serif;
   font-size: 2vw;
+}
+
+.contactsLink:hover {
+  color: blue;
 }
 
 /* About Page styles */
