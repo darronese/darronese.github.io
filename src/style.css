@@ -37,19 +37,31 @@
   margin-top: 20px;
 }
 
+.centerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
 .landEmail,
 .landGit {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
   font-family: "EB Garamond", serif;
+  color: gray;
+  margin: 5px 0;
+  display: inline-block;
+}
+
+.landEmail a,
+.landGit a {
+  display: inline-block; 
+  text-decoration: none;
   color: gray;
 }
 
-.landEmail:hover {
-  color:blue;
-}
-.landGit:hover {
+.landEmail a:hover,
+.landGit a:hover {
   color: blue;
 }
 
