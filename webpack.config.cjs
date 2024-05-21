@@ -5,8 +5,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'build'),  // Output to 'build' directory
+    filename: 'bundle.js',
+    publicPath: '/'  // Ensure assets are served correctly
   },
   mode: process.env.NODE_ENV || 'development',
   module: {
@@ -29,26 +30,27 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './public/index.html',  // Reference 'public/index.html'
       filename: 'index.html'
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: './src/about.html', to: 'about.html' },
-        { from: './src/contacts.html', to: 'contacts.html' },
-        { from: './src/projects.html', to: 'projects.html' },
-        { from: './src/resume.html', to: 'resume.html' },
-        { from: './src/output.css', to: 'output.css' },
-        { from: './src/style.css', to: 'style.css' }
+        { from: './public/about.html', to: 'about.html' },
+        { from: './public/contacts.html', to: 'contacts.html' },
+        { from: './public/projects.html', to: 'projects.html' },
+        { from: './public/resume.html', to: 'resume.html' },
+        { from: './public/output.css', to: 'output.css' },
+        { from: './public/style.css', to: 'style.css' }
       ]
     })
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'build'),  // Serve from 'build' directory
     },
     compress: true,
     port: 9000,
-    open: true
+    open: true,
+    historyApiFallback: true  // Ensure SPA routing works
   }
 };

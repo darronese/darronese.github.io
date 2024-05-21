@@ -1,11 +1,12 @@
 {
   "private": true,
   "type": "module",
+  "homepage": "https://darronese.github.io",
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "chart.js": "^4.2.1",

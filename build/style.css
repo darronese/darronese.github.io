@@ -48,13 +48,11 @@
 
 /* Contacts Page styles */
 .contactsHeading {
-  line-height: 1.25em;
-  height: auto;
+  line-height: 50px;
+  height: 50px;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 80px;
-  font-weight: 600;
-  margin-top: 20px;
+  font-size: 3vw;
 }
 
 .contactsLink {
@@ -67,13 +65,11 @@
 
 /* About Page styles */
 .aboutHeading {
-  line-height: 1.25em;
-  height: auto;
+  line-height: 50px;
+  height: 50px;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 80px;
-  font-weight: 600;
-  margin-top: 20px;
+  font-size: 3vw;
 }
 
 .aboutDescription {
@@ -84,26 +80,22 @@
   font-size: 1.5vw;
 }
 
-/*Projects stuff */
-.projectsHeading {
-  line-height: 1.25em;
-  height: auto;
-  text-align: center;
-  font-family: "Oswald", serif;
-  font-size: 80px;
-  font-weight: 600;
-  margin-top: 20px;
-}
-
-/*Resume Stuff*/
-.resumeHeading {
-  line-height: 1.25em;
-  height: auto;
-  text-align: center;
-  font-family: "Oswald", serif;
-  font-size: 80px;
-  font-weight: 600;
-  margin-top: 20px;
+/* Responsive adjustments */
+@media(max-width: 768px) {
+  .landHeading {
+    font-size: 8vw;
+  }
+  .landDescrip {
+    font-size: 4vw;
+  }
+  .contactsHeading,
+  .aboutHeading {
+    font-size: 6vw;
+  }
+  .contactsLink,
+  .aboutDescription {
+    font-size: 4vw;
+  }
 }
 
 /* Index.jsx styles */
