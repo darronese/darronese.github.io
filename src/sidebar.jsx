@@ -1,6 +1,9 @@
+//Imports
 import React from 'react';
+//Importing icons from font awesome
 import { FaUser, FaEnvelope, FaFileAlt, FaProjectDiagram, FaHome } from 'react-icons/fa';
 
+//Sidebar icon
 const SideBarIcon = ({ icon, text }) => (
   <div className="sidebar-icon group">
     {icon}
@@ -10,6 +13,8 @@ const SideBarIcon = ({ icon, text }) => (
   </div>
 );
 
+//Main sidebar function
+//Main idea was from fireship's discord-like sidebar tutorial
 const SideBar = () => (
   <div className="sidebarFormat">
     <ul className="flex">
@@ -42,10 +47,12 @@ const SideBar = () => (
   </div>
 );
 
+//Poots it in the footer
 const Footer = () => (
   <div className="sidebarFormat">
     <SideBar />
   </div>
 );
 
+//Exports
 export default Footer;

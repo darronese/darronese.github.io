@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Importing a font*/
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Oswald:wght@400;600&display=swap');
 
 @layer base {
@@ -37,6 +38,7 @@
   margin-top: 20px;
 }
 
+/*Wrote a center container so the hyper links don't take up the entire width of the page*/
 .centerContainer {
   display: flex;
   flex-direction: column;
@@ -53,15 +55,8 @@
   display: inline-block;
 }
 
-.landEmail a,
-.landGit a {
-  display: inline-block; 
-  text-decoration: none;
-  color: gray;
-}
-
-.landEmail a:hover,
-.landGit a:hover {
+.landEmail:hover,
+.landGit:hover {
   color: blue;
 }
 
