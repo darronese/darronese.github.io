@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 /*Importing a font*/
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Oswald:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Oswald:wght@400;600&display=swap");
 
 @layer base {
   @font-face {
-    font-family: 'EB Garamond';
-    src: url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+    font-family: "EB Garamond";
+    src: url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap");
   }
 
   @font-face {
-    font-family: 'Oswald';
-    src: url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+    font-family: "Oswald";
+    src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap");
   }
 }
 
@@ -124,13 +124,18 @@
   margin-top: 20px;
 }
 
+.resumePicture {
+  height: 500px;
+  width: 500px;
+}
+
 /* Index.jsx styles */
 @layer components {
   .font-garamond {
-    font-family: 'EB Garamond', serif;
+    font-family: "EB Garamond", serif;
   }
   .font-oswald {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
   }
 
   .parentContainer {
