@@ -17,6 +17,10 @@
   }
 }
 
+/*background color*/
+.background {
+  background-color: #d7bea8;
+}
 
 /* Landing page styles */
 .landHeading {
@@ -34,7 +38,7 @@
   height: auto;
   text-align: center;
   font-family: "EB Garamond", serif;
-  color: gray;
+  color: #4b3b42;
   font-size: 32px;
   margin-top: 20px;
 }
@@ -51,10 +55,10 @@
 .landEmail,
 .landGit {
   font-family: "EB Garamond", serif;
-  color: gray;
+  color: #9c8481;
   margin: 5px 0;
   display: inline-block;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .landEmail:hover,
@@ -79,8 +83,8 @@
   font-weight: bold;
   font-family: "EB Garamond", serif;
   font-size: 28px;
-  margin-top: 5vw;
-  color: darkgray;
+  margin-top: 2vw;
+  color: #4b3b42;
 }
 
 .contactsLink:hover {
@@ -104,6 +108,7 @@
   font-family: "EB Garamond", serif;
   font-size: 32px;
   margin-top: 5vw;
+  color: #4b3b42;
 }
 
 /*Projects stuff */
@@ -151,7 +156,7 @@
   }
 
   .sidebar-icon {
-    @apply relative flex items-center justify-center h-12 w-12 text-gray-700 bg-gray-300 hover:bg-gray-400 rounded-3xl hover:rounded-xl transition-all;
+    @apply relative flex items-center justify-center h-12 w-12 text-[#4b3b42] bg-[#dbd2c3] hover:bg-gray-400 rounded-3xl hover:rounded-xl transition-all;
   }
 
   .sidebar-tooltip {
@@ -169,8 +174,8 @@
     display: flex;
     justify-content: center;
     padding: 10px;
-    background-color: #f8f8f8;
     font-family: "EB Garamond", serif;
+    background-color: #9c8481;
     color: gray;
   }
 

@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'dark-beige': '#9c8481',
+        'light-beige': '#e2cbb0',
+      }
     },
   },
   plugins: [],
