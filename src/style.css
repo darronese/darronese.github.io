@@ -66,17 +66,6 @@
   color: blue;
 }
 
-/* Contacts Page styles */
-.contactsHeading {
-  line-height: 1.25em;
-  height: auto;
-  text-align: center;
-  font-family: "Oswald", serif;
-  font-size: 52px;
-  font-weight: 600;
-  margin-top: 20px;
-}
-
 .contactsLink {
   display: block;
   text-align: center;

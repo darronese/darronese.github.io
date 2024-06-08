@@ -29,11 +29,6 @@ const SideBar = () => (
         </a>
       </li>
       <li>
-        <a href="contacts.html" title="Goes to contacts page">
-          <SideBarIcon icon={<FaEnvelope size="28" />} text="Contacts" />
-        </a>
-      </li>
-      <li>
         <a href="resume.html">
           <SideBarIcon icon={<FaFileAlt size="28" />} text="Resume" />
         </a>
