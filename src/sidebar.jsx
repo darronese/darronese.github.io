@@ -3,6 +3,7 @@ import React from 'react';
 //Importing icons from font awesome
 import { FaUser, FaEnvelope, FaFileAlt, FaProjectDiagram, FaHome } from 'react-icons/fa';
 
+
 //Sidebar icon
 const SideBarIcon = ({ icon, text }) => (
   <div className="sidebar-icon group">

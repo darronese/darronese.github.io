@@ -31,6 +31,7 @@
   font-size: 52px;
   font-weight: 600;
   margin-top: 20px;
+  color: #4b3b42;
 }
 
 .landDescrip {
@@ -73,7 +74,7 @@
   font-family: "EB Garamond", serif;
   font-size: 28px;
   margin-top: 2vw;
-  color: #4b3b42;
+  color: #9c8481;
 }
 
 .contactsLink:hover {
@@ -89,6 +90,7 @@
   font-size: 52px;
   font-weight: 600;
   margin-top: 20px;
+  color: #4b3b42;
 }
 
 .aboutDescription {
@@ -109,6 +111,7 @@
   font-size: 52px;
   font-weight: 600;
   margin-top: 20px;
+  color: #4b3b42;
 }
 
 /*Resume Stuff*/
@@ -120,6 +123,7 @@
   font-size: 52px;
   font-weight: 600;
   margin-top: 20px;
+  color: #4b3b42;
 }
 
 .resumePicture {
