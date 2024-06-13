@@ -1,5 +1,7 @@
+//imports
 import React from 'react';
 
+//homepage
 const HomePage = () => (
   <div>
     <h1 className="landHeading">Darron Li</h1>

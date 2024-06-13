@@ -1,8 +1,8 @@
 // Imports
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Footer from './sidebar'; // Importing Footer correctly
-import HomePage from './homepage'; // Import HomePage correctly
+import Footer from './sidebar';
+import HomePage from './homepage';
 import About from './about';
 import Resume from './resume';
 import Projects from './projects';

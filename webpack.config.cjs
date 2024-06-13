@@ -36,9 +36,6 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: './public/404.html', to: '404.html' },
-        { from: './public/about.html', to: 'about.html' },
-        { from: './public/projects.html', to: 'projects.html' },
-        { from: './public/resume.html', to: 'resume.html' },
         { from: './public', to: './', globOptions: { ignore: ['**/index.html'] } }  // Copy everything except index.html
       ]
     })

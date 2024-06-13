@@ -1,10 +1,10 @@
 //Imports
 import React from 'react';
 
+//projects
 const Projects = () => (
   <div>
-    <h1>Projects Page</h1>
-    <p>This is the projects page.</p>
+    <h1 className="projectsHeading">Projects</h1>
   </div>
 );
 
