@@ -1,8 +1,7 @@
 //Imports
 import React from 'react';
-//Importing icons from font awesome
 import { FaUser, FaEnvelope, FaFileAlt, FaProjectDiagram, FaHome } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 
 //Sidebar icon
 const SideBarIcon = ({ icon, text }) => (
@@ -20,30 +19,29 @@ const SideBar = () => (
   <div className="sidebarFormat">
     <ul className="flex">
       <li>
-        <a href="index.html" title="Goes to home page">
+        <Link to="/" title="Goes to home page">
           <SideBarIcon icon={<FaHome size="28" />} text="Home" />
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="about.html" title="Goes to about page">
+        <Link to="/about">
           <SideBarIcon icon={<FaUser size="28" />} text="About" />
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="resume.html">
+        <Link to="/resume">
           <SideBarIcon icon={<FaFileAlt size="28" />} text="Resume" />
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="projects.html">
+        <Link to="/projects">
           <SideBarIcon icon={<FaProjectDiagram size="28" />} text="Projects" />
-        </a>
+        </Link>
       </li>
     </ul>
   </div>
 );
 
-//Poots it in the footer
 const Footer = () => (
   <div className="sidebarFormat">
     <SideBar />
