@@ -17,10 +17,21 @@
   }
 }
 
+body, html {
+  margin : auto;
+  width: auto;
+  padding : 0;
+  height: 100%;
+  font-family: "EB Garamond", serif;
+  background-color: #d7bea8;
+  overflow-y: scroll;
+}
+
 /*background color*/
 .background {
   background-color: #d7bea8;
   min-height: 100vh;
+  padding-bottom: 20px;
 }
 
 /* Landing page styles */
@@ -29,7 +40,7 @@
   height: auto;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 52px;
+  font-size: 10rem;
   font-weight: 600;
   margin-top: 20px;
   color: #4b3b42;
@@ -41,7 +52,7 @@
   text-align: center;
   font-family: "EB Garamond", serif;
   color: #4b3b42;
-  font-size: 32px;
+  font-size: 2rem;
   margin-top: 20px;
 }
 
@@ -59,7 +70,7 @@
   text-align: center;
   font-weight: bold;
   font-family: "EB Garamond", serif;
-  font-size: 28px;
+  font-size: 1.75px;
   margin-top: 2vw;
   color: #9c8481;
 }
@@ -74,31 +85,20 @@
   height: auto;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 52px;
+  font-size: 3.5rem;
   font-weight: 600;
   margin-top: 20px;
   color: #4b3b42;
 }
 
 .aboutDescription {
-  height: 50px;
-  text-align: center;
-  font-family: "EB Garamond", serif;
-  font-size: 32px;
-  margin-top: 5vw;
-  color: #4b3b42;
-}
-
-/*Projects stuff */
-.projectsHeading {
-  line-height: 1.25em;
   height: auto;
   text-align: center;
-  font-family: "Oswald", serif;
-  font-size: 52px;
-  font-weight: 600;
-  margin-top: 20px;
+  font-family: "EB Garamond", serif;
+  font-size: 2rem;
+  margin-top: 2rem;
   color: #4b3b42;
+  margin-bottom: 2rem;
 }
 
 /*Resume Stuff*/
@@ -107,7 +107,7 @@
   height: auto;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 52px;
+  font-size: 3.5rem;
   font-weight: 600;
   margin-top: 20px;
   color: #4b3b42;
@@ -133,6 +133,24 @@
 
 .resumeLink:hover {
   color: blue;
+}
+
+/*Projects stuff */
+.projectsHeading {
+  line-height: 1.25em;
+  height: auto;
+  text-align: center;
+  font-family: "Oswald", serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-top: 20px;
+  color: #4b3b42;
+  margin-bottom: 30px;
+}
+
+.projectsContainer {
+  margin-bottom: 50px;
+  padding-bottom: 2rem;
 }
 
 /* Index.jsx styles */
@@ -182,5 +200,33 @@
 
   .sidebarFormat a {
     @apply no-underline flex flex-col items-center;
+  }
+}
+
+@media (max-width: 768px) {
+  .landHeading, .aboutHeading, .projectsHeading, .resumeHeading {
+    font-size: 10rem; /* Smaller font size for tablet and mobile */
+  }
+
+  .landDescrip, .aboutDescription, .contactsLink, .resumeLink {
+    font-size: 3rem; /* Smaller font size for tablet and mobile */
+  }
+
+  .resumePicture {
+    width: 70%; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .landHeading, .aboutHeading, .projectsHeading, .resumeHeading {
+    font-size: 2rem; /* Even smaller font size for small mobile screens */
+  }
+
+  .landDescrip, .aboutDescription, .contactsLink, .resumeLink {
+    font-size: 1.25rem; /* Even smaller font size for small mobile screens */
+  }
+
+  .resumePicture {
+    width: 90%; /* Full width for very small screens */
   }
 }

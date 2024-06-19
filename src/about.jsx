@@ -4,7 +4,6 @@ import './style.css';
 
 const About = () => (
   <div className="background">
-    <title>About Darron</title>
     <h1 className="aboutHeading">About</h1>
       <p className="aboutDescription">
       My name is Darron Li and I am an aspiring software engineer. I am currently

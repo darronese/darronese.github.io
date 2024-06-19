@@ -1,7 +1,7 @@
 //Imports
 import React from 'react';
 import { FaUser, FaEnvelope, FaFileAlt, FaProjectDiagram, FaHome } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 //Sidebar icon
 const SideBarIcon = ({ icon, text }) => (
@@ -19,22 +19,22 @@ const SideBar = () => (
   <div className="sidebarFormat">
     <ul className="flex">
       <li>
-        <Link to="/" title="Goes to home page">
+        <Link to="home" smooth={true}>
           <SideBarIcon icon={<FaHome size="28" />} text="Home" />
         </Link>
       </li>
       <li>
-        <Link to="/about">
+        <Link to="about" smooth={true}>
           <SideBarIcon icon={<FaUser size="28" />} text="About" />
         </Link>
       </li>
       <li>
-        <Link to="/resume">
+        <Link to="resume" smooth={true}>
           <SideBarIcon icon={<FaFileAlt size="28" />} text="Resume" />
         </Link>
       </li>
       <li>
-        <Link to="/projects">
+        <Link to="projects" smooth={true}>
           <SideBarIcon icon={<FaProjectDiagram size="28" />} text="Projects" />
         </Link>
       </li>
