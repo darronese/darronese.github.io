@@ -3,7 +3,8 @@ import React from "react";
 
 //homepage
 const HomePage = () => (
-  <div>
+//combined contacts page with the home page
+  <div> 
       <h1 className="landHeading">Darron Li</h1>
       <p className="landDescrip">Welcome to my webpage!</p>
       <div className="centerContainer">
@@ -40,4 +41,5 @@ const HomePage = () => (
   </div>
 );
 
+//export it so we can use it in our apps
 export default HomePage;

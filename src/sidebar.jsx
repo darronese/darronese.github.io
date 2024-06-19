@@ -1,7 +1,6 @@
 //Imports
 import React from 'react';
 import { FaUser, FaEnvelope, FaFileAlt, FaProjectDiagram, FaHome } from 'react-icons/fa';
-import { Link } from 'react-scroll';
 
 //Sidebar icon
 const SideBarIcon = ({ icon, text }) => (
@@ -15,36 +14,31 @@ const SideBarIcon = ({ icon, text }) => (
 
 //Main sidebar function
 //Main idea was from fireship's discord-like sidebar tutorial
-const SideBar = () => (
+//onclick allows us to scroll to a certain section based on the parallax page
+//links wasn't working so i did onclick
+const SideBar = ({scrollTo}) => (
   <div className="sidebarFormat">
     <ul className="flex">
-      <li>
-        <Link to="home" smooth={true}>
+      <li onClick={() => scrollTo(0)}>
           <SideBarIcon icon={<FaHome size="28" />} text="Home" />
-        </Link>
       </li>
-      <li>
-        <Link to="about" smooth={true}>
+      <li onClick={() => scrollTo(1)}>
           <SideBarIcon icon={<FaUser size="28" />} text="About" />
-        </Link>
       </li>
-      <li>
-        <Link to="resume" smooth={true}>
+      <li onClick={() => scrollTo(2)}>
           <SideBarIcon icon={<FaFileAlt size="28" />} text="Resume" />
-        </Link>
       </li>
-      <li>
-        <Link to="projects" smooth={true}>
+      <li onClick={() => scrollTo(3)}>
           <SideBarIcon icon={<FaProjectDiagram size="28" />} text="Projects" />
-        </Link>
       </li>
     </ul>
   </div>
 );
 
-const Footer = () => (
+//allows us to scroll dynamically
+const Footer = ({scrollTo}) => (
   <div className="sidebarFormat">
-    <SideBar />
+    <SideBar scrollTo={scrollTo} />
   </div>
 );
 

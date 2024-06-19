@@ -1,6 +1,7 @@
 /* Importing a font */
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Oswald:wght@400;600&display=swap");
 
+/*tail wind stuff*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,16 +16,6 @@
     font-family: "Oswald";
     src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap");
   }
-}
-
-body, html {
-  margin : auto;
-  width: auto;
-  padding : 0;
-  height: 100%;
-  font-family: "EB Garamond", serif;
-  background-color: #d7bea8;
-  overflow-y: scroll;
 }
 
 /*background color*/
@@ -120,6 +111,7 @@ body, html {
   margin-right: auto;
   border: solid;
   width: 50%;
+  max-width: 500px;
 }
 
 .resumeLink {
@@ -147,13 +139,24 @@ body, html {
   color: #4b3b42;
   margin-bottom: 30px;
 }
+.projectsDescrip {
+  line-height: 1.25em;
+  height: auto;
+  text-align: center;
+  font-family: "Oswald", serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-top: 20px;
+  color: #4b3b42;
+  margin-bottom: 30px;
+}
 
 .projectsContainer {
   margin-bottom: 50px;
   padding-bottom: 2rem;
 }
 
-/* Index.jsx styles */
+/* react styling for .jsx */
 @layer components {
   .font-garamond {
     font-family: "EB Garamond", serif;
@@ -183,6 +186,7 @@ body, html {
     bottom: 0;
     width: 100%;
     display: flex;
+    z-index: 10;
     justify-content: center;
     padding: 10px;
     font-family: "EB Garamond", serif;
@@ -203,30 +207,39 @@ body, html {
   }
 }
 
+/* parallax section */
+.parallax-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* for other devices, make sure everything fits*/
 @media (max-width: 768px) {
   .landHeading, .aboutHeading, .projectsHeading, .resumeHeading {
-    font-size: 10rem; /* Smaller font size for tablet and mobile */
+    font-size: 10rem;
   }
 
   .landDescrip, .aboutDescription, .contactsLink, .resumeLink {
-    font-size: 3rem; /* Smaller font size for tablet and mobile */
+    font-size: 3rem; 
   }
 
   .resumePicture {
-    width: 70%; /* Adjust width for smaller screens */
+    width: 70%; 
   }
 }
 
 @media (max-width: 480px) {
   .landHeading, .aboutHeading, .projectsHeading, .resumeHeading {
-    font-size: 2rem; /* Even smaller font size for small mobile screens */
+    font-size: 2rem;
   }
 
   .landDescrip, .aboutDescription, .contactsLink, .resumeLink {
-    font-size: 1.25rem; /* Even smaller font size for small mobile screens */
+    font-size: 1.25rem;
   }
 
   .resumePicture {
-    width: 90%; /* Full width for very small screens */
+    width: 90%;
   }
 }

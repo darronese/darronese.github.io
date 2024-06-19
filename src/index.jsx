@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom/client';
 import './style.css';
 import App from './app';
 
-
-//Creates a side bar and renders it within react
+//stuff stack overflow told me to do
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
+//stuff react told me to do
 root.render(
   <React.StrictMode>
     <App />
