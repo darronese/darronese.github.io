@@ -215,6 +215,20 @@
   justify-content: center;
 }
 
+@media (max-width: 1440px) {
+  .landHeading, .aboutHeading, .projectsHeading, .resumeHeading {
+    font-size: 12rem;
+  }
+
+  .landDescrip, .aboutDescription, .contactsLink, .resumeLink {
+    font-size: 4.25rem;
+  }
+
+  .resumePicture {
+    width: 125%;
+  }
+}
+
 /* for other devices, make sure everything fits*/
 @media (max-width: 768px) {
   .landHeading, .aboutHeading, .projectsHeading, .resumeHeading {
