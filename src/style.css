@@ -61,7 +61,7 @@
   text-align: center;
   font-weight: bold;
   font-family: "EB Garamond", serif;
-  font-size: 1.75px;
+  font-size: 2rem;
   margin-top: 2vw;
   color: #9c8481;
 }
@@ -76,13 +76,43 @@
   height: auto;
   text-align: center;
   font-family: "Oswald", serif;
+  font-size: 10rem;
+  font-weight: 600;
+  margin-top: 20px;
+  color: #4b3b42;
+}
+.personalHeading {
+  line-height: 1.25em;
+  height: auto;
+  text-align: center;
+  font-family: "Oswald", serif;
   font-size: 3.5rem;
   font-weight: 600;
   margin-top: 20px;
   color: #4b3b42;
 }
 
-.aboutDescription {
+.personalDescription {
+  height: auto;
+  text-align: center;
+  font-family: "EB Garamond", serif;
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: #4b3b42;
+  margin-bottom: 2rem;
+}
+
+.skillsHeading {
+  line-height: 1.25em;
+  height: auto;
+  text-align: center;
+  font-family: "Oswald", serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-top: 20px;
+  color: #4b3b42;
+}
+.skillsList {
   height: auto;
   text-align: center;
   font-family: "EB Garamond", serif;
@@ -98,7 +128,7 @@
   height: auto;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 3.5rem;
+  font-size: 10rem;
   font-weight: 600;
   margin-top: 20px;
   color: #4b3b42;
@@ -110,7 +140,7 @@
   margin-left: auto;
   margin-right: auto;
   border: solid;
-  width: 50%;
+  width: 100%;
   max-width: 500px;
 }
 
@@ -133,7 +163,7 @@
   height: auto;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 3.5rem;
+  font-size: 10rem;
   font-weight: 600;
   margin-top: 20px;
   color: #4b3b42;
@@ -215,45 +245,25 @@
   justify-content: center;
 }
 
-@media (max-width: 1440px) {
-  .landHeading, .aboutHeading, .projectsHeading, .resumeHeading {
-    font-size: 12rem;
-  }
-
-  .landDescrip, .aboutDescription, .contactsLink, .resumeLink {
-    font-size: 4.25rem;
-  }
-
-  .resumePicture {
-    width: 125%;
-  }
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensures the background stays behind your content */
+  background: linear-gradient(-45deg, #f0f0f0, #e0e0e0, #f0f0f0, #e0e0e0);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
 }
-
-/* for other devices, make sure everything fits*/
-@media (max-width: 768px) {
-  .landHeading, .aboutHeading, .projectsHeading, .resumeHeading {
-    font-size: 10rem;
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
-
-  .landDescrip, .aboutDescription, .contactsLink, .resumeLink {
-    font-size: 3rem; 
+  50% {
+    background-position: 100% 50%;
   }
-
-  .resumePicture {
-    width: 70%; 
-  }
-}
-
-@media (max-width: 480px) {
-  .landHeading, .aboutHeading, .projectsHeading, .resumeHeading {
-    font-size: 2rem;
-  }
-
-  .landDescrip, .aboutDescription, .contactsLink, .resumeLink {
-    font-size: 1.25rem;
-  }
-
-  .resumePicture {
-    width: 90%;
+  100% {
+    background-position: 0% 50%;
   }
 }
