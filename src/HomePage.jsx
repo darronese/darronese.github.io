@@ -5,7 +5,12 @@ import React from "react";
 const HomePage = () => (
 //combined contacts page with the home page
   <div> 
-      <h1 className="landHeading">Darron Li</h1>
+      <motion.h1 
+        className="landHeading"
+        initial={{x: 0}}
+        animate={{ x: 100 }}
+        transition={{ type: "spring", stiffness: 300, damping: 10,}}
+      >Darron Li</motion.h1>
       <p className="landDescrip">Welcome to my webpage!</p>
       <div className="centerContainer">
         <a

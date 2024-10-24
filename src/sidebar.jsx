@@ -1,6 +1,6 @@
 //Imports
 import React from 'react';
-import { FaUser, FaEnvelope, FaFileAlt, FaProjectDiagram, FaHome } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaBolt, FaFileAlt, FaProjectDiagram, FaHome } from 'react-icons/fa';
 
 //Sidebar icon
 const SideBarIcon = ({ icon, text }) => (
@@ -26,9 +26,12 @@ const SideBar = ({scrollTo}) => (
           <SideBarIcon icon={<FaUser size="28" />} text="About" />
       </li>
       <li onClick={() => scrollTo(2)}>
-          <SideBarIcon icon={<FaFileAlt size="28" />} text="Resume" />
+          <SideBarIcon icon={<FaBolt size="28" />} text="Skills" />
       </li>
       <li onClick={() => scrollTo(3)}>
+          <SideBarIcon icon={<FaFileAlt size="28" />} text="Resume" />
+      </li>
+      <li onClick={() => scrollTo(4)}>
           <SideBarIcon icon={<FaProjectDiagram size="28" />} text="Projects" />
       </li>
     </ul>

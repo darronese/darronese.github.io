@@ -1,10 +1,10 @@
 /*
 TO-DO LIST
-- Add skills section
-- Make the backgronud not so boring
-- Better my resume
+- Animate the home page
+- Better the scrolling: I want when the user is scrolling to the about section for the skills to
+  appear only when the personal statement has ended
 - Add picture of myself to about section
-- Finish projects when done with gym app
+- Finish game project and add that within my projects
 
 */
 // Imports
@@ -14,6 +14,7 @@ import HomePage from "./homepage";
 import About from "./about.jsx";
 import Resume from "./resume.jsx";
 import Projects from "./projects.jsx";
+import Skills from "./skills.jsx";
 //animations from parallax library
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 //styles
@@ -52,11 +53,17 @@ const App = () => {
 
         <ParallaxLayer offset={2} speed={0.5} factor={1}>
           <div className="parallax-section">
-            <Resume />
+            <Skills />
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={3} speed={0.5} factor={1}>
+          <div className="parallax-section">
+            <Resume />
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={4} speed={0.5} factor={1}>
           <div className="parallax-section">
             <Projects />
           </div>
