@@ -1,5 +1,6 @@
 /*
 TO-DO LIST
+- Add more details to the about
 - Animate the home page
 - Better the scrolling: I want when the user is scrolling to the about section for the skills to
   appear only when the personal statement has ended
@@ -17,6 +18,8 @@ import Projects from "./projects.jsx";
 import Skills from "./skills.jsx";
 //animations from parallax library
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+//animations from framer-motion
+import { motion } from "framer-motion";
 //styles
 import "./style.css";
 
