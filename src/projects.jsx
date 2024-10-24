@@ -4,10 +4,10 @@ import React from 'react';
 //projects
 const Projects = () => (
   <div>
-    <h1 className="projectsHeading">Projects</h1>
-    <body className="projectsDescrip">
-      *WIP*
-    </body>
+  <h1 className="projectsHeading">Projects</h1>
+  <body className="projectsDescrip">
+  *WIP*
+  </body>
   </div>
 );
 

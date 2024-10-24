@@ -1,14 +1,14 @@
 /*
-TO-DO LIST
-- Add more details to the about
-- Animate the home page
-- Better the scrolling: I want when the user is scrolling to the about section for the skills to
-  appear only when the personal statement has ended
-- Add picture of myself to about section
-- Finish game project and add that within my projects
+  TO-DO LIST
+  - Add more details to the about
+  - Animate the home page
+  - Better the scrolling: I want when the user is scrolling to the about section for the skills to
+appear only when the personal statement has ended
+  - Add picture of myself to about section
+  - Finish game project and add that within my projects
 
-*/
-// Imports
+  */
+  // Imports
 import React, { useRef } from "react";
 import Footer from "./sidebar";
 import HomePage from "./homepage";
@@ -36,44 +36,44 @@ const App = () => {
   };
 
   //main app render, has 4 sections,
-  //planning on updating to 5 with a skills section
+    //planning on updating to 5 with a skills section
   //returns a wrapper like that wraps every webpage together inside one dynamic page!
-  return (
-    <div>
+    return (
+      <div>
       <Footer scrollTo={scrollTo} /> {/* Pass scrollTo function */}
-      <Parallax ref={parallaxRef} pages={4}>
-        <ParallaxLayer offset={0} speed={0.5} factor={1}>
-          <div className="parallax-section">
-            <HomePage />
-          </div>
-        </ParallaxLayer>
+      <Parallax ref={parallaxRef} pages={5}>
+      <ParallaxLayer offset={0} speed={0.5} factor={1}>
+      <div className="parallax-section">
+      <HomePage />
+      </div>
+      </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={0.5} factor={1}>
-          <div className="parallax-section">
-            <About />
-          </div>
-        </ParallaxLayer>
+      <ParallaxLayer offset={1} speed={0.5} factor={1}>
+      <div className="parallax-section">
+      <About />
+      </div>
+      </ParallaxLayer>
 
-        <ParallaxLayer offset={2} speed={0.5} factor={1}>
-          <div className="parallax-section">
-            <Skills />
-          </div>
-        </ParallaxLayer>
+      <ParallaxLayer offset={2} speed={0.5} factor={1}>
+      <div className="parallax-section">
+      <Skills />
+      </div>
+      </ParallaxLayer>
 
-        <ParallaxLayer offset={3} speed={0.5} factor={1}>
-          <div className="parallax-section">
-            <Resume />
-          </div>
-        </ParallaxLayer>
+      <ParallaxLayer offset={3} speed={0.5} factor={1}>
+      <div className="parallax-section">
+      <Resume />
+      </div>
+      </ParallaxLayer>
 
-        <ParallaxLayer offset={4} speed={0.5} factor={1}>
-          <div className="parallax-section">
-            <Projects />
-          </div>
-        </ParallaxLayer>
+      <ParallaxLayer offset={4} speed={0.5} factor={1}>
+      <div className="parallax-section">
+      <Projects />
+      </div>
+      </ParallaxLayer>
       </Parallax>
-    </div>
-  );
+      </div>
+    );
 };
 
 export default App;

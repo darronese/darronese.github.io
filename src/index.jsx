@@ -5,12 +5,12 @@ import './style.css';
 import App from './app';
 
 //stuff stack overflow told me to do
-const container = document.getElementById('root');
+  const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 //stuff react told me to do
-root.render(
-  <React.StrictMode>
+  root.render(
+    <React.StrictMode>
     <App />
-  </React.StrictMode>
-);
+    </React.StrictMode>
+  );
