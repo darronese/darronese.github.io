@@ -12,7 +12,14 @@ const About = () => (
   whileInView={{opacity:1, y:0}}
   exit={{ opacity: 0, y: 50}}
   viewport={{once: false, amount: 0.5}}
-  transition={{duration: 1}}
+  transition={{
+    type: "spring",
+    stiffness: 300,
+    damping: 10,
+    duration: 0.5,
+    repeat: Infinity,
+    repeatType: "mirror",
+  }}
   >About</motion.h1>
   <motion.p 
   className="personalDescription"
@@ -24,7 +31,15 @@ const About = () => (
   >
   My name is Darron Li and I am an aspiring software engineer. I am
   currently studying at Washington State University, pursuing a bachelor's
-  in computer science.
+  in computer science. I love learning new things, especially if it involves
+  software engineering. I love developing and creating new things. I am also a 
+  professional (self-proclaimed) musician, with mastery at the guitar and piano.
+
+  My name is Darron Li and I am an aspriing software engineer. I am currently studying
+  at Washington State University, pursuing a bachelor's in computer science. I have a strong
+  passion for learning, especially when it comes to software engineering. I thrive on developing
+  and creating innovative solutions. This may explain my passion for music! I am a (self-proclaimed)
+  professional musician with mastery in both guitar and piano!
   </motion.p>
   </div>
 );

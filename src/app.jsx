@@ -1,11 +1,7 @@
 /*
   TO-DO LIST
-  - Add more details to the about
-  - Animate the home page
-  - Better the scrolling: I want when the user is scrolling to the about section for the skills to
-appear only when the personal statement has ended
-  - Add picture of myself to about section
-  - Finish game project and add that within my projects
+  -3: Animate the home page
+  -4: Finish game project and add that within my projects
 
   */
   // Imports
