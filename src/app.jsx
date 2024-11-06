@@ -15,8 +15,8 @@ import Skills from "./skills.jsx";
 //animations from parallax library
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 //animations from framer-motion
-import { motion } from "framer-motion";
 import ScrollProgressBar from "./scroll.jsx";
+//animations for background
 //styles
 import "./style.css";
 
@@ -26,7 +26,7 @@ const App = () => {
   const parallaxRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
-    const handleScroll = () => {
+  const handleScroll = () => {
     if (parallaxRef.current && parallaxRef.current.container.current) {
       const container = parallaxRef.current.container.current;
       const scrollTop = container.scrollTop;
