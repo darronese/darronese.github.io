@@ -1,10 +1,14 @@
 //Imports
 import React from 'react';
+import { motion } from "framer-motion";
 
 //projects
 const Projects = () => (
   <div>
-  <h1 className="projectsHeading">Projects</h1>
+  <motion.h1 className="projectsHeading"
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+  >Projects</motion.h1>
   <body className="projectsDescrip">
   *WIP*
   </body>

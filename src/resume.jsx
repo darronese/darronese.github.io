@@ -1,10 +1,17 @@
 //imports
 import React from "react";
+import { motion } from "framer-motion";
 
 //resume page that contains my resume
 const Resume = () => (
   <div className="background">
-    <h1 className="resumeHeading">Resume</h1>
+    <motion.h1
+      className="resumeHeading"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      Resume
+    </motion.h1>
     <img src="/resume.png" className="resumePicture" alt="My resume" />{" "}
     <div className="centerContainer">
       <a

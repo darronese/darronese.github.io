@@ -1,6 +1,8 @@
 /*
   TO-DO LIST
-  -3: Animate the home page
+  * finish implementing animated music note background
+  * add in projects and pictures to it
+  * make it mobile friendly (again)
   */
 // Imports
 import React, { useRef, useState, useEffect } from "react";
