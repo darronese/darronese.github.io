@@ -1,9 +1,9 @@
 # Darron Li's Personal Portfolio Website
 
-##Live Demo
+## Live Demo
 You can view the website at darronese.github.io
 
-##Features
+## Features
  - **Responsive Design**: Adapts to desktop, tablet, and mobile screens using CSS Grid and Flexbox
  - **Interactive Animations**: Ability to click on headings and a nice background animation that is interactable powered by
     Framer Motion and React Spring Parallax
@@ -11,7 +11,7 @@ You can view the website at darronese.github.io
     to reveal a more creative side to me
  - **Contact Information**: Easy to access contact information including links to my LinkedIn and Github
 
- ##Technologies Used
+ ## Technologies Used
  - **Langauges**: HTML, CSS (TailwindCSS), Javascript (React)
  - **Styling & Animations**: TailwindCSS, Framer Motion, React Spring Parallax
  - **Development Tools**: Git/GitHub, NPM, Babel
