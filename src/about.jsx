@@ -8,9 +8,8 @@ const About = () => (
   <div className="background">
   <motion.h1 
   className="aboutHeading"
-  initial={{ opacity: 0, scale: 0.5 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.5 }}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
   >About</motion.h1>
   <motion.p 
   className="personalDescription"

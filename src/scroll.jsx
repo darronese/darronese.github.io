@@ -1,12 +1,15 @@
-import { motion, useScroll } from "framer-motion"
+import React from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
 
-export const CircleIndicator = () => {
-  const { scrollYProgress } = useScroll()
-
+const ScrollProgressBar = ({ progress }) => {
   return (
-    <motion.path
-      d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
-      style={{ pathLength: scrollYProgress }}
-    />
-  )
-}
+    <div className="progress-bar-container">
+      <div
+        className="progress-bar"
+        style={{ transform: `scaleX(${progress})` }}
+      ></div>
+    </div>
+  );
+};
+
+export default ScrollProgressBar;

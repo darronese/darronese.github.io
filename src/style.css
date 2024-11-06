@@ -192,6 +192,25 @@
   padding-bottom: 2rem;
 }
 
+/* scroll.css */
+.progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: transparent;
+  z-index: 9999;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  background-color: #9c8481;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+  transition: transform 0.1s linear;
+}
 /* react styling for .jsx */
 @layer components {
   .font-garamond {
