@@ -1,5 +1,6 @@
 /*
   TO-DO LIST
+  -2: fix about heading animation error
   -3: Animate the home page
   -4: Finish game project and add that within my projects
 
@@ -12,6 +13,7 @@ import About from "./about.jsx";
 import Resume from "./resume.jsx";
 import Projects from "./projects.jsx";
 import Skills from "./skills.jsx";
+import CircleIndicator from "./scroll.jsx";
 //animations from parallax library
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 //animations from framer-motion

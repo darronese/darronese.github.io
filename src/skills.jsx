@@ -8,10 +8,9 @@ const Skills = () => (
   <div className="background">
   <motion.h2
   className="skillsHeading"
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: false, amount: 0.5 }}
-  transition={{ duration: 1 }}
+  initial={{ opacity: 0, scale: 0.5 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.5 }}
   >
   Skills
   </motion.h2>
@@ -21,7 +20,7 @@ const Skills = () => (
   whileInView={{ opacity: 1, y: 0 }}
   exit={{ opacity: 0, y: 50 }}
   viewport={{ once: false, amount: 0.5 }}
-  transition={{ duration: 1 }}
+  transition={{ duration: 0.5 }}
   >
   <li>-Proficient in C/C++, Python, Javascript, Html, CSS</li>
   <li>
