@@ -184,6 +184,7 @@
   color: #4b3b42;
   margin-bottom: 30px;
 }
+
 .projectsDescrip {
   line-height: 1.25em;
   height: auto;
@@ -196,9 +197,44 @@
   margin-bottom: 30px;
 }
 
-.projectsContainer {
-  margin-bottom: 50px;
-  padding-bottom: 2rem;
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-left:250px;
+  padding-right:250px;
+
+}
+
+.gameCarousel {
+  border: 10px solid #4b3b42;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gameHeading {
+  line-height: 1.25em;
+  height: auto;
+  text-align: center;
+  font-family: "Oswald", serif;
+  font-size: 5rem;
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 20px;
+  color: #4b3b42;
+}
+
+.gameDescrip {
+  line-height: 1.5em;
+  height: auto;
+  text-align: center;
+  font-family: "EB Garamond", serif;
+  color: #4b3b42;
+  font-size: 2rem;
+  margin-top: 20px;
 }
 
 /* scroll.css */
@@ -221,7 +257,6 @@
   transition: transform 0.1s linear;
 }
 
-/* react styling for .jsx */
 @layer components {
   .font-garamond {
     font-family: "EB Garamond", serif;
@@ -278,16 +313,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }

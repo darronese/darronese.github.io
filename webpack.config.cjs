@@ -22,6 +22,17 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader']
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/i,  // Add this rule for images
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',  // Keep original path and filename
+            },
+          },
+        ],
       }
     ]
   },

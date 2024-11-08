@@ -20,7 +20,7 @@ const HomePage = () => (
       <p className="landDescrip">Welcome to my webpage!</p>
       <div className="centerContainer">
         <a
-          href="mailto:darron198@hotmail.com"
+          href="mailto:darronese@outlook.com"
           target="_blank"
           className="contactsLink"
           title="Goes to email!"

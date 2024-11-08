@@ -8,6 +8,7 @@ const About = () => (
   <div className="background">
   <motion.h1 
   className="aboutHeading"
+  //animation to have it appear and be clickable
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
   >About</motion.h1>
