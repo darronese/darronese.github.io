@@ -25,6 +25,19 @@
   padding-bottom: 20px;
 }
 
+.homePage {
+  z-index: 2;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #d7bea8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* Landing page styles */
 .landHeading {
   line-height: 1.25em;
@@ -90,27 +103,22 @@
   margin-top: 20px;
   color: #4b3b42;
 }
-.personalHeading {
-  line-height: 1.25em;
-  height: auto;
-  text-align: center;
-  font-family: "Oswald", serif;
-  font-size: 3.5rem;
-  font-weight: 600;
-  margin-top: 20px;
-  color: #4b3b42;
-}
 
-.personalDescription {
+.aboutDescription {
   height: auto;
   text-align: center;
   font-family: "EB Garamond", serif;
   font-size: 2rem;
-  margin-top: 2rem;
   color: #4b3b42;
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  width: 80%;
+  max-width: 1500px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
+  margin: clamp(1rem, 2vw, 2rem) auto;
 }
 
 /*skills section*/
@@ -135,6 +143,12 @@
   margin-bottom: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
 }
 
 /*Resume Stuff*/
@@ -197,17 +211,37 @@
   margin-bottom: 30px;
 }
 
-.gameContainer {
+.projectsFlexContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: 40px; /* Space between Game and Music Containers */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  padding: 20px 0; /* Vertical padding */
+}
+
+/* Game and Music Containers */
+.gameContainer,
+.musicContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding-left:250px;
-  padding-right:250px;
-
+  justify-content: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 80vh;
+  width: 45%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
+  border-radius: 10px;
+  margin-bottom: 500px;
 }
-
 .gameCarousel {
   border: 10px solid #4b3b42;
   max-width: 800px;
@@ -215,7 +249,7 @@
   margin: 0 auto;
 }
 
-.gameHeading {
+.headingForProjects {
   line-height: 1.25em;
   height: auto;
   text-align: center;
@@ -227,7 +261,7 @@
   color: #4b3b42;
 }
 
-.gameDescrip {
+.descripForProjects {
   line-height: 1.5em;
   height: auto;
   text-align: center;
@@ -304,6 +338,13 @@
 
   .sidebarFormat a {
     @apply no-underline flex flex-col items-center;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutDescription {
+    font-size: 1.5rem;
+    margin: 1.5rem;
   }
 }
 

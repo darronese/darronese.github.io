@@ -1,66 +1,38 @@
-import React, {useState, useEffect} from "react";
-import { motion, useAnimation } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
-const BouncingMusicNotes = () => {
-  const controls = useAnimation();
-  const [viewport, setViewport] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  // Update viewport dimensions on window resize
-  useEffect(() => {
-    const handleResize = () => {
-      setViewport({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Function to generate a random position within the viewport
-  const getRandomPosition = () => {
-    const padding = 50; // To ensure the note stays within bounds
-    const x = Math.random() * (viewport.width - padding);
-    const y = Math.random() * (viewport.height - padding);
-    return { x, y };
-  };
-
-  // Animate to a new random position indefinitely
-  useEffect(() => {
-    const animate = async () => {
-      while (true) {
-        const target = getRandomPosition();
-        await controls.start({
-          x: target.x,
-          y: target.y,
-          transition: {
-            duration: Math.random() * 3 + 2, // Random duration between 2-5 seconds
-            ease: "easeInOut",
-          },
-        });
-      }
-    };
-    animate();
-  }, [controls, viewport]);
-
+const BouncingMusicNotes = ({ x, delay, duration }) => {
   return (
     <motion.img
-      src={'./halfNote.png'}
-      alt="Music Note"
+      src={'./halfNote.png'} // Ensure this path is correct
+      alt="Bouncing Music Note Icon"
       className="music-note"
-      animate={controls}
-      initial={{ x: 0, y: 0 }}
+      initial={{ y: '100vh', opacity: 0 }}
+      animate={{ y: '-100vh', opacity: 1 }}
+      transition={{
+        duration: 3,
+        delay: delay,
+        repeat: Infinity,
+        repeatType: 'loop',
+        ease: 'linear',
+      }}
       style={{
-        position: "fixed",
+        position: "absolute",
+        left: x,
         width: "50px",
         height: "50px",
-        zIndex: 0,
+        pointerEvents: "none", // Prevents the note from blocking clicks
+        zIndex: 1,
       }}
     />
   );
+};
+
+BouncingMusicNotes.propTypes = {
+  x: PropTypes.string.isRequired, // Percentage string (e.g., '50%')
+  delay: PropTypes.number.isRequired, // Delay in seconds
+  duration: PropTypes.number.isRequired, // Duration in seconds
 };
 
 export default BouncingMusicNotes;
