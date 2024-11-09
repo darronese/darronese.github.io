@@ -5,7 +5,7 @@ You can view the website at darronese.github.io
 
 ## Features
  - **Responsive Design**: Adapts to desktop, tablet, and mobile screens using CSS Grid and Flexbox
- - **Interactive Animations**: Ability to click on headings and a nice background animation that is interactable powered by
+ - **Fluid Animations**: Animations that make the website look more modern using
     Framer Motion and React Spring Parallax
  - **Taskbar and Animated Background**: Includes a working taskbar that jumps to any page you're looking for and a dynamic background element
     to reveal a more creative side to me
