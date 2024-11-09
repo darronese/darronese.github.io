@@ -99,6 +99,10 @@
 }
 
 /* About Page styles */
+.aboutSection {
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
 .aboutHeading {
   line-height: 1.25em;
   height: auto;
@@ -118,16 +122,17 @@
   color: #4b3b42;
   width: 80%;
   max-width: 1500px;
-  background-color: rgba(
-  255,
-  255,
-  255,
-  0.1
-  );
+  background-color: rgba(255, 255, 255, 0.1);
   margin: clamp(1rem, 2vw, 2rem) auto;
+  padding: 2rem;
 }
 
 /*skills section*/
+
+.skillsSection {
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
 
 .skillsHeading {
   line-height: 1.25em;
@@ -149,15 +154,16 @@
   margin-bottom: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
-  background-color: rgba(
-  255,
-  255,
-  255,
-  0.1
-  );
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
 }
 
 /*Resume Stuff*/
+.resumeSection {
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
 .resumeHeading {
   line-height: 1.25em;
   height: auto;
@@ -193,6 +199,11 @@
 }
 
 /*Projects stuff */
+
+.projectsSection {
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
 .projectsHeading {
   line-height: 1.25em;
   height: auto;
@@ -238,12 +249,7 @@
   box-sizing: border-box;
   min-height: 80vh;
   width: 45%;
-  background-color: rgba(
-  255,
-  255,
-  255,
-  0.1
-  );
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   margin-bottom: 500px;
 }
@@ -349,10 +355,18 @@
 
   /*phone*/
   @media (max-width: 768px) {
-    .landHeading, .aboutHeading, .skillsHeading, .resumeHeading, .projectsHeading {
+    .landHeading,
+    .aboutHeading,
+    .skillsHeading,
+    .resumeHeading,
+    .projectsHeading {
       font-size: 5rem;
     }
-    .landDescrip, .aboutDescrip, .skillsDescrip, .resumeDescrip, .projectsDescrip {
+    .landDescrip,
+    .aboutDescrip,
+    .skillsDescrip,
+    .resumeDescrip,
+    .projectsDescrip {
       font-size: 1rem;
       margin: 1.5rem;
     }
@@ -369,13 +383,60 @@
       flex-direction: column;
       align-items: center;
     }
-    .gameContainer, .musicContainer {
+    .gameContainer,
+    .musicContainer {
+      width: 60%;
+      min-height: auto;
+      margin-bottom: 2rem;
+    }
+  }
+  /* bigger screens */
+  @media (max-width: 1430px) {
+    .landHeading,
+    .aboutHeading,
+    .skillsHeading,
+    .resumeHeading,
+    .projectsHeading {
+      font-size: 8rem;
+    }
+    .landDescrip,
+    .aboutDescrip,
+    .skillsDescrip,
+    .resumeDescrip,
+    .projectsDescrip {
+      font-size: 1.5rem;
+      margin: 2rem;
+    }
+    .resumePicture {
+      margin-top: 4vw;
+      display: block;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      border: solid;
+      width: 90%;
+      max-width: 400px;
+    }
+    .projectsFlexContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+    .gameContainer,
+    .musicContainer {
       width: 80%;
       min-height: auto;
       margin-bottom: 2rem;
     }
-
   }
-
+  /*medium sized screens*/
+  @media (max-width: 1024px) {
+    .projectsHeading,
+    .resumeHeading {
+      font-size: 6rem;
+    }
+    .projectsSection,
+    .resumeSection {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
 }
-

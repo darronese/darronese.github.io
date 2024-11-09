@@ -1,9 +1,3 @@
-/*
-  TO-DO LIST
-  * finish implementing animated music note background
-  * add in projects and pictures to it
-  * make it mobile friendly (again)
-  */
 // Imports
 import React, { useRef, useState, useEffect } from "react";
 import Footer from "./sidebar";
