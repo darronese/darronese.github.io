@@ -18,6 +18,14 @@
   }
 }
 
+/* parallax section components */
+.parallax-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*background color*/
 .background {
   background-color: #d7bea8;
@@ -60,7 +68,6 @@
   margin-top: 20px;
 }
 
-/* musicNotes */
 .music-note {
   top: 0;
   width: 50px;
@@ -69,7 +76,6 @@
   pointer-events: none;
 }
 
-/*Wrote a center container so the hyper links don't take up the entire width of the page*/
 .centerContainer {
   display: flex;
   flex-direction: column;
@@ -113,10 +119,10 @@
   width: 80%;
   max-width: 1500px;
   background-color: rgba(
-    255,
-    255,
-    255,
-    0.1
+  255,
+  255,
+  255,
+  0.1
   );
   margin: clamp(1rem, 2vw, 2rem) auto;
 }
@@ -144,10 +150,10 @@
   margin-left: 2rem;
   margin-right: 2rem;
   background-color: rgba(
-    255,
-    255,
-    255,
-    0.1
+  255,
+  255,
+  255,
+  0.1
   );
 }
 
@@ -217,12 +223,11 @@
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  gap: 40px; /* Space between Game and Music Containers */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  padding: 20px 0; /* Vertical padding */
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px 0;
 }
 
-/* Game and Music Containers */
 .gameContainer,
 .musicContainer {
   display: flex;
@@ -234,14 +239,15 @@
   min-height: 80vh;
   width: 45%;
   background-color: rgba(
-    255,
-    255,
-    255,
-    0.1
+  255,
+  255,
+  255,
+  0.1
   );
   border-radius: 10px;
   margin-bottom: 500px;
 }
+
 .gameCarousel {
   border: 10px solid #4b3b42;
   max-width: 800px;
@@ -339,19 +345,37 @@
   .sidebarFormat a {
     @apply no-underline flex flex-col items-center;
   }
-}
+  /*adjust size for mobile devices*/
 
-@media (max-width: 768px) {
-  .aboutDescription {
-    font-size: 1.5rem;
-    margin: 1.5rem;
+  /*phone*/
+  @media (max-width: 768px) {
+    .landHeading, .aboutHeading, .skillsHeading, .resumeHeading, .projectsHeading {
+      font-size: 5rem;
+    }
+    .landDescrip, .aboutDescrip, .skillsDescrip, .resumeDescrip, .projectsDescrip {
+      font-size: 1rem;
+      margin: 1.5rem;
+    }
+    .resumePicture {
+      margin-top: 2.5vw;
+      display: block;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      border: solid;
+      width: 50%;
+      max-width: 250px;
+    }
+    .projectsFlexContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+    .gameContainer, .musicContainer {
+      width: 80%;
+      min-height: auto;
+      margin-bottom: 2rem;
+    }
+
   }
+
 }
 
-/* parallax section */
-.parallax-section {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
