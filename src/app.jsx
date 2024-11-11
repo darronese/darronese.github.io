@@ -64,18 +64,21 @@ const App = () => {
             <About />
           </div>
         </ParallaxLayer>
+        <br />
 
         <ParallaxLayer offset={2} speed={0.5} factor={1}>
           <div className="parallax-section">
             <Skills />
           </div>
         </ParallaxLayer>
+        <br />
 
         <ParallaxLayer offset={3} speed={0.5} factor={1}>
           <div className="parallax-section">
             <Resume />
           </div>
         </ParallaxLayer>
+        <br />
 
         <ParallaxLayer offset={4} speed={0.5} factor={1}>
           <div className="parallax-section">
@@ -83,6 +86,7 @@ const App = () => {
           </div>
         </ParallaxLayer>
       </Parallax>
+      <br />
     </div>
   );
 };
