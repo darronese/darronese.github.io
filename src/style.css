@@ -6,6 +6,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
 @layer base {
   @font-face {
     font-family: "EB Garamond";
@@ -17,6 +18,7 @@
     src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap");
   }
 }
+*/
 
 /* parallax section components */
 .parallax-section {
@@ -25,13 +27,15 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 /*background color*/
 .background {
   background-color: #d7bea8;
   min-height: 100vh;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 
 .homePage {
@@ -39,7 +43,7 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #d7bea8;
   display: flex;
   justify-content: center;
@@ -53,9 +57,9 @@
   height: auto;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 10rem;
+  font-size: 10em;
   font-weight: 600;
-  margin-top: 20px;
+  margin-top: 2rem;
   color: #4b3b42;
 }
 
@@ -65,14 +69,14 @@
   text-align: center;
   font-family: "EB Garamond", serif;
   color: #4b3b42;
-  font-size: 2rem;
-  margin-top: 20px;
+  font-size: 2em;
+  margin-top: 2rem;
 }
 
 .music-note {
   top: 0;
-  width: 50px;
-  height: 50px;
+  width: 5vw;
+  height: 5vh;
   z-index: 1;
   pointer-events: none;
 }
@@ -82,7 +86,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
 .contactsLink {
@@ -90,8 +94,8 @@
   text-align: center;
   font-weight: bold;
   font-family: "EB Garamond", serif;
-  font-size: 2rem;
-  margin-top: 2vw;
+  font-size: 2em;
+  margin-top: 2rem;
   color: #9c8481;
 }
 
@@ -109,9 +113,9 @@
   height: auto;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 10rem;
+  font-size: 10em;
   font-weight: 600;
-  margin-top: 20px;
+  margin-top: 2rem;
   color: #4b3b42;
 }
 
@@ -119,13 +123,18 @@
   height: auto;
   text-align: center;
   font-family: "EB Garamond", serif;
-  font-size: 2rem;
+  font-size: 2em;
   color: #4b3b42;
   width: 80%;
-  max-width: 1500px;
+  /*
+  max-width: 5rem;
+  */
   background-color: rgba(255, 255, 255, 0.1);
   margin: clamp(1rem, 2vw, 2rem) auto;
   padding: 2rem;
+
+  /*border properties*/
+  border: 5px solid #4b3b42;
 }
 
 /*skills section*/
@@ -140,23 +149,21 @@
   height: auto;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 10rem;
+  font-size: 10em;
   font-weight: 600;
-  margin-top: 20px;
+  margin-top: 2rem;
   color: #4b3b42;
 }
 .skillsList {
   height: auto;
   text-align: center;
   font-family: "EB Garamond", serif;
-  font-size: 2rem;
-  margin-top: 2rem;
+  font-size: 2em;
+  margin: 2rem 2rem auto;
   color: #4b3b42;
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 2rem;
+  border: 5px solid #4b3b42;
 }
 
 /*Resume Stuff*/
@@ -170,28 +177,28 @@
   height: auto;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 10rem;
+  font-size: 10em;
   font-weight: 600;
-  margin-top: 20px;
+  margin-top: 2rem;
   color: #4b3b42;
 }
 
 .resumePicture {
-  margin-top: 5vw;
+  margin-top: 5vh;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: solid;
-  width: 100%;
-  max-width: 500px;
+  border: 2px solid;
+  width: 35vw;
+  height: auto;
 }
 
 .resumeLink {
   font-family: "EB Garamond", serif;
   color: #9c8481;
-  margin: 5px 0;
+  margin: 5rem;
   display: inline-block;
-  font-size: 24px;
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -203,30 +210,18 @@
 
 .projectsSection {
   margin-bottom: 2rem;
-  padding: 2rem;
+  padding: 2rem 0 4rem 0;
 }
 .projectsHeading {
   line-height: 1.25em;
   height: auto;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 10rem;
+  font-size: 10em;
   font-weight: 600;
-  margin-top: 20px;
+  margin-top: 2rem;
   color: #4b3b42;
-  margin-bottom: 30px;
-}
-
-.projectsDescrip {
-  line-height: 1.25em;
-  height: auto;
-  text-align: center;
-  font-family: "Oswald", serif;
-  font-size: 3.5rem;
-  font-weight: 600;
-  margin-top: 20px;
-  color: #4b3b42;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .projectsFlexContainer {
@@ -235,9 +230,9 @@
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  gap: 40px;
+  gap: 4rem;
   flex-wrap: wrap;
-  padding: 20px 0;
+  padding: 2rem 0;
 }
 
 .gameContainer,
@@ -246,18 +241,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 20px;
+  padding: 2rem;
   box-sizing: border-box;
   min-height: 80vh;
-  width: 45%;
+  width: 40%;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  margin-bottom: 500px;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  border: 5px solid #4b3b42;
 }
 
 .gameCarousel {
   border: 10px solid #4b3b42;
-  max-width: 800px;
+  max-width: 50rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -267,10 +263,10 @@
   height: auto;
   text-align: center;
   font-family: "Oswald", serif;
-  font-size: 5rem;
+  font-size: 5em;
   font-weight: 600;
   font-style: italic;
-  margin-top: 20px;
+  margin-top: 2rem;
   color: #4b3b42;
 }
 
@@ -280,8 +276,8 @@
   text-align: center;
   font-family: "EB Garamond", serif;
   color: #4b3b42;
-  font-size: 2rem;
-  margin-top: 20px;
+  font-size: 2em;
+  margin-top: 2rem;
 }
 
 /* scroll.css */
@@ -290,7 +286,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 10px;
+  height: 1rem;
   background-color: transparent;
   z-index: 9999;
 }
@@ -335,7 +331,7 @@
     display: flex;
     z-index: 10;
     justify-content: center;
-    padding: 10px;
+    padding: 1rem;
     font-family: "EB Garamond", serif;
     background-color: #9c8481;
     color: gray;
@@ -352,53 +348,33 @@
   .sidebarFormat a {
     @apply no-underline flex flex-col items-center;
   }
-  /*adjust size for mobile devices*/
 
-  /*phone*/
-  @media (max-width: 768px) {
+  /* smaller than 640px */
+  @media (max-width: 639px) {
     .landHeading,
     .aboutHeading,
     .skillsHeading,
     .resumeHeading,
     .projectsHeading {
-      font-size: 5rem;
+      font-size: 5em;
     }
     .landDescrip,
     .aboutDescrip,
     .skillsDescrip,
     .resumeDescrip,
     .projectsDescrip {
-      font-size: 1rem;
+      font-size: 1em;
       margin: 1.5rem;
     }
-    .resumePicture {
-      margin-top: 2.5vw;
-      display: block;
-      margin-left: 1.5rem;
-      margin-right: 1.5rem;
-      border: solid;
-      width: 50%;
-      max-width: 250px;
-    }
-    .projectsFlexContainer {
-      flex-direction: column;
-      align-items: center;
-    }
-    .gameContainer,
-    .musicContainer {
-      width: 60%;
-      min-height: auto;
-      margin-bottom: 2rem;
-    }
   }
-  /* bigger screens */
-  @media (max-width: 1430px) {
+  /* large screens*/
+  @media (min-width: 1024px) {
     .landHeading,
     .aboutHeading,
     .skillsHeading,
     .resumeHeading,
     .projectsHeading {
-      font-size: 8rem;
+      font-size: 7rem;
     }
     .landDescrip,
     .aboutDescrip,
@@ -406,38 +382,24 @@
     .resumeDescrip,
     .projectsDescrip {
       font-size: 1.5rem;
-      margin: 2rem;
-    }
-    .resumePicture {
-      margin-top: 4vw;
-      display: block;
-      margin-left: 2rem;
-      margin-right: 2rem;
-      border: solid;
-      width: 90%;
-      max-width: 400px;
-    }
-    .projectsFlexContainer {
-      flex-direction: column;
-      align-items: center;
-    }
-    .gameContainer,
-    .musicContainer {
-      width: 80%;
-      min-height: auto;
-      margin-bottom: 2rem;
+      margin: 1.5rem;
     }
   }
-  /*medium sized screens*/
-  @media (max-width: 1024px) {
-    .projectsHeading,
-    .resumeHeading {
-      font-size: 6rem;
+  @media (max-width: 1439px) {
+    .landHeading,
+    .aboutHeading,
+    .skillsHeading,
+    .resumeHeading,
+    .projectsHeading {
+      font-size: 15rem;
     }
-    .projectsSection,
-    .resumeSection {
-      margin-top: 3rem;
-      margin-bottom: 3rem;
+    .landDescrip,
+    .aboutDescrip,
+    .skillsDescrip,
+    .resumeDescrip,
+    .projectsDescrip {
+      font-size: 2.5em;
+      margin: 1.5rem;
     }
   }
 }

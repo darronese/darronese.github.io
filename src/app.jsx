@@ -52,7 +52,7 @@ const App = () => {
     <div>
       <Footer scrollTo={scrollTo} />
       <ScrollProgressBar progress={scrollProgress} />
-      <Parallax ref={parallaxRef} pages={5}>
+      <Parallax ref={parallaxRef} pages={7}>
         <ParallaxLayer offset={0} speed={0.5} factor={1}>
           <div className="parallax-section">
             <HomePage />
@@ -64,21 +64,18 @@ const App = () => {
             <About />
           </div>
         </ParallaxLayer>
-        <br />
 
         <ParallaxLayer offset={2} speed={0.5} factor={1}>
           <div className="parallax-section">
             <Skills />
           </div>
         </ParallaxLayer>
-        <br />
 
         <ParallaxLayer offset={3} speed={0.5} factor={1}>
           <div className="parallax-section">
             <Resume />
           </div>
         </ParallaxLayer>
-        <br />
 
         <ParallaxLayer offset={4} speed={0.5} factor={1}>
           <div className="parallax-section">
@@ -86,7 +83,6 @@ const App = () => {
           </div>
         </ParallaxLayer>
       </Parallax>
-      <br />
     </div>
   );
 };
