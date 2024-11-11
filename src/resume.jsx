@@ -17,10 +17,11 @@ const Resume = () => (
       <div className="centerContainer">
         <a
           href="https://drive.google.com/drive/u/0/folders/1c2qjx02dvd33weYW3Kl--AZ2PDeWdgob"
+          target="_blank"
+          rel="noopener noreferrer"
           className="resumeLink"
-          download
         >
-          Download
+          <i className="fa-brands fa-google-drive"></i> Download
         </a>
       </div>
     </div>

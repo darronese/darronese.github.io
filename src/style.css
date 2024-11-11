@@ -38,6 +38,11 @@
   padding-bottom: 1.25rem;
 }
 
+.spacer-section {
+  display: flex;
+  height: 20%;
+}
+
 .homePage {
   z-index: 2;
   overflow: hidden;
@@ -188,7 +193,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid;
+  border: 5px solid #4b3b42;
   width: 35vw;
   height: auto;
 }
