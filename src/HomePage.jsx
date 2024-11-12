@@ -1,7 +1,7 @@
 // HomePage.jsx
-import React, { useMemo } from "react"; // Import useMemo instead of useState
+import React, { useMemo } from "react";
 import { motion } from "framer-motion";
-import BouncingMusicNotes from "./musicNotes.jsx"; // Ensure the correct path
+import BouncingMusicNotes from "./musicNotes.jsx";
 import { v4 as uuidv4 } from "uuid";
 
 const containerVariants = {
@@ -11,12 +11,12 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3, // Stagger the animations of child components
+      //stagger the animations to make it appear one at a time
+      staggerChildren: 0.3,
     },
   },
 };
 
-// Variants for staggered child animations (optional)
 const childVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -29,14 +29,17 @@ const childVariants = {
 const HomePage = () => {
   const numberOfNotes = 30;
 
-  // Generate 30 notes with unique IDs and random positions/delays/durations
+  //generate 30 notes with unique IDs and random positions/delays/durations
   const notes = useMemo(
     () =>
       Array.from({ length: numberOfNotes }, () => ({
         id: uuidv4(),
-        x: Math.random() * 100, // Random horizontal position as percentage (0-100%)
-        delay: Math.random() * 10, // Random delay up to 10 seconds
-        duration: Math.random() * 5 + 5, // Random duration between 5-10 seconds
+        //random horizontal position as percentage (0-100%)
+        x: Math.random() * 100,
+        //random delay up to 10 seconds
+        delay: Math.random() * 10, 
+        //random duration between 5-10 seconds
+        duration: Math.random() * 5 + 5,
       })),
     [numberOfNotes],
   );
@@ -45,11 +48,11 @@ const HomePage = () => {
     <div
       className="homePage"
     >
-      {/* Render all 30 music notes */}
       {notes.map((note) => (
         <BouncingMusicNotes
           key={note.id}
-          x={`${note.x}%`} // Position as percentage for responsiveness
+        //position as percentage for responsiveness
+          x={`${note.x}%`}
           delay={note.delay}
           duration={note.duration}
         />

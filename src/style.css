@@ -6,20 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-@layer base {
-  @font-face {
-    font-family: "EB Garamond";
-    src: url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap");
-  }
-
-  @font-face {
-    font-family: "Oswald";
-    src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap");
-  }
-}
-*/
-
 /* parallax section components */
 .parallax-section {
   min-height: 100vh;
@@ -124,7 +110,7 @@
   color: #4b3b42;
 }
 
-.aboutDescription {
+.aboutDescrip {
   height: auto;
   text-align: center;
   font-family: "EB Garamond", serif;
@@ -355,7 +341,7 @@
   }
 
   /* smaller than 640px */
-  @media (max-width: 639px) {
+  @media (min-width: 639px) {
     .landHeading,
     .aboutHeading,
     .skillsHeading,
@@ -365,15 +351,19 @@
     }
     .landDescrip,
     .aboutDescrip,
-    .skillsDescrip,
-    .resumeDescrip,
+    .skillsList,
+    .resumeLink,
     .projectsDescrip {
       font-size: 1em;
       margin: 1.5rem;
     }
+    .spacer-section {
+      display: flex;
+      height: 50%;
+    }
   }
-  /* large screens*/
-  @media (min-width: 1024px) {
+  /*medium screens*/
+  @media (min-width: 640px) {
     .landHeading,
     .aboutHeading,
     .skillsHeading,
@@ -383,14 +373,40 @@
     }
     .landDescrip,
     .aboutDescrip,
-    .skillsDescrip,
-    .resumeDescrip,
+    .skillsList,
+    .resumeLink,
     .projectsDescrip {
       font-size: 1.5rem;
       margin: 1.5rem;
     }
+    .spacer-section {
+      display: flex;
+      height: 40%;
+    }
   }
-  @media (max-width: 1439px) {
+  /* large screens*/
+  @media (min-width: 1024px) {
+    .landHeading,
+    .aboutHeading,
+    .skillsHeading,
+    .resumeHeading,
+    .projectsHeading {
+      font-size: 9rem;
+    }
+    .landDescrip,
+    .aboutDescrip,
+    .skillsList,
+    .resumeLink,
+    .projectsDescrip {
+      font-size: 1.5rem;
+      margin: 1.5rem;
+    }
+    .spacer-section {
+      display: flex;
+      height: 30%;
+    }
+  }
+  @media (min-width: 1440px) {
     .landHeading,
     .aboutHeading,
     .skillsHeading,
@@ -400,11 +416,15 @@
     }
     .landDescrip,
     .aboutDescrip,
-    .skillsDescrip,
-    .resumeDescrip,
+    .skillsList,
+    .resumeLink,
     .projectsDescrip {
       font-size: 2.5em;
       margin: 1.5rem;
     }
+  }
+  .spacer-section {
+    display: flex;
+    height: 10%;
   }
 }

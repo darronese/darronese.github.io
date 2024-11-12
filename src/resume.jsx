@@ -2,7 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-//resume page that contains my resume
 const Resume = () => (
   <div className="resumeSection">
     <div className="background">
@@ -28,5 +27,4 @@ const Resume = () => (
   </div>
 );
 
-//export it as resume so we can include it in our app
 export default Resume;

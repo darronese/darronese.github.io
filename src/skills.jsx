@@ -38,5 +38,4 @@ const Skills = () => (
   </div>
 );
 
-//export about so we can use it in our app
 export default Skills;
