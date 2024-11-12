@@ -22,17 +22,15 @@ const Skills = () => (
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.5 }}
       >
-        <li>-Proficient in C/C++, Python, Javascript, Html, CSS, Lua</li>
+        <li>- Proficient in C/C++, Python, Javascript, Html, CSS, Lua</li>
         <li>
-          -Experienced with modern front-end technologies, including React and
-          TailwindCSS
+          - Experienced with modern front-end technologies, such as React, TailwindCSS, Framer Motion,
         </li>
         <li>
-          -Knowledgeable of software devlopment tools such as Github, NPM,
-          source control (Git)
+          - Knowledgeable of software devlopment tools such as Git/Github, NPM, CMake/Make, Pytest
         </li>
         <li>
-          -Strong understanding of algorithms, data structures, and
+          - Strong understanding of algorithms, data structures, and
           object-oriented programming
         </li>
       </motion.ul>
