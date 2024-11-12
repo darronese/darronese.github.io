@@ -31,11 +31,10 @@ const About = () => (
         and JavaScript with the React framework. Additionally, I created "Dark
         Ship," an interactive game built with C/C++ using the SFML library for
         graphics. Currently, I am working on "Magic Music," a music theory
-        generator developed in Python utilizing the music21 library. This
-        project aims to assist musicians like myself in understanding and
-        applying music theory concepts more effectively. Beyond my technological
-        pursuits, I am also an accomplished musician with mastery of the guitar
-        and piano, which has enhanced my creativity and discipline.
+        generator developed in Python utilizing the music21 library. Beyond my
+        technological pursuits, I am also an accomplished musician with mastery
+        of the guitar and piano, which has enhanced my creativity and
+        discipline.
       </motion.p>
     </div>
   </div>

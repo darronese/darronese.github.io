@@ -114,7 +114,7 @@
   height: auto;
   text-align: center;
   font-family: "EB Garamond", serif;
-  font-size: 2em;
+  font-size: 1.75em;
   color: #4b3b42;
   width: 80%;
   /*
@@ -149,7 +149,7 @@
   height: auto;
   text-align: center;
   font-family: "EB Garamond", serif;
-  font-size: 2em;
+  font-size: 1.75em;
   margin: 2rem 2rem auto;
   color: #4b3b42;
   background-color: rgba(255, 255, 255, 0.1);
@@ -189,7 +189,7 @@
   color: #9c8481;
   margin: 5rem;
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   text-align: center;
 }
 
@@ -285,7 +285,7 @@
 .progress-bar {
   width: 100%;
   height: 100%;
-  background-color: #050517;
+  background-color: #4b3b42;
   transform-origin: 0 0;
   transform: scaleX(0);
   transition: transform 0.1s linear;
@@ -354,7 +354,7 @@
     .skillsList,
     .resumeLink,
     .projectsDescrip {
-      font-size: 1em;
+      font-size: 0.75em;
       margin: 1.5rem;
     }
     .spacer-section {
@@ -376,7 +376,7 @@
     .skillsList,
     .resumeLink,
     .projectsDescrip {
-      font-size: 1.5rem;
+      font-size: 1rem;
       margin: 1.5rem;
     }
     .spacer-section {
@@ -398,7 +398,7 @@
     .skillsList,
     .resumeLink,
     .projectsDescrip {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       margin: 1.5rem;
     }
     .spacer-section {
@@ -419,7 +419,7 @@
     .skillsList,
     .resumeLink,
     .projectsDescrip {
-      font-size: 2.5em;
+      font-size: 1.75em;
       margin: 1.5rem;
     }
   }
