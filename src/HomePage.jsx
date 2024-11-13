@@ -37,7 +37,7 @@ const HomePage = () => {
         //random horizontal position as percentage (0-100%)
         x: Math.random() * 100,
         //random delay up to 10 seconds
-        delay: Math.random() * 10, 
+        delay: Math.random() * 10,
         //random duration between 5-10 seconds
         duration: Math.random() * 5 + 5,
       })),
@@ -46,12 +46,23 @@ const HomePage = () => {
 
   return (
     <div
-      className="homePage"
+      className="
+        relative
+        z-20
+        overflow-hidden
+        w-full
+        min-h-screen
+        bg-[#d7bea8]
+        flex
+        flex-col
+        items-center
+        justify-center
+      "
     >
       {notes.map((note) => (
         <BouncingMusicNotes
           key={note.id}
-        //position as percentage for responsiveness
+          //position as percentage for responsiveness
           x={`${note.x}%`}
           delay={note.delay}
           duration={note.duration}
@@ -59,23 +70,65 @@ const HomePage = () => {
       ))}
 
       <motion.div
-        className="contentContainer"
+        className="relative z-20"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         style={{ zIndex: 2, position: "relative" }}
       >
-        <motion.h1 className="landHeading" variants={childVariants}>
+        <motion.h1
+          className="
+    text-center 
+    font-oswald 
+    font-semibold 
+    mt-8 text-[#4b3b42] 
+    leading-[1.25em] 
+    text-5xl
+    sm:text-7xl
+    md:text-9xl
+    lg:text-[10em]
+    xl:text-[12em]
+    "
+          variants={childVariants}
+        >
           Darron Li
         </motion.h1>
-        <motion.p className="landDescrip" variants={childVariants}>
+        <motion.p
+          className="
+    text-center
+    font-garamond
+    text-[#4b3b42]
+    leading-[1.5em]
+    mt-8
+    text-lg
+    sm:text-xl
+    md:text-2xl
+    lg:text-3x1
+    xl:text-4xl
+    "
+          variants={childVariants}
+        >
           Welcome to my webpage!
         </motion.p>
-        <motion.div className="centerContainer" variants={childVariants}>
+        <motion.div
+          className="flex flex-col items-center mt-4"
+          variants={childVariants}
+        >
           <a
             href="mailto:darronese@outlook.com"
             target="_blank"
-            className="contactsLink"
+            className="
+    text-center
+    font-bold
+    font-garamond
+    mt-4
+    text-[#9c8481]
+    hover:text-blue-500
+    text-lg
+    sm:text-xl
+    md:text-2xl
+    lg:text-3xl
+    "
             title="Goes to email!"
             rel="noopener noreferrer"
           >
@@ -85,7 +138,18 @@ const HomePage = () => {
           <a
             href="https://github.com/darronese"
             target="_blank"
-            className="contactsLink"
+            className="
+    text-center
+    font-bold
+    font-garamond
+    mt-4
+    text-[#9c8481]
+    hover:text-blue-500
+    text-lg
+    sm:text-xl
+    md:text-2xl
+    lg:text-3xl
+"
             title="Goes to github!"
             rel="noopener noreferrer"
           >
@@ -95,7 +159,18 @@ const HomePage = () => {
           <a
             href="https://www.linkedin.com/in/darronese/"
             target="_blank"
-            className="contactsLink"
+            className="
+    text-center
+    font-bold
+    font-garamond
+    mt-4
+    text-[#9c8481]
+    hover:text-blue-500
+    text-lg
+    sm:text-xl
+    md:text-2xl
+    lg:text-3xl
+"
             title="Goes to linkedin!"
             rel="noopener noreferrer"
           >

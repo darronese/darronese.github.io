@@ -1,3 +1,6 @@
+/*
+ * Switch to applying styling conditions within .jsx files and not style.jsx
+ */
 // Imports
 import React, { useRef, useState, useEffect } from "react";
 import Footer from "./sidebar";
@@ -45,46 +48,30 @@ const App = () => {
       parallaxRef.current.scrollTo(page);
     }
   };
-  //main app render, has 4 sections,
-  //planning on updating to 5 with a skills section
   //returns a wrapper like that wraps every webpage together inside one dynamic page!
   return (
     <div>
       <Footer scrollTo={scrollTo} />
       <ScrollProgressBar progress={scrollProgress} />
-      <Parallax ref={parallaxRef} pages={5.5}>
-        <ParallaxLayer offset={0} speed={0.5} factor={1}>
-          <div className="parallax-section">
+      <Parallax ref={parallaxRef} pages={5}>
+        <ParallaxLayer offset={0} speed={0.5} factor={1} style={{backgroundColor: '#d7bea8'}}>
             <HomePage />
-          </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={0.5} factor={1}>
-          <div className="parallax-section">
+        <ParallaxLayer offset={1} speed={0.5} factor={1} style={{backgroundColor: '#d7bea8'}}>
             <About />
-          </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2} speed={0.5} factor={1}>
-          <div className="parallax-section">
+        <ParallaxLayer offset={2} speed={0.5} factor={1} style={{backgroundColor: '#d7bea8'}}>
             <Skills />
-          </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={3} speed={0.5} factor={1}>
-          <div className="parallax-section">
+        <ParallaxLayer offset={3} speed={0.5} factor={1} style={{backgroundColor: '#d7bea8'}}>
             <Resume />
-          </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={4} speed={0.5} factor={1}>
-          <div className="parallax-section">
+        <ParallaxLayer offset={4} speed={0.5} factor={1} style={{backgroundColor: '#d7bea8'}}>
             <Projects />
-          </div>
-        </ParallaxLayer>
-        <ParallaxLayer offset={5} speed={0} factor = {0.5}>
-          <div className="spacer">
-          </div>
         </ParallaxLayer>
       </Parallax>
     </div>
