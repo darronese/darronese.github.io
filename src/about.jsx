@@ -15,6 +15,7 @@ const About = () => (
   mt-8
   text-[#4b3b42]
   leading-[1.25em]
+    text-[5em]
     sm:text-[6em]
     md:text-[7em]
     lg:text-[8em]
