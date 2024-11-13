@@ -39,13 +39,14 @@ const Projects = () => {
           <div
             className="
               flex
-              flex-colo
+              flex-col
               sm:flex-row
               flex-wrap
               justify-center
               items-start
               gap-16
-              py-8
+              pt-8
+              pb-16 sm:pb-8
             "
           >
             {/* Project 1 */}
@@ -71,6 +72,7 @@ const Projects = () => {
                   text-3xl
                   sm:text-4xl
                   md:text-5xl
+                  text-center
                 "
               >
                 Dark Ship
@@ -123,6 +125,7 @@ const Projects = () => {
                 border-[#4b3b42]
                 rounded-[8px]
                 bg-[#f7ebdf]
+                text-center
               "
             >
               <h2
@@ -146,6 +149,7 @@ const Projects = () => {
                   text-lg
                   sm:text-xl
                   md:text-2xl
+                  sm:mb-8
                 "
               >
                 Magic Music is an innovative music theory generator that uses

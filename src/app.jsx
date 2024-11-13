@@ -54,23 +54,23 @@ const App = () => {
       <Footer scrollTo={scrollTo} />
       <ScrollProgressBar progress={scrollProgress} />
       <Parallax ref={parallaxRef} pages={5}>
-        <ParallaxLayer offset={0} speed={0.5} factor={1} style={{backgroundColor: '#d7bea8'}}>
+        <ParallaxLayer offset={0} speed={0.5} factor={1}>
             <HomePage />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={0.5} factor={1} style={{backgroundColor: '#d7bea8'}}>
+        <ParallaxLayer offset={1} speed={0.5} factor={1}>
             <About />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2} speed={0.5} factor={1} style={{backgroundColor: '#d7bea8'}}>
+        <ParallaxLayer offset={2} speed={0.5} factor={1}>
             <Skills />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={3} speed={0.5} factor={1} style={{backgroundColor: '#d7bea8'}}>
+        <ParallaxLayer offset={3} speed={0.5} factor={1}>
             <Resume />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={4} speed={0.5} factor={1} style={{backgroundColor: '#d7bea8'}}>
+        <ParallaxLayer offset={4} speed={0.5} factor={1} style={{overflowY: "auto"}}>
             <Projects />
         </ParallaxLayer>
       </Parallax>
