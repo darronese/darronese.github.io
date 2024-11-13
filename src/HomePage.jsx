@@ -121,7 +121,7 @@ const HomePage = () => {
     text-center
     font-bold
     font-garamond
-    mt-4
+    mt-2
     text-[#9c8481]
     hover:text-blue-500
     text-lg
@@ -142,7 +142,7 @@ const HomePage = () => {
     text-center
     font-bold
     font-garamond
-    mt-4
+    mt-2
     text-[#9c8481]
     hover:text-blue-500
     text-lg
@@ -163,7 +163,7 @@ const HomePage = () => {
     text-center
     font-bold
     font-garamond
-    mt-4
+    mt-2
     text-[#9c8481]
     hover:text-blue-500
     text-lg
@@ -175,6 +175,27 @@ const HomePage = () => {
             rel="noopener noreferrer"
           >
             <i className="fa-brands fa-linkedin-in"></i> LinkedIn
+          </a>
+    <br></br>
+          <a
+            href="https://github.com/darronese/darronese.github.io"
+            target="_blank"
+            className="
+    text-center
+    font-bold
+    font-garamond
+    mt-2
+    text-[#9c8481]
+    hover:text-blue-500
+    text-lg
+    sm:text-xl
+    md:text-2xl
+    lg:text-3xl
+"
+            title="Goes to repository!"
+            rel="noopener noreferrer"
+          >
+            <i className="fa-solid fa-code"></i> Repository
           </a>
         </motion.div>
       </motion.div>
