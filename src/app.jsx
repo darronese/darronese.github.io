@@ -53,25 +53,29 @@ const App = () => {
     <div>
       <Footer scrollTo={scrollTo} />
       <ScrollProgressBar progress={scrollProgress} />
-      <Parallax ref={parallaxRef} pages={5}>
+      <Parallax ref={parallaxRef} pages={5.5}>
         <ParallaxLayer offset={0} speed={0.5} factor={1}>
-            <HomePage />
+          <HomePage />
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.5} factor={1}>
-            <About />
+          <About />
         </ParallaxLayer>
 
         <ParallaxLayer offset={2} speed={0.5} factor={1}>
-            <Skills />
+          <Skills />
         </ParallaxLayer>
 
         <ParallaxLayer offset={3} speed={0.5} factor={1}>
-            <Resume />
+          <Resume />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={4} speed={0.5} factor={1} style={{overflowY: "auto"}}>
-            <Projects />
+        <ParallaxLayer
+          offset={4}
+          speed={0.5}
+          factor={1}
+        >
+          <Projects />
         </ParallaxLayer>
       </Parallax>
     </div>

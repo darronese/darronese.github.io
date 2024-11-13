@@ -15,11 +15,11 @@ const Skills = () => (
   mt-8
   text-[#4b3b42]
   leading-[1.25em]
-  text-5xl
-  sm:text-7xl
-  md:text-9xl
-  lg:text-[10em]
-  xl:text-[12em]
+    sm:text-[6em]
+    md:text-[7em]
+    lg:text-[8em]
+    xl:text-[9em]
+    2xl:text-[10em]
   "
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}

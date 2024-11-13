@@ -22,11 +22,11 @@ const Projects = () => {
             mt-8
             text-[#4b3b42]
             leading-[1.25em]
-            text-5xl
-            sm:text-7xl
-            md:text-9xl
-            lg:text-[10em]
-            xl:text-[12em]
+            sm:text-[6em]
+            md:text-[7em]
+            lg:text-[8em]
+            xl:text-[9em]
+            2xl:text-[10em]
           "
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -35,36 +35,39 @@ const Projects = () => {
         </motion.h1>
 
         {/* Wrap both projects in a container */}
-        <div className="container mx-auto px-4 overflow-auto sm:mb-16">
+        {/* Projects Container */}
+        <div className="container mx-auto px-4">
           <div
             className="
-              flex
-              flex-col
-              sm:flex-row
-              flex-wrap
-              justify-center
-              items-start
-              gap-16
-              pt-8
-              pb-16 sm:pb-8
-            "
+            flex
+            flex-col
+            sm:flex-row
+            flex-wrap
+            justify-center
+            items-start
+            gap-16
+          "
           >
-            {/* Project 1 */}
+            {/* Project 1: Dark Ship */}
             <div
               className="
-                flex-1
-                min-w-[300px]
-                max-w-[600px]
-                mb-8
-                p-4
-                border-4
-                border-[#4b3b42]
-                rounded-[8px]
-                bg-[#f7ebdf]
-              "
+              flex-1
+              min-w-[300px]
+              max-w-[600px]
+              p-6
+              border-4
+              border-[#4b3b42]
+              rounded-lg
+              bg-[#f7ebdf]
+              shadow-lg
+              flex
+              flex-col
+              justify-between
+            "
             >
-              <h2
-                className="
+              <div>
+                <h2
+                  className="
                   font-oswald
                   font-semibold
                   text-[#4b3b42]
@@ -74,62 +77,66 @@ const Projects = () => {
                   md:text-5xl
                   text-center
                 "
-              >
-                Dark Ship
-              </h2>
-              <p
-                className="
+                >
+                  Dark Ship
+                </h2>
+                <p
+                  className="
                   font-garamond
                   text-[#4b3b42]
-                  mb-4
+                  mb-6
                   text-lg
                   sm:text-xl
                   md:text-2xl
+                  text-center
                 "
-              >
-                Dark Ship is a 2-D game loosely inspired by "Dead by Daylight"
-                using SFML 2.6.1 and C/C++!
-              </p>
-              {/* Carousel Integration */}
-              <div className="mb-4">
-                <GameCarousel />
+                >
+                  Dark Ship is a 2-D game loosely inspired by "Dead by Daylight"
+                  using SFML 2.6.1 and C/C++!
+                </p>
+                {/* Carousel Integration */}
+                <div className="mb-6">
+                  <GameCarousel />
+                </div>
               </div>
               <a
                 href="https://github.com/darronese/Dark-Ship"
                 target="_blank"
                 className="
-                  font-garamond
-                  text-[#9c8481]
-                  mt-4
-                  inline-block
-                  text-[1.75em]
-                  text-center
-                  hover:text-blue-500
-                "
+                font-garamond
+                text-[#9c8481]
+                text-[1.75em]
+                text-center
+                hover:text-blue-500
+                transition-colors
+                duration-300
+              "
                 title="View Repository"
                 rel="noopener noreferrer"
               >
                 <i className="fa-brands fa-github"></i> Repository
               </a>
             </div>
-
-            {/* Project 2 */}
+            {/* Project 2: Magic Music */}
             <div
               className="
-                flex-1
-                min-w-[300px]
-                max-w-[600px]
-                mb-8
-                p-4
-                border-4
-                border-[#4b3b42]
-                rounded-[8px]
-                bg-[#f7ebdf]
-                text-center
-              "
+              flex-1
+              min-w-[300px]
+              max-w-[600px]
+              p-6
+              border-4
+              border-[#4b3b42]
+              rounded-lg
+              bg-[#f7ebdf]
+              shadow-lg
+              flex
+              flex-col
+              justify-between
+            "
             >
-              <h2
-                className="
+              <div>
+                <h2
+                  className="
                   font-oswald
                   font-semibold
                   text-[#4b3b42]
@@ -137,38 +144,31 @@ const Projects = () => {
                   text-3xl
                   sm:text-4xl
                   md:text-5xl
+                  text-center
                 "
-              >
-                Magic Music
-              </h2>
-              <p
-                className="
+                >
+                  Magic Music
+                </h2>
+                <p
+                  className="
                   font-garamond
                   text-[#4b3b42]
-                  mb-4
+                  mb-6
                   text-lg
                   sm:text-xl
                   md:text-2xl
-                  sm:mb-8
+                  text-center
                 "
-              >
+                >
                 Magic Music is an innovative music theory generator that uses
                 Python and the music21 library to generate music theory!
-              </p>
-              {/* Carousel Integration */}
-              <div className="mb-4">
-                <p
-                  className="
-                    font-garamond
-                    text-[#4b3b42]
-                    mb-4
-                    text-lg
-                    sm:text-xl
-                    md:text-2xl
-                  "
-                >
+                </p>
+                <p className="
+    text-center
+    ">
                   ***WIP***
                 </p>
+                {/* Carousel Integration Here */}
               </div>
             </div>
           </div>
