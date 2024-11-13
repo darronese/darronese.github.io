@@ -34,7 +34,6 @@ const Projects = () => {
           Projects
         </motion.h1>
 
-        {/* Wrap both projects in a container */}
         {/* Projects Container */}
         <div className="container mx-auto px-4">
           <div
@@ -46,6 +45,9 @@ const Projects = () => {
             justify-center
             items-start
             gap-16
+    mt-8
+    sm:mt-6
+    md:mt-8
           "
           >
             {/* Project 1: Dark Ship */}

@@ -44,10 +44,6 @@ const HomePage = () => {
     [numberOfNotes],
   );
 
-  //small screen: 6
-  //md screen(768): 7
-  //lg screen(1024)/laptop: 8
-  //xl screen: 10
   return (
     <div
       className="

@@ -53,7 +53,7 @@ const App = () => {
     <div>
       <Footer scrollTo={scrollTo} />
       <ScrollProgressBar progress={scrollProgress} />
-      <Parallax ref={parallaxRef} pages={5.5}>
+      <Parallax ref={parallaxRef} pages={5.3}>
         <ParallaxLayer offset={0} speed={0.5} factor={1}>
           <HomePage />
         </ParallaxLayer>

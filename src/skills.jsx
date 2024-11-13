@@ -38,7 +38,7 @@ const Skills = () => (
     mx-auto
     p-6
     bg-[#f7ebdf]
-    border-2
+    border-5
     border-[#4b3b42]
     rounded-[8px]
     leading-[1.5em]

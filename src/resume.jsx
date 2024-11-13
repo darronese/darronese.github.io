@@ -27,11 +27,14 @@ const Resume = () => (
       <img
         src="/resume.png"
         className="
-  mt-[5vh]
+    mt-8
+    sm:mt-6
+    md:mt-8
   block
   mx-auto
-  border-[5px]
+  border-5
   border-[#4b3b42]
+    rounded-[8px]
   w-[35vw]
   max-w-md
   h-auto
