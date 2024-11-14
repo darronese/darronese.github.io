@@ -98,7 +98,15 @@ const Projects = () => {
                   using SFML 2.6.1 and C/C++!
                 </p>
                 {/* Carousel Integration */}
-                <div className="mb-6">
+                <div
+                  className="
+                  mb-6
+                  rounded-lg
+                  border-5
+                  border-black
+                  p-0
+                  "
+                >
                   <GameCarousel />
                 </div>
               </div>
@@ -163,12 +171,14 @@ const Projects = () => {
                   text-center
                 "
                 >
-                Magic Music is an innovative music theory generator that uses
-                Python and the music21 library to generate music theory!
+                  Magic Music is an innovative music theory generator that uses
+                  Python and the music21 library to generate music theory!
                 </p>
-                <p className="
+                <p
+                  className="
     text-center
-    ">
+    "
+                >
                   ***WIP***
                 </p>
                 {/* Carousel Integration Here */}
