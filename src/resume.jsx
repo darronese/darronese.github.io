@@ -26,7 +26,7 @@ const Resume = () => (
         Resume
       </motion.h1>
       <img
-        src="/resume.png"
+        src="/Resume.png"
         className="
     mt-8
     sm:mt-6
