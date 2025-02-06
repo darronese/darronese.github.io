@@ -70,11 +70,7 @@ const App = () => {
           <Resume />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={4}
-          speed={0.5}
-          factor={1}
-        >
+        <ParallaxLayer offset={4} speed={0.5} factor={1}>
           <Projects />
         </ParallaxLayer>
       </Parallax>
