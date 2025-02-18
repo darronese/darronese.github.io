@@ -48,7 +48,7 @@ const Resume = () => (
   "
       >
         <a
-          href="https://drive.google.com/drive/u/0/folders/1c2qjx02dvd33weYW3Kl--AZ2PDeWdgob"
+          href="https://drive.google.com/file/d/1UttJyvH14NpbarQX50bVc_iC2vNuG4Rb/view?usp=share_link"
           target="_blank"
           rel="noopener noreferrer"
           className="
