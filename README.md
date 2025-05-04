@@ -1,20 +1,38 @@
-# Darron Li's Personal Portfolio Website
+# sv
 
-## Live Demo
-You can view the website at darronese.github.io
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Features
- - **Responsive Design**: Adapts to desktop, tablet, and mobile screens using CSS Grid and Flexbox
- - **Fluid Animations**: Animations that make the website look more modern using
-    Framer Motion and React Spring Parallax
- - **Taskbar and Animated Background**: Includes a working taskbar that jumps to any page you're looking for and a dynamic background element
-    to reveal a more creative side to me
- - **Contact Information**: Easy to access contact information including links to my LinkedIn and Github
+## Creating a project
 
- ## Technologies Used
- - **Langauges**: HTML, CSS (TailwindCSS), Javascript (React)
- - **Styling & Animations**: TailwindCSS, Framer Motion, React Spring Parallax
- - **Development Tools**: Git/GitHub, NPM, Babel
+If you're seeing this, you've probably already done this step. Congrats!
 
- ## License
- This project is licensed under the GPL-3.0 License
+```bash
+# create a new project in the current directory
+npx sv create
+
+# create a new project in my-app
+npx sv create my-app
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
