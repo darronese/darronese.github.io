@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import "tailwindcss/preflight";
 @import "tailwindcss/utilities";
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
 
+/*
+* https://visme.co/blog/website-color-schemes/
+* CONSIDER THIS PALETTE SCHEME:
+* #244855
+* #E64833
+* #874F41
+* #90AEAD
+* #FBE9D0
+*/
 @layer base {
   body {
     font-family: 'JetBrains Mono', monospace;
