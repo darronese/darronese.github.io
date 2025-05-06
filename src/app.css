@@ -15,5 +15,6 @@
 @layer base {
   body {
     font-family: 'JetBrains Mono', monospace;
+    background-color: #244855;
   }
 }

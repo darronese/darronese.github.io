@@ -88,6 +88,7 @@ declare module '$env/static/private' {
 	export const XDG_RUNTIME_DIR: string;
 	export const DEBUGINFOD_URLS: string;
 	export const npm_package_json: string;
+	export const BUN_INSTALL: string;
 	export const npm_config_noproxy: string;
 	export const PATH: string;
 	export const npm_config_node_gyp: string;
@@ -99,6 +100,7 @@ declare module '$env/static/private' {
 	export const KITTY_INSTALLATION_DIR: string;
 	export const npm_node_execpath: string;
 	export const npm_config_engine_strict: string;
+	export const OLDPWD: string;
 	export const HYPRCURSOR_SIZE: string;
 	export const TERM_PROGRAM: string;
 	export const NODE_ENV: string;
@@ -195,6 +197,7 @@ declare module '$env/dynamic/private' {
 		XDG_RUNTIME_DIR: string;
 		DEBUGINFOD_URLS: string;
 		npm_package_json: string;
+		BUN_INSTALL: string;
 		npm_config_noproxy: string;
 		PATH: string;
 		npm_config_node_gyp: string;
@@ -206,6 +209,7 @@ declare module '$env/dynamic/private' {
 		KITTY_INSTALLATION_DIR: string;
 		npm_node_execpath: string;
 		npm_config_engine_strict: string;
+		OLDPWD: string;
 		HYPRCURSOR_SIZE: string;
 		TERM_PROGRAM: string;
 		NODE_ENV: string;
