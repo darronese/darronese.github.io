@@ -2,19 +2,23 @@
 @import "tailwindcss/preflight";
 @import "tailwindcss/utilities";
 @import "tailwindcss";
+@plugin 'flowbite/plugin';
 
 /*
 * https://visme.co/blog/website-color-schemes/
 * CONSIDER THIS PALETTE SCHEME:
-* #244855
-* #E64833
-* #874F41
-* #90AEAD
-* #FBE9D0
+* #2D22D2a
+* #4C4C47
+* #848FA5
+* #C14953
+* #E5DCC5
 */
 @layer base {
   body {
     font-family: 'JetBrains Mono', monospace;
-    background-color: #244855;
+    background-color: #2D2D2A;
   }
 }
+
+@source "../node_modules/flowbite-svelte/dist";
+@source "../node_modules/flowbite-svelte-icons/dist";
