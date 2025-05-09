@@ -15,11 +15,6 @@ import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
-// FLOWBITE
-import { Button } from "flowbite-svelte";
-import { Img } from "flowbite-svelte";  
-import { Indicator } from "flowbite-svelte";
-import { CheckCircleSolid } from "flowbite-svelte-icons";
 </script>
 
 <div class="flex flex-col sm:flex-row items-center gap-y-6">
@@ -30,21 +25,20 @@ import { CheckCircleSolid } from "flowbite-svelte-icons";
       <dt class = "italic"> self proclaimed professional musician </dt>
     </dl>
     <div class="p-4">
-      <Button href="https://github.com/darronese" class="text-[#C14953]" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/darronese" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
         <Fa icon={faGithub}/>
-      </Button>
-      <Button href="https://www.linkedin.com/in/darronese/" class="text-[#C14953]" target="_blank" rel="noopener noreferrer">
+      </a>
+      <a href="https://www.linkedin.com/in/darronese/" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
         <Fa icon={faLinkedin}/>
-      </Button>
-      <Button href="mailto:darronese@outlook.com" class="text-[#C14953]" target="_blank" rel="noopener noreferrer">
+      </a>
+      <a href="mailto:darronese@outlook.com" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
         <Fa icon={faEnvelope}/>
-      </Button>
+      </a>
     </div>
   </div>
   <div class="object-contain sm:basis-1/4 p-6 sm:pt-30">
-    <Img class="rounded-lg" src="/temp.png" alt="Portrait of Me!"/>
+    <img class="rounded-lg" src="/temp.png" alt="Portrait of Me!"/>
   </div>
-
 
 </div>
   <a> Projects</a>

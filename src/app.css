@@ -2,7 +2,7 @@
 @import "tailwindcss/preflight";
 @import "tailwindcss/utilities";
 @import "tailwindcss";
-@plugin 'flowbite/plugin';
+@plugin "daisyui";
 
 /*
 * https://visme.co/blog/website-color-schemes/
@@ -20,7 +20,3 @@
     height: 100dvh;
   }
 }
-
-
-@source "../node_modules/flowbite-svelte/dist";
-@source "../node_modules/flowbite-svelte-icons/dist";
