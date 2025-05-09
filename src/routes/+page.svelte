@@ -14,14 +14,44 @@ import Resume from '$lib/resume.svelte'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
-
 </script>
 
+<!-- MENU -->
+<div class="dropdown">
+  <button tabindex="0" class="btn m-1 bg-[#4c4c47]">
+    <Fa icon={faBars}/>
+  </button>
+  <ul tabindex="0" class="dropdown-content menu rounded-box bg-[#4c4c47]">
+    <li>
+      <a href="/">
+        <Fa icon={faHome}/>
+      </a>
+    </li>
+    <li>
+      <a href="Projects">
+        <Fa icon={faFolder}/>
+      </a>
+    </li>
+    <li>
+      <a href="About">
+        <Fa icon={faCircleInfo}/>
+      </a>
+    </li>
+    <li>
+      <a href="Resume">
+        <Fa icon={faFile}/>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- PAGES -->
 <div class="flex flex-col sm:flex-row items-center gap-y-6">
   <div class="basis-auto sm:basis-2/3 p-6 text-center">
     <h1 class="font-bold text-7xl text-[#E5DCC5] p-4 sm:pt-30">darron li</h1>
