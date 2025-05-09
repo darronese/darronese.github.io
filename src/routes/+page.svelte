@@ -10,12 +10,16 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faFile } from '@fortawesome/free-solid-svg-icons';
+import { faFolder } from '@fortawesome/free-solid-svg-icons';
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 // FLOWBITE
-import { Avatar, Dropdown, DropdownHeader, DropdownItem, Tooltip } from "flowbite-svelte";
 import { Button } from "flowbite-svelte";
 import { Img } from "flowbite-svelte";  
-import { BottomNav, BottomNavItem } from "flowbite-svelte";
+import { Indicator } from "flowbite-svelte";
+import { CheckCircleSolid } from "flowbite-svelte-icons";
 </script>
 
 <div class="flex flex-col sm:flex-row items-center gap-y-6">
@@ -41,12 +45,32 @@ import { BottomNav, BottomNavItem } from "flowbite-svelte";
     <Img class="rounded-lg" src="/temp.png" alt="Portrait of Me!"/>
   </div>
 
-  <!-- 
-BOTTOM NAVIGATION
--->
-  <BottomNav position="absolute" innerClass="grid-cols-4 bg-[#4C4C47]">
-    <BottomNavItem btnName="Home">
-      <Fa icon={faHome}/>
-    </BottomNavItem>
-  </BottomNav>
+  <!-- INDICATOR -->
+<ol class="fixed right-6 top-24
+          flex flex-col items-end
+          space-y-8">
+  {#each [1,2,2,3] as step, i}
+    <li class="relative flex flex-col items-center">
+      <!-- the dot itself -->
+      <Indicator
+        size="xl"
+        color={i < 3 ? undefined : 'gray'}
+        class={`z-10 ring-0 ring-white 
+                ${i < 3
+                  ? 'bg-primary-200 dark:bg-primary-900'
+                  : 'dark:bg-gray-700 dark:ring-gray-900'}`} />
+
+      <!-- vertical connector to the next dot -->
+      {#if i < 3}
+        <span class="absolute top-full left-1/2
+                     -translate-x-1/2
+                     h-6 w-px
+                     bg-gray-200 dark:bg-gray-700"></span>
+      {/if}
+    </li>
+  {/each}
+</ol>
+
+  <a href>"/projects"> Projects</a>
+
 </div>
