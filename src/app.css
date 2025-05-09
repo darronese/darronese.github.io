@@ -14,9 +14,10 @@
 * #E5DCC5
 */
 @layer base {
-  body {
+  html, body {
     font-family: 'JetBrains Mono', monospace;
     background-color: #2D2D2A;
+    height: 100dvh;
   }
 }
 

@@ -45,32 +45,6 @@ import { CheckCircleSolid } from "flowbite-svelte-icons";
     <Img class="rounded-lg" src="/temp.png" alt="Portrait of Me!"/>
   </div>
 
-  <!-- INDICATOR -->
-<ol class="fixed right-6 top-24
-          flex flex-col items-end
-          space-y-8">
-  {#each [1,2,2,3] as step, i}
-    <li class="relative flex flex-col items-center">
-      <!-- the dot itself -->
-      <Indicator
-        size="xl"
-        color={i < 3 ? undefined : 'gray'}
-        class={`z-10 ring-0 ring-white 
-                ${i < 3
-                  ? 'bg-primary-200 dark:bg-primary-900'
-                  : 'dark:bg-gray-700 dark:ring-gray-900'}`} />
-
-      <!-- vertical connector to the next dot -->
-      {#if i < 3}
-        <span class="absolute top-full left-1/2
-                     -translate-x-1/2
-                     h-6 w-px
-                     bg-gray-200 dark:bg-gray-700"></span>
-      {/if}
-    </li>
-  {/each}
-</ol>
-
-  <a href>"/projects"> Projects</a>
 
 </div>
+  <a> Projects</a>
