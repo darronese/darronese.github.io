@@ -5,6 +5,11 @@
 -->
 <script>
 import Fa from "svelte-fa";
+
+// import new components as pages
+import Projects from '$lib/projects.svelte'
+import About from '$lib/about.svelte'
+import Resume from '$lib/resume.svelte'
 // FONT AWESOME
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -41,4 +46,13 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
   </div>
 
 </div>
-  <a> Projects</a>
+
+<section id="Projects">
+  <Projects />
+</section>
+<section id="About">
+  <About />
+</section>
+<section id="Resume">
+  <Resume />
+</section>
