@@ -2,7 +2,7 @@ import "clsx";
 import { t as fallback, u as attr, v as attr_class, w as attr_style, x as stringify, q as escape_html, y as bind_props, l as pop, p as push } from "../../chunks/index.js";
 /* empty css                                                        */
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faBars, faHome, faFolder, faCircleInfo, faFile, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faHome, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 function getTransform(scale, translateX, translateY, rotate, flip, translateTimes = 1, translateUnit = "", rotateUnit = "") {
   let flipX = 1;
   let flipY = 1;
@@ -114,39 +114,18 @@ function Fa($$payload, $$props) {
   });
   pop();
 }
-function Projects($$payload) {
-  $$payload.out += `<h>Projects</h>`;
-}
-function About($$payload) {
-  $$payload.out += `<h>About</h>`;
-}
-function Resume($$payload) {
-  $$payload.out += `<h>Resume</h>`;
-}
 function _page($$payload) {
   $$payload.out += `<div class="dropdown"><button tabindex="0" class="btn m-1 bg-[#4c4c47]">`;
   Fa($$payload, { icon: faBars });
   $$payload.out += `<!----></button> <ul tabindex="0" class="dropdown-content menu rounded-box bg-[#4c4c47]"><li><a href="/">`;
   Fa($$payload, { icon: faHome });
-  $$payload.out += `<!----></a></li> <li><a href="Projects">`;
-  Fa($$payload, { icon: faFolder });
-  $$payload.out += `<!----></a></li> <li><a href="About">`;
-  Fa($$payload, { icon: faCircleInfo });
-  $$payload.out += `<!----></a></li> <li><a href="Resume">`;
-  Fa($$payload, { icon: faFile });
   $$payload.out += `<!----></a></li></ul></div> <div class="flex flex-col sm:flex-row items-center gap-y-6"><div class="basis-auto sm:basis-2/3 p-6 text-center"><h1 class="font-bold text-7xl text-[#E5DCC5] p-4 sm:pt-30">darron li</h1> <dl class="font-normal text-[#848fa5]"><dt class="italic">aspring software engineer</dt> <dt class="italic">self proclaimed professional musician</dt></dl> <div class="p-4"><a href="https://github.com/darronese" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">`;
   Fa($$payload, { icon: faGithub });
   $$payload.out += `<!----></a> <a href="https://www.linkedin.com/in/darronese/" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">`;
   Fa($$payload, { icon: faLinkedin });
   $$payload.out += `<!----></a> <a href="mailto:darronese@outlook.com" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">`;
   Fa($$payload, { icon: faEnvelope });
-  $$payload.out += `<!----></a></div></div> <div class="object-contain sm:basis-1/4 p-6 sm:pt-30"><img class="rounded-lg" src="/temp.png" alt="Portrait of Me!"></div></div> <section id="Projects">`;
-  Projects($$payload);
-  $$payload.out += `<!----></section> <section id="About">`;
-  About($$payload);
-  $$payload.out += `<!----></section> <section id="Resume">`;
-  Resume($$payload);
-  $$payload.out += `<!----></section>`;
+  $$payload.out += `<!----></a></div></div> <div class="object-contain sm:basis-1/4 p-6 sm:pt-30"><img class="rounded-lg" src="/temp.png" alt="Portrait of Me!"></div></div>`;
 }
 export {
   _page as default

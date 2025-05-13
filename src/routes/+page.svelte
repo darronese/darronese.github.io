@@ -33,6 +33,7 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
         <Fa icon={faHome}/>
       </a>
     </li>
+    <!--
     <li>
       <a href="Projects">
         <Fa icon={faFolder}/>
@@ -48,6 +49,7 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
         <Fa icon={faFile}/>
       </a>
     </li>
+-->
   </ul>
 </div>
 
@@ -77,6 +79,7 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 </div>
 
+<!--
 <section id="Projects">
   <Projects />
 </section>
@@ -86,3 +89,4 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 <section id="Resume">
   <Resume />
 </section>
+-->
