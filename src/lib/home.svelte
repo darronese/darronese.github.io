@@ -1,6 +1,6 @@
-<script>
-/* IMPORTS */
+<script lang="ts">
 import Fa from "svelte-fa";
+import { onMount } from 'svelte';
 // FONT AWESOME
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -8,24 +8,28 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { gsap } from 'gsap';
 
+
+onMount(() => {
+  gsap.fromTo(".initial", { x: -200, opacity: 0}, {x: 0, stagger: 0.1, duration: 0.7, opacity: 1});
+});
 </script>
 
 <section id="Home">
   <div class="flex flex-col sm:flex-row items-center gap-y-6">
     <div class="basis-auto sm:basis-2/3 p-6 text-center">
-      <h1 class="font-bold text-7xl text-[#E5DCC5] p-4 sm:pt-30">darron li</h1>
+      <h1 class="initial font-bold text-7xl text-[#E5DCC5] p-4 sm:pt-28">darron li</h1>
       <dl class="font-normal text-[#848fa5]">
-        <dt class="italic"> aspring software engineer </dt>
-        <dt class = "italic"> self proclaimed professional musician </dt>
+        <dt class="initial italic"> aspiring software engineer </dt>
+        <dt class = "initial italic"> self proclaimed professional musician </dt>
       </dl>
       <div class="p-4">
-        <a href="https://github.com/darronese" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/darronese" class="initial btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
           <Fa icon={faGithub}/>
         </a>
-        <a href="https://www.linkedin.com/in/darronese/" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/darronese/" class="initial btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
           <Fa icon={faLinkedin}/>
         </a>
-        <a href="mailto:darronese@outlook.com" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:darronese@outlook.com" class="initial btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
           <Fa icon={faEnvelope}/>
         </a>
       </div>
