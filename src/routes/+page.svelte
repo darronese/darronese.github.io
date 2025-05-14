@@ -32,28 +32,28 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 -->
 
 <!-- MENU -->
-<div class="breadcrumbs text-sm">
+<div class="breadcrumbs text-sm fixed mx-auto inset-x-0">
   <ul class="justify-center pt-6">
     <li>
-      <a>
+      <a href="#Home">
         <Fa icon={faHome}/>
         home
       </a>
     </li>
     <li>
-      <a class="">
+      <a href="#Projects">
         <Fa icon={faFolder}/>
         projects
       </a>
     </li>
     <li>
-      <a class="">
+      <a href="#Resume">
         <Fa icon={faFile}/>
         resume
       </a>
     </li>
     <li>
-      <a class="">
+      <a href="#About">
         <Fa icon={faCircleInfo}/>
         about
       </a>
@@ -61,31 +61,33 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
   </ul>
 </div>
 
-<!-- PAGES -->
-<div class="flex flex-col sm:flex-row items-center gap-y-6">
-  <div class="basis-auto sm:basis-2/3 p-6 text-center">
-    <h1 class="font-bold text-7xl text-[#E5DCC5] p-4 sm:pt-30">darron li</h1>
-    <dl class="font-normal text-[#848fa5]">
-      <dt class="italic"> aspring software engineer </dt>
-      <dt class = "italic"> self proclaimed professional musician </dt>
-    </dl>
-    <div class="p-4">
-      <a href="https://github.com/darronese" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
-        <Fa icon={faGithub}/>
-      </a>
-      <a href="https://www.linkedin.com/in/darronese/" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
-        <Fa icon={faLinkedin}/>
-      </a>
-      <a href="mailto:darronese@outlook.com" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
-        <Fa icon={faEnvelope}/>
-      </a>
+<!-- HOME -->
+<section id="Home">
+  <div class="flex flex-col sm:flex-row items-center gap-y-6">
+    <div class="basis-auto sm:basis-2/3 p-6 text-center">
+      <h1 class="font-bold text-7xl text-[#E5DCC5] p-4 sm:pt-30">darron li</h1>
+      <dl class="font-normal text-[#848fa5]">
+        <dt class="italic"> aspring software engineer </dt>
+        <dt class = "italic"> self proclaimed professional musician </dt>
+      </dl>
+      <div class="p-4">
+        <a href="https://github.com/darronese" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
+          <Fa icon={faGithub}/>
+        </a>
+        <a href="https://www.linkedin.com/in/darronese/" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
+          <Fa icon={faLinkedin}/>
+        </a>
+        <a href="mailto:darronese@outlook.com" class="btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
+          <Fa icon={faEnvelope}/>
+        </a>
+      </div>
     </div>
-  </div>
-  <div class="object-contain basis-1/6 w-84 sm:basis-1/4 p-6 sm:pt-30">
-    <img class="rounded-lg" src="/portrait.png" alt="Portrait of Me!"/>
-  </div>
+    <div class="object-contain basis-1/6 w-84 sm:basis-1/4 p-6 sm:pt-30">
+      <img class="rounded-lg" src="/portrait.png" alt="Portrait of Me!"/>
+    </div>
 
-</div>
+  </div>
+</section>
 
 <section id="Projects">
   <Projects />
