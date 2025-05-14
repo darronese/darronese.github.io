@@ -74,7 +74,7 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
     </div>
   </div>
   <div class="object-contain sm:basis-1/4 p-6 sm:pt-30">
-    <img class="rounded-lg" src="/temp.png" alt="Portrait of Me!"/>
+    <img class="rounded-lg" src="/portrait.png" alt="Portrait of Me!"/>
   </div>
 
 </div>

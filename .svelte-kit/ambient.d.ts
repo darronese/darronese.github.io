@@ -27,14 +27,16 @@
  */
 declare module '$env/static/private' {
 	export const MANPATH: string;
+	export const TERM_PROGRAM: string;
 	export const NODE: string;
 	export const INIT_CWD: string;
-	export const SHELL: string;
 	export const TERM: string;
-	export const CPPFLAGS: string;
-	export const HOMEBREW_REPOSITORY: string;
+	export const SHELL: string;
 	export const TMPDIR: string;
+	export const HOMEBREW_REPOSITORY: string;
+	export const CPPFLAGS: string;
 	export const npm_config_global_prefix: string;
+	export const TERM_PROGRAM_VERSION: string;
 	export const WINDOWID: string;
 	export const COLOR: string;
 	export const npm_config_noproxy: string;
@@ -49,6 +51,7 @@ declare module '$env/static/private' {
 	export const npm_execpath: string;
 	export const VIRTUAL_ENV_DISABLE_PROMPT: string;
 	export const PAGER: string;
+	export const TMUX: string;
 	export const LSCOLORS: string;
 	export const PATH: string;
 	export const npm_package_json: string;
@@ -66,28 +69,31 @@ declare module '$env/static/private' {
 	export const LANG: string;
 	export const npm_config_npm_version: string;
 	export const XPC_FLAGS: string;
+	export const TMUX_PANE: string;
 	export const npm_config_node_gyp: string;
 	export const npm_package_version: string;
 	export const XPC_SERVICE_NAME: string;
 	export const SHLVL: string;
 	export const HOME: string;
 	export const TERMINFO: string;
+	export const tmux_version: string;
 	export const HOMEBREW_PREFIX: string;
 	export const npm_config_cache: string;
-	export const LESS: string;
 	export const LOGNAME: string;
+	export const LESS: string;
 	export const npm_lifecycle_script: string;
+	export const TMUX_PLUGIN_MANAGER_PATH: string;
 	export const npm_config_user_agent: string;
-	export const KITTY_INSTALLATION_DIR: string;
 	export const KITTY_WINDOW_ID: string;
+	export const KITTY_INSTALLATION_DIR: string;
 	export const PROMPT_EOL_MARK: string;
 	export const INFOPATH: string;
 	export const HOMEBREW_CELLAR: string;
 	export const CONDA_CHANGEPS1: string;
 	export const npm_node_execpath: string;
 	export const npm_config_prefix: string;
-	export const COLORTERM: string;
 	export const KITTY_PUBLIC_KEY: string;
+	export const COLORTERM: string;
 	export const NODE_ENV: string;
 }
 
@@ -121,14 +127,16 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		MANPATH: string;
+		TERM_PROGRAM: string;
 		NODE: string;
 		INIT_CWD: string;
-		SHELL: string;
 		TERM: string;
-		CPPFLAGS: string;
-		HOMEBREW_REPOSITORY: string;
+		SHELL: string;
 		TMPDIR: string;
+		HOMEBREW_REPOSITORY: string;
+		CPPFLAGS: string;
 		npm_config_global_prefix: string;
+		TERM_PROGRAM_VERSION: string;
 		WINDOWID: string;
 		COLOR: string;
 		npm_config_noproxy: string;
@@ -143,6 +151,7 @@ declare module '$env/dynamic/private' {
 		npm_execpath: string;
 		VIRTUAL_ENV_DISABLE_PROMPT: string;
 		PAGER: string;
+		TMUX: string;
 		LSCOLORS: string;
 		PATH: string;
 		npm_package_json: string;
@@ -160,28 +169,31 @@ declare module '$env/dynamic/private' {
 		LANG: string;
 		npm_config_npm_version: string;
 		XPC_FLAGS: string;
+		TMUX_PANE: string;
 		npm_config_node_gyp: string;
 		npm_package_version: string;
 		XPC_SERVICE_NAME: string;
 		SHLVL: string;
 		HOME: string;
 		TERMINFO: string;
+		tmux_version: string;
 		HOMEBREW_PREFIX: string;
 		npm_config_cache: string;
-		LESS: string;
 		LOGNAME: string;
+		LESS: string;
 		npm_lifecycle_script: string;
+		TMUX_PLUGIN_MANAGER_PATH: string;
 		npm_config_user_agent: string;
-		KITTY_INSTALLATION_DIR: string;
 		KITTY_WINDOW_ID: string;
+		KITTY_INSTALLATION_DIR: string;
 		PROMPT_EOL_MARK: string;
 		INFOPATH: string;
 		HOMEBREW_CELLAR: string;
 		CONDA_CHANGEPS1: string;
 		npm_node_execpath: string;
 		npm_config_prefix: string;
-		COLORTERM: string;
 		KITTY_PUBLIC_KEY: string;
+		COLORTERM: string;
 		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
