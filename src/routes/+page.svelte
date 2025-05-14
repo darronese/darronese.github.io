@@ -14,7 +14,6 @@ import Resume from '$lib/resume.svelte'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
@@ -22,34 +21,43 @@ import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 </script>
 
-<!-- MENU -->
-<div class="dropdown">
-  <button tabindex="0" class="btn m-1 bg-[#4c4c47]">
-    <Fa icon={faBars}/>
-  </button>
-  <ul tabindex="0" class="dropdown-content menu rounded-box bg-[#4c4c47]">
-    <li>
-      <a href="/">
-        <Fa icon={faHome}/>
-      </a>
-    </li>
-    <!--
-    <li>
-      <a href="Projects">
-        <Fa icon={faFolder}/>
-      </a>
-    </li>
-    <li>
-      <a href="About">
-        <Fa icon={faCircleInfo}/>
-      </a>
-    </li>
-    <li>
-      <a href="Resume">
-        <Fa icon={faFile}/>
-      </a>
-    </li>
+<!-- 
+* https://visme.co/blog/website-color-schemes/
+* CONSIDER THIS PALETTE SCHEME:
+* #2D2D2a
+* #4C4C47
+* #848FA5
+* #C14953
+* #E5DCC5
 -->
+
+<!-- MENU -->
+<div class="breadcrumbs text-sm">
+  <ul class="justify-center pt-6">
+    <li>
+      <a>
+        <Fa icon={faHome}/>
+        home
+      </a>
+    </li>
+    <li>
+      <a class="">
+        <Fa icon={faFolder}/>
+        projects
+      </a>
+    </li>
+    <li>
+      <a class="">
+        <Fa icon={faFile}/>
+        resume
+      </a>
+    </li>
+    <li>
+      <a class="">
+        <Fa icon={faCircleInfo}/>
+        about
+      </a>
+    </li>
   </ul>
 </div>
 
@@ -79,14 +87,12 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 </div>
 
-<!--
 <section id="Projects">
   <Projects />
-</section>
-<section id="About">
-  <About />
 </section>
 <section id="Resume">
   <Resume />
 </section>
--->
+<section id="About">
+  <About />
+</section>

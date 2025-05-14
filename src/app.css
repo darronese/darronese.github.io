@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import "tailwindcss/preflight";
 @import "tailwindcss/utilities";
 @import "tailwindcss";
@@ -7,16 +7,16 @@
 /*
 * https://visme.co/blog/website-color-schemes/
 * CONSIDER THIS PALETTE SCHEME:
-* #2D22D2a
+* #2D2D2a
 * #4C4C47
 * #848FA5
 * #C14953
 * #E5DCC5
 */
 @layer base {
-  html, body {
-    font-family: 'JetBrains Mono', monospace;
-    background-color: #2D2D2A;
-    height: 100dvh;
+  html,
+  body {
+    font-family: "JetBrains Mono", monospace;
+    background-color: #2d2d2a;
   }
 }
