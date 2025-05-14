@@ -32,7 +32,7 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 -->
 
 <!-- MENU -->
-<div class="breadcrumbs text-sm fixed mx-auto inset-x-0">
+<div class="breadcrumbs text-sm fixed mx-auto inset-x-0 backdrop-blur-xs">
   <ul class="justify-center pt-6">
     <li>
       <a href="#Home">
