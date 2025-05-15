@@ -53,16 +53,19 @@ import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling'
   </ul>
 </div>
 
+
 <!-- PAGES -->
-<section use:scrollRef={'Home'} id="Home">
-  <Home />
-</section>
-<section use:scrollRef={'Projects'} id="Projects">
-  <Projects />
-</section>
-<section use:scrollRef={'Resume'} id="Resume">
-  <Resume />
-</section>
-<section use:scrollRef={'About'} id="About">
-  <About />
-</section>
+<div class="content h-screen overflow-y-scroll snap-y snap-mandatory">
+  <section use:scrollRef={'Home'} id="Home" class="snap-start min-h-screen">
+    <Home />
+  </section>
+  <section use:scrollRef={'Projects'} id="Projects" class="snap-start min-h-screen">
+    <Projects />
+  </section>
+  <section use:scrollRef={'Resume'} id="Resume" class="snap-start min-h-screen">
+    <Resume />
+  </section>
+  <section use:scrollRef={'About'} id="About" class="snap-start min-h-screen">
+    <About />
+  </section>
+</div>
