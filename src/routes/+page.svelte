@@ -18,6 +18,8 @@ import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 </script>
 
+<!-- https://tailwindcss.com/docs/responsive-design -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- MENU -->
 <div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-2 backdrop-blur-xs">
   <ul class="justify-center pt-6">
