@@ -3,7 +3,7 @@
 8 columns for tablet
 4 columns for mobile
 -->
-<script>
+<script lang="ts">
 import Fa from "svelte-fa";
 
 // import new components as pages
@@ -16,6 +16,9 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+
+// function for smooth scrolling
+import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling'
 </script>
 
 <!-- https://tailwindcss.com/docs/responsive-design -->
@@ -24,42 +27,42 @@ import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 <div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-2 backdrop-blur-xs">
   <ul class="justify-center pt-6">
     <li>
-      <a href="#Home">
+      <a use:scrollTo={'Home'} class="hover:underline decoration-[#c14153]">
         <Fa icon={faHome}/>
-        home
+        <span class="font-bold"> home </span>
       </a>
     </li>
     <li>
-      <a href="#Projects">
+      <a use:scrollTo={'Projects'} class="hover:underline decoration-[#c14153]">
         <Fa icon={faFolder}/>
-        projects
+        <span class="font-bold"> projects </span>
       </a>
     </li>
     <li>
-      <a href="#Resume">
+      <a use:scrollTo={'Resume'} class="hover:underline decoration-[#c14153]">
         <Fa icon={faFile}/>
-        resume
+        <span class="font-bold"> resume </span>
       </a>
     </li>
     <li>
-      <a href="#About">
+      <a use:scrollTo={'About'} class="hover:underline decoration-[#c14153]">
         <Fa icon={faCircleInfo}/>
-        about
+        <span class="font-bold"> about </span>
       </a>
     </li>
   </ul>
 </div>
 
 <!-- PAGES -->
-<section id="Home">
+<section use:scrollRef={'Home'} id="Home">
   <Home />
 </section>
-<section id="Projects">
+<section use:scrollRef={'Projects'} id="Projects">
   <Projects />
 </section>
-<section id="Resume">
+<section use:scrollRef={'Resume'} id="Resume">
   <Resume />
 </section>
-<section id="About">
+<section use:scrollRef={'About'} id="About">
   <About />
 </section>

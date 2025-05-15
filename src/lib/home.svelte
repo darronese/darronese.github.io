@@ -34,7 +34,7 @@ onMount(() => {
         </a>
       </div>
     </div>
-    <div class="object-contain basis-1/6 w-84 sm:basis-1/4 p-6 sm:pt-30">
+    <div class="object-contain basis-1/6 w-84 sm:basis-1/4 p-4 sm:pt-30">
       <img class="rounded-lg" src="/portrait.png" alt="Portrait of Me!"/>
     </div>
 
