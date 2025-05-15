@@ -6,3 +6,11 @@ I got inspired by many different portfolio apps that were much better than my or
 
 # Technologies:
 Using Sveltekit, DaisyUI, and GSAP!
+
+# TO-DO:
+
+- Dynamic & Reactive Nav Bar where it is bold depending on the section
+
+- Projects Integration and even embedding into website
+
+- Animated and interactive background
