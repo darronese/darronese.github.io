@@ -4,7 +4,7 @@ import { faGoogleDrive } from '@fortawesome/free-brands-svg-icons';
 </script>
 <!-- PAGES -->
 <div class="flex flex-col sm:flex-row items-center gap-y-6">
-  <div class="basis-auto sm:basis-2/3 pt-6 sm:pt-0 text-center">
+  <div class="basis-auto sm:basis-2/3 p-6 sm:pt-0 text-center">
     <h1 class="font-bold text-7xl text-[#E5DCC5] pt-12 sm:pt-0">resume</h1>
   </div>
   <div class="card object-contain basis-1/6 w-84 sm:basis-1/4 p-4 sm:pt-30">

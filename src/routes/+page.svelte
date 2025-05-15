@@ -59,7 +59,7 @@ function scrollToSection(id: string) {
 
 
 <!-- PAGES -->
-<div bind:this={scrollContainer} class="content h-screen overflow-y-scroll snap-y snap-mandatory">
+<div bind:this={scrollContainer} class="content h-screen overflow-y-scroll snap-y snap-proximity">
   <section id="Home" class="snap-start min-h-screen">
     <Home />
   </section>
