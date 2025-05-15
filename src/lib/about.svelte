@@ -5,7 +5,7 @@
 <div class="flex flex-col sm:flex-row items-center gap-y-6">
   <div class="basis-auto sm:basis-2/3 p-6 text-center">
     <h1 class="font-bold text-7xl text-[#E5DCC5] pt-12 sm:pt-30">about</h1>
-    <p class="italic">
+    <p class="italic pt-12">
       "There are no men like me. There's only me."
     </p>
     <p class="">
