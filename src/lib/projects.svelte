@@ -34,7 +34,7 @@ onMount(() => {
 <!-- PAGES -->
 <div class="flex flex-col sm:flex-row items-center gap-y-6">
   <div class="basis-auto sm:basis-2/3 p-6">
-    <h1 class="title font-bold text-7xl text-[#E5DCC5] p-4 sm:pt-30">Projects</h1>
+    <h1 class="title font-bold text-7xl text-[#E5DCC5] p-4 sm:pt-30">projects</h1>
     <p class="text-center">
       WIP
     </p>

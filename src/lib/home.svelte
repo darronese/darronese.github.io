@@ -36,6 +36,9 @@ onMount(() => {
     </div>
     <div class="object-contain basis-1/6 w-48 sm:w-84 sm:basis-1/4 p-4 sm:pt-30">
       <img class="rounded-lg" src="/portrait.png" alt="Portrait of Me!"/>
+      <p class="text-center p-4 italic">
+        "How does one make portfolio sites not boring?"
+      </p>
     </div>
 
   </div>
