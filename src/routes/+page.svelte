@@ -17,8 +17,12 @@ import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
-// function for smooth scrolling
-import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling'
+// smooth scrolling function (from google ai: adjusted)
+let scrollContainer: HTMLDivElement;
+function scrollToSection(id: string) {
+  const section = document.getElementById(id);
+  section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 </script>
 
 <!-- https://tailwindcss.com/docs/responsive-design -->
@@ -27,25 +31,25 @@ import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling'
 <div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-2 backdrop-blur-xs">
   <ul class="justify-center pt-6">
     <li>
-      <a use:scrollTo={'Home'} class="hover:underline decoration-[#c14153]">
+      <a on:click={() => scrollToSection('Home')} class="hover:underline decoration-[#c14153]">
         <Fa icon={faHome}/>
         <span class="font-bold"> home </span>
       </a>
     </li>
     <li>
-      <a use:scrollTo={'Projects'} class="hover:underline decoration-[#c14153]">
+      <a on:click={() => scrollToSection('Projects')} class="hover:underline decoration-[#c14153]">
         <Fa icon={faFolder}/>
         <span class="font-bold"> projects </span>
       </a>
     </li>
     <li>
-      <a use:scrollTo={'Resume'} class="hover:underline decoration-[#c14153]">
+      <a on:click={() => scrollToSection('Resume')} class="hover:underline decoration-[#c14153]">
         <Fa icon={faFile}/>
         <span class="font-bold"> resume </span>
       </a>
     </li>
     <li>
-      <a use:scrollTo={'About'} class="hover:underline decoration-[#c14153]">
+      <a on:click={() => scrollToSection('About')} class="hover:underline decoration-[#c14153]">
         <Fa icon={faCircleInfo}/>
         <span class="font-bold"> about </span>
       </a>
@@ -55,17 +59,17 @@ import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling'
 
 
 <!-- PAGES -->
-<div class="content h-screen overflow-y-scroll snap-y snap-mandatory">
-  <section use:scrollRef={'Home'} id="Home" class="snap-start min-h-screen">
+<div bind:this={scrollContainer} class="content h-screen overflow-y-scroll snap-y snap-mandatory">
+  <section id="Home" class="snap-start min-h-screen">
     <Home />
   </section>
-  <section use:scrollRef={'Projects'} id="Projects" class="snap-start min-h-screen">
+  <section id="Projects" class="snap-start min-h-screen">
     <Projects />
   </section>
-  <section use:scrollRef={'Resume'} id="Resume" class="snap-start min-h-screen">
+  <section id="Resume" class="snap-start min-h-screen">
     <Resume />
   </section>
-  <section use:scrollRef={'About'} id="About" class="snap-start min-h-screen">
+  <section id="About" class="snap-start min-h-screen">
     <About />
   </section>
 </div>
