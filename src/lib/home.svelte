@@ -15,21 +15,21 @@ onMount(() => {
 </script>
 
 <section id="Home">
-  <div class="flex flex-col sm:flex-row items-center gap-y-6">
+  <div class="flex flex-col sm:flex-row items-center gap-y-6 p-8">
     <div class="basis-auto sm:basis-2/3 p-6 text-center">
       <h1 class="initial font-bold text-7xl text-[#E5DCC5] p-4 sm:pt-28">darron li</h1>
       <dl class="font-normal text-[#848fa5]">
         <dt class="initial italic"> aspiring software engineer </dt>
-        <dt class = "initial italic"> self proclaimed professional musician </dt>
+        <dt class = "initial italic"> <span class="line-through">self proclaimed</span> professional musician </dt>
       </dl>
       <div class="p-4">
-        <a href="https://github.com/darronese" class="initial btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/darronese" class="initial btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
           <Fa icon={faGithub}/>
         </a>
-        <a href="https://www.linkedin.com/in/darronese/" class="initial btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/darronese/" class="initial btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
           <Fa icon={faLinkedin}/>
         </a>
-        <a href="mailto:darronese@outlook.com" class="initial btn bg-[#c14953]" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:darronese@outlook.com" class="initial btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
           <Fa icon={faEnvelope}/>
         </a>
       </div>
