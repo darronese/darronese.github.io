@@ -3,45 +3,15 @@ import { onMount } from 'svelte';
 import { gsap } from 'gsap';
 
 onMount(() => {
-
-  let mm = gsap.matchMedia();
-
-  mm.add("(min-width:640px)", () => {
-    gsap.to('.title', {
-      scrollTrigger: {
-        trigger: '.box',
-        start: 'top bottom',
-      },
-      xPercent: 50,
-      duration: 1,
-    })
-  });
-
-  gsap.to('.project', {
-    scrollTrigger: {
-      trigger: '.box',
-      pin: true,
-      start: 'top center',
-      end: '+=500',
-      scrub: 1,
-    },
-    duration: 3,
-  });
 });
 
 </script>
 
 <!-- PAGES -->
-<div class="flex flex-col sm:flex-row items-center gap-y-6">
-  <div class="basis-auto sm:basis-2/3 p-6 sm:pt-0">
-    <h1 class="title font-bold text-7xl text-[#E5DCC5] pt-12 sm:pt-30">projects</h1>
-    <p class="text-center">
-      WIP
-    </p>
-    <!--
-    <div class="object-contain">
-      <img class="project rounded-lg" src="/home.png" alt="Game Home Screen"/>
-    </div>
-    -->
+<div class="flex flex-col gap-y-6">
+  <div class="p-6 sm:pt-0">
+    <h1 class="box title font-bold text-center text-7xl text-[#E5DCC5] pt-12 sm:pt-30">projects</h1>
+  </div>
+  <div>
   </div>
 </div>
