@@ -68,7 +68,7 @@ onMount(() => {
         <a href="https://github.com/darronese/Dark-Ship" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
           <Fa icon={faGithub}/>
         </a>
-        <a href="" class="btn btn-disabled bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
+        <a href="/postscript" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
           <Fa icon={faPlay}/>
         </a>
       </li>
@@ -86,6 +86,32 @@ onMount(() => {
         <!-- description -->
         <p class="list-col-wrap text-xs pr-10">
           A dead by daylight/among-us inspired game. A fun experience using SFML!
+        </p>
+        <!-- buttons -->
+        <a href="https://github.com/darronese/Dark-Ship" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
+          <Fa icon={faGithub}/>
+        </a>
+        <a href="" class="btn btn-disabled bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
+          <Fa icon={faPlay}/>
+        </a>
+      </li>
+    </ul>
+    <ul class="collapse list sm:basis-1/3 bg-[#4c4c47] rounded-box shadow-md">
+      <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Definitely Finished Projects</li>
+      <li class="list-row">
+        <div>
+          <img class="size-10 rounded-box" src="/projects/bus.png" alt="Home screen of dark ship"/></div>
+        <div>
+          <div>PT-Better-Beacon</div>
+          <div class="pt-2">
+            <div class="badge badge-outline bg-[#4953c1]">React Native</div>
+            <div class="badge badge-outline bg-[#49c1b7]">NodeJS</div>
+            <div class="badge badge-outline bg-[#c1a349]">In Progress</div>
+          </div>
+        </div>
+        <!-- description -->
+        <p class="list-col-wrap text-xs pr-10">
+          A revised and more efficient Pullman transit real-time bus tracking app with WebSockets!
         </p>
         <!-- buttons -->
         <a href="https://github.com/darronese/Dark-Ship" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
