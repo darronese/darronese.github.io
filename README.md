@@ -14,3 +14,5 @@ Using Sveltekit, DaisyUI, and GSAP!
 - Projects Integration and even embedding into website
 
 - Animated and interactive background
+
+- Embed Spotify into website

@@ -64,7 +64,7 @@ function scrollToSection(id: string) {
     <Home />
   </section>
   <section id="Projects" class="snap-start min-h-screen">
-    <Projects />
+    <Projects scrollContainer={scrollContainer}/>
   </section>
   <section id="Resume" class="snap-start min-h-screen">
     <Resume />
