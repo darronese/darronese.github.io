@@ -20,10 +20,52 @@ onMount(() => {
   <!-- TITLE -->
   <div class="basis-auto sm:basis-2/3 p-6 text-center">
     <h1 class="font-bold text-7xl text-[#E5DCC5] pt-12 sm:pt-30">projects</h1>
+    <p class="text-center p-6 sm:pr-8"> "A mind needs books as a sword needs a whetstone, if it is to keep its edge."</p>
+    <div class="chat chat-start">
+      <div class="chat-image avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS chat bubble component"
+            src="/prime.png"
+          />
+        </div>
+      </div>
+      <div class="chat-header">
+        Hiring Manager
+        <time class="text-xs opacity-50">12:45</time>
+      </div>
+      <div class="chat-bubble bg-[#4c4c47]">What technologies have you used?</div>
+    </div>
+    <div class="chat chat-end">
+      <div class="chat-image avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS chat bubble component"
+            src="/portrait.png"
+          />
+        </div>
+      </div>
+      <div class="chat-header">
+        Humble, Awesome, Great, Smart, Guy
+        <time class="text-xs opacity-50">12:46</time>
+      </div>
+      <div class="chat-bubble bg-[#4c4c47]">
+        <button class="btn btn-soft">C/C++</button>
+        <button class="btn btn-soft btn-primary">JavaScript</button>
+        <button class="btn btn-soft btn-secondary">Rust</button>
+        <button class="btn btn-soft btn-accent">Python</button>
+        <button class="btn btn-soft btn-info">Haskell</button>
+        <button class="btn btn-soft btn-success">React Native</button>
+        <button class="btn btn-soft btn-warning">NodeJS</button>
+        <button class="btn btn-soft btn-error">Pytorch</button>
+        <button class="btn btn-soft btn-error">SFML</button>
+      </div>
+      <div class="chat-footer opacity-50">Seen at 12:46</div>
+    </div>
   </div>
 
   <!-- PROJECTS BOX -->
-  <div class="sm:pt-30 p-4 sm:pr-10">
+  <div class="sm:pt-30 pl-4 pr-4 sm:pr-10">
     <!-- DAISY UI LIST -->
     <ul class="list sm:basis-1/3 bg-[#4c4c47] rounded-box shadow-md">
       <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Definitely Finished Projects</li>
@@ -118,7 +160,7 @@ onMount(() => {
             </div>
             <!-- description -->
             <p class="list-col-wrap text-xs pr-10">
-              A dead by daylight/among-us inspired game. A fun experience using SFML!
+              A machine learning model with Pytorch's Random Forest to predict future snowpack across Washington! <span class="line-through"> also won first place </span>
             </p>
             <!-- buttons -->
             <a href="https://github.com/mathletedev/agath0n" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">

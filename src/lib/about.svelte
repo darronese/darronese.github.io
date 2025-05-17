@@ -13,9 +13,6 @@
     </p>
   </div>
   <p class="object-contain sm:basis-1/3 sm:w-30 p-4 sm:pt-60 sm:pr-8 text-center">
-    Hi there! My name is Darron and I am an aspiring software engineer with a passion for music. While impatiently waiting for <span class="underline italic decoration-[#c14153]"> Winds of Winter </span> to come out, I have decided to delve into the more technological side of me and explore the different worlds of software engineering. I love learning about new technlogies, even if they seem to bore me (<span class="underline decoration-[#03fc43]">cybersecurity</span>).
+    Hi there! My name is Darron and I am an aspiring software engineer with a passion for music. While impatiently waiting for <span class="underline italic decoration-[#c14153]"> Winds of Winter </span> to come out, I have been exploring the different technologies of software engineering. I love learning about new technlogies and systems, even if they seem to bore me (<span class="underline decoration-[#03fc43]">cybersecurity</span>).
   </p>
-</div>
-<div class="basis-auto sm:basis-2/3 p-6 text-center">
-  <h2 class="font-bold text-4xl text-[#E5DCC5] p-4 sm:pt-30"> skills </h2>
 </div>
