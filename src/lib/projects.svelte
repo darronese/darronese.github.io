@@ -107,12 +107,12 @@ onMount(() => {
         <ul class="list sm:basis-1/3 bg-[#4c4c47] rounded-box shadow-md">
           <li class="list-row">
             <div>
-              <img class="size-10 rounded-box" src="/projects/game.png" alt="Home screen of dark ship"/></div>
+              <img class="size-10 rounded-box" src="/projects/trophy.png" alt="Agathon"/></div>
             <div>
-              <div>Dark Ship</div>
+              <div>Agathon</div>
               <div class="pt-2">
-                <div class="badge badge-outline bg-[#c149b7]">SFML</div>
-                <div class="badge badge-outline bg-[#6749c1]">C++</div>
+                <div class="badge badge-outline bg-[#adc149]">Python</div>
+                <div class="badge badge-outline bg-[#c14953]">Pytorch</div>
                 <div class="badge badge-outline bg-[#7bc149]">Completed</div>
               </div>
             </div>
@@ -121,7 +121,7 @@ onMount(() => {
               A dead by daylight/among-us inspired game. A fun experience using SFML!
             </p>
             <!-- buttons -->
-            <a href="https://github.com/darronese/Dark-Ship" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/mathletedev/agath0n" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
               <Fa icon={faGithub}/>
             </a>
             <a href="" class="btn btn-disabled bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
