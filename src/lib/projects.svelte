@@ -50,15 +50,15 @@ onMount(() => {
         <time class="text-xs opacity-50">12:46</time>
       </div>
       <div class="chat-bubble bg-[#4c4c47]">
-        <button class="btn btn-soft">C/C++</button>
-        <button class="btn btn-soft btn-primary">JavaScript</button>
-        <button class="btn btn-soft btn-secondary">Rust</button>
-        <button class="btn btn-soft btn-accent">Python</button>
-        <button class="btn btn-soft btn-info">Haskell</button>
-        <button class="btn btn-soft btn-success">React Native</button>
-        <button class="btn btn-soft btn-warning">NodeJS</button>
-        <button class="btn btn-soft btn-error">Pytorch</button>
-        <button class="btn btn-soft btn-error">SFML</button>
+        <button class="btn btn-soft bg-[#6749c1]">C/C++</button>
+        <button class="btn btn-soft bg-[#c14953]">JavaScript</button>
+        <button class="btn btn-soft bg-[#c17149]">Rust</button>
+        <button class="btn btn-soft bg-[#adc149]">Python</button>
+        <button class="btn btn-soft bg-[#7b49c1]">Haskell</button>
+        <button class="btn btn-soft bg-[#4953c1]">React Native</button>
+        <button class="btn btn-soft bg-[#49c1b7]">NodeJS</button>
+        <button class="btn btn-soft bg-[#c14953]">Pytorch</button>
+        <button class="btn btn-soft bg-[#c149b7]">SFML</button>
       </div>
       <div class="chat-footer opacity-50">Seen at 12:46</div>
     </div>
