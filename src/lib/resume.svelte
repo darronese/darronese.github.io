@@ -6,7 +6,7 @@ import { faBolt } from '@fortawesome/free-solid-svg-icons';
 <!-- PAGES -->
 <div class="flex flex-col sm:flex-row items-center gap-y-6">
   <div class="basis-auto sm:basis-2/3 p-6 sm:pt-0 text-center">
-    <h1 class="font-bold text-7xl text-[#E5DCC5] pt-12 sm:pt-0">resume</h1>
+    <h1 class="font-bold text-8xl text-[#E5DCC5] pt-12 sm:pt-0">resume</h1>
     <div class="basis-auto sm:basis-2/3 p-6 text-center">
       <label class="btn btn-circle swap swap-rotate bg-[#4c4c47]">
         <!-- this hidden checkbox controls the state -->
@@ -47,7 +47,7 @@ import { faBolt } from '@fortawesome/free-solid-svg-icons';
       </h2>
       <div class="card-actions justify-center">
         <div class="badge badge-outline">Professional</div>
-        <div class="btn badge badge-outline bg-[#34A853]">
+        <div class="btn badge badge-outline bg-[#34A853] rounded-xl hover:bg-[#247c3b] hover:rounded-md duration-500">
           <a href="https://drive.google.com/file/d/1jd2WKaapmU2YjLHcehOiUCtWwxAwMZgM/view?usp=share_link" target="_blank" rel="noreferrer noopener">
             <Fa icon={faGoogleDrive}/>
           </a>

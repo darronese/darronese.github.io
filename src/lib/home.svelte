@@ -17,7 +17,7 @@ onMount(() => {
 <section id="Home">
   <div class="flex flex-col sm:flex-row items-center gap-y-6 p-8">
     <div class="basis-auto sm:basis-2/3 p-6 text-center">
-      <h1 class="initial font-bold text-7xl text-[#E5DCC5] pt-12 sm:pt-28">darron li</h1>
+      <h1 class="initial font-bold text-7xl sm:text-9xl text-[#E5DCC5] pt-12 sm:pt-28">darron li</h1>
       <dl class="font-normal text-[#848fa5]">
         <dt class="initial italic"> aspiring software engineer </dt>
         <dt class = "initial italic"> <span class="line-through">self proclaimed</span> professional musician </dt>
