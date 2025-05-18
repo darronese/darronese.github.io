@@ -1,14 +1,9 @@
 <script lang="ts">
 import { onMount } from 'svelte';
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
 import Fa from "svelte-fa";
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faTruck } from '@fortawesome/free-solid-svg-icons';
-
-gsap.registerPlugin(ScrollTrigger);
 
 import { initColorLinks } from '$lib/components/colorscript.svelte';
 onMount(() => {

@@ -6,16 +6,19 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import { gsap } from 'gsap';
-
+import { animate, stagger } from 'animejs';
 import { initColorLinks } from '$lib/components/colorscript.svelte';
 onMount(() => {
   initColorLinks();
-}); 
 
-onMount(() => {
-  gsap.fromTo(".initial", { x: -200, opacity: 0}, {x: 0, stagger: 0.1, duration: 0.7, opacity: 1});
-});
+  animate('.initial', {
+    x: ['-60rem', '0rem'],
+    delay: stagger(100),
+    duration: stagger(100, { start: 500 }),
+    easing: 'ease-out',
+    fill: 'forwards' 
+  });
+}); 
 </script>
 
 <section id="Home">
