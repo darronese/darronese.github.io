@@ -4,9 +4,9 @@ import { faGoogleDrive } from '@fortawesome/free-brands-svg-icons';
 import { faBolt } from '@fortawesome/free-solid-svg-icons';
 </script>
 <!-- PAGES -->
-<div class="flex flex-col sm:flex-row items-center gap-y-6">
+<div class="flex flex-col md:flex-row items-center gap-y-6">
   <div class="basis-auto sm:basis-2/3 p-6 sm:pt-0 text-center">
-    <h1 class="font-bold text-8xl text-[#E5DCC5] pt-12 sm:pt-0">resume</h1>
+    <h1 class="font-bold text-8xl sm:text-9xl text-[#E5DCC5] pt-12 sm:pt-0">resume</h1>
     <div class="basis-auto sm:basis-2/3 p-6 text-center">
       <label class="btn btn-circle swap swap-rotate bg-[#4c4c47]">
         <!-- this hidden checkbox controls the state -->

@@ -16,11 +16,12 @@ onMount(() => {
 
 </script>
 
-<div class="flex flex-col sm:flex-row items-center gap-y-6">
+<div class="flex flex-col items-center gap-y-6">
   <!-- TITLE -->
-  <div class="basis-auto sm:basis-2/3 p-6 text-center">
-    <h1 class="font-bold text-7xl sm:text-8xl text-[#E5DCC5] pt-12 sm:pt-30">projects</h1>
-    <p class="text-center p-6 sm:pr-8"> "A mind needs books as a sword needs a whetstone, if it is to keep its edge."</p>
+  <div class="basis-auto p-6 text-center">
+    <h1 class="font-bold text-7xl sm:text-9xl text-[#E5DCC5] pt-12 sm:pt-30">projects</h1>
+    <p class="text-center italic p-6 sm:pr-8"> "A mind needs books as a sword needs a whetstone, if it is to keep its edge."</p>
+    <p class="text-center"> - Tyrion Lannister(ASOIAF)</p>
     <div class="chat chat-start">
       <div class="chat-image avatar">
         <div class="w-10 rounded-full">
@@ -50,22 +51,22 @@ onMount(() => {
         <time class="text-xs opacity-50">12:46</time>
       </div>
       <div class="chat-bubble bg-[#4c4c47]">
-        <button class="btn btn-soft bg-[#6749c1]">C/C++</button>
-        <button class="btn btn-soft bg-[#c14953]">JavaScript</button>
-        <button class="btn btn-soft bg-[#c17149]">Rust</button>
-        <button class="btn btn-soft bg-[#adc149]">Python</button>
-        <button class="btn btn-soft bg-[#7b49c1]">Haskell</button>
-        <button class="btn btn-soft bg-[#4953c1]">React Native</button>
-        <button class="btn btn-soft bg-[#49c1b7]">NodeJS</button>
-        <button class="btn btn-soft bg-[#c14953]">Pytorch</button>
-        <button class="btn btn-soft bg-[#c149b7]">SFML</button>
+        <button class="badge badge-outline  bg-[#6749c1]">C/C++</button>
+        <button class="badge badge-outline bg-[#c14953]">JavaScript</button>
+        <button class="badge badge-outline bg-[#c17149]">Rust</button>
+        <button class="badge badge-outline bg-[#adc149]">Python</button>
+        <button class="badge badge-outline bg-[#7b49c1]">Haskell</button>
+        <button class="badge badge-outline bg-[#4953c1]">React Native</button>
+        <button class="badge badge-outline bg-[#49c1b7]">NodeJS</button>
+        <button class="badge badge-outline bg-[#c14953]">Pytorch</button>
+        <button class="badge badge-outline bg-[#c149b7]">SFML</button>
       </div>
       <div class="chat-footer opacity-50">Seen at 12:46</div>
     </div>
   </div>
 
   <!-- PROJECTS BOX -->
-  <div class="sm:pt-30 pl-4 pr-4 sm:pr-10">
+  <div class="sm:pt-8 pl-4 pr-4 text-center">
     <!-- DAISY UI LIST -->
     <ul class="list sm:basis-1/3 bg-[#4c4c47] rounded-box shadow-md">
       <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Definitely Finished Projects</li>

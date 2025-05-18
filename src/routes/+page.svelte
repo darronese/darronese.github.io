@@ -2,15 +2,24 @@
 12 columns for desktop
 8 columns for tablet
 4 columns for mobile
+
+TODO:
+ADD PROGRESS BAR (FIGURE OUT THE VIDEO AND HOW TO GET IT TO WORK WITH TAILWINDCSS)
+ADD SOMETHING TO RESUME AREA
+ADD BETTER ANIMATIONS
 -->
 <script lang="ts">
 import Fa from "svelte-fa";
+import { onMount } from 'svelte';
 
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import new components as pages
 import Home from '$lib/home.svelte'
 import Projects from '$lib/projects.svelte'
 import About from '$lib/about.svelte'
 import Resume from '$lib/resume.svelte'
+
 // FONT AWESOME
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
@@ -23,6 +32,10 @@ function scrollToSection(id: string) {
   const section = document.getElementById(id);
   section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+// animated progress bar
+// https://www.youtube.com/watch?v=4J6TbtVAV7Q
+let progress = 0;
 </script>
 
 <!-- https://tailwindcss.com/docs/responsive-design -->
