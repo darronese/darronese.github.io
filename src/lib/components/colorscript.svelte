@@ -1,6 +1,6 @@
 <script context="module">
 //https://github.com/cassidoo/blahg/blob/main/src/components/ColorScript.astro
-let colors = ["#24d05a", "#eb4888", "#10a2f5", "#e9bc3f"];
+let colors = ["#7bc149", "#c1a349", "#c14953", "#c149b7", "#6749c1"];
 
 function getRandomColor() {
   return colors[Math.floor(Math.random() * colors.length)];

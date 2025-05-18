@@ -10,10 +10,12 @@ import { faTruck } from '@fortawesome/free-solid-svg-icons';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export let scrollContainer: HTMLDivElement;
+import { initColorLinks } from '$lib/components/colorscript.svelte';
 onMount(() => {
-});
+  initColorLinks();
+}); 
 
+export let scrollContainer: HTMLDivElement;
 </script>
 
 <div class="flex flex-col items-center gap-y-6">
@@ -21,7 +23,7 @@ onMount(() => {
   <div class="basis-auto p-6 text-center">
     <h1 class="font-bold text-7xl sm:text-9xl text-[#E5DCC5] pt-12 sm:pt-30">projects</h1>
     <p class="text-center italic p-6 sm:pr-8"> "A mind needs books as a sword needs a whetstone, if it is to keep its edge."</p>
-    <p class="text-center"> - Tyrion Lannister(ASOIAF)</p>
+    <p class="text-center"> - <a class="underline">Tyrion</a> <a class="underline">Lannister</a>(ASOIAF)</p>
     <div class="chat chat-start">
       <div class="chat-image avatar">
         <div class="w-10 rounded-full">
@@ -83,7 +85,7 @@ onMount(() => {
         </div>
         <!-- description -->
         <p class="list-col-wrap text-xs pr-10">
-          A revised and more efficient Pullman transit real-time bus tracking app with WebSockets!
+          A <a class="underline">revised</a> and more <a class="underline">efficient</a> Pullman transit real-time bus <a class="underline">tracking</a> app with <a class="underline">WebSockets</a>!
         </p>
         <!-- buttons -->
         <a href="https://github.com/darronese/pt-better-beacon" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
@@ -105,7 +107,7 @@ onMount(() => {
         </div>
         <!-- description -->
         <p class="list-col-wrap text-xs pr-10">
-          A postscript interpreter that is blazingly fast. Built with Rust!
+          A postscript <a class="underline">interpreter</a> that is <a class="underline">blazingly</a> fast. Built <a class="underline">with</a> Rust!
         </p>
         <!-- buttons -->
         <a href="https://github.com/darronese/postscript" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
@@ -128,7 +130,7 @@ onMount(() => {
         </div>
         <!-- description -->
         <p class="list-col-wrap text-xs pr-10">
-          A dead by daylight/among-us inspired game. A fun experience using SFML!
+          A <a class="underline">dead</a> by daylight/among-us <a class="underline">inspired</a> game. A fun <a class="underline">experience</a> using SFML!
         </p>
         <!-- buttons -->
         <a href="https://github.com/darronese/Dark-Ship" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
