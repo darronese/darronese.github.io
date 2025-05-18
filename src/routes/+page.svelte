@@ -4,7 +4,6 @@
 4 columns for mobile
 
 TODO:
-ADD PROGRESS BAR (FIGURE OUT THE VIDEO AND HOW TO GET IT TO WORK WITH TAILWINDCSS)
 ADD SOMETHING TO RESUME AREA
 ADD BETTER ANIMATIONS
 -->
@@ -12,8 +11,8 @@ ADD BETTER ANIMATIONS
 import Fa from "svelte-fa";
 import { onMount } from 'svelte';
 
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { createAnimatable, utils } from 'animejs';
+
 // import new components as pages
 import Home from '$lib/home.svelte'
 import Projects from '$lib/projects.svelte'
@@ -28,48 +27,103 @@ import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
 // smooth scrolling function (from google ai: adjusted)
 let scrollContainer: HTMLDivElement;
+
+
 function scrollToSection(id: string) {
   const section = document.getElementById(id);
-  section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (section && scrollContainer) {
+    scrollContainer.scrollTo({
+      top: section.offsetTop,
+      behavior: 'smooth'
+    });
+  }
 }
 
 // animated progress bar
-// https://www.youtube.com/watch?v=4J6TbtVAV7Q
 let progress = 0;
+onMount(() => {
+  scrollContainer.addEventListener('scroll', () => {
+    const maxScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+    progress = (scrollContainer.scrollTop / maxScroll) * 100;
+  })
+});
+
+let activeSection = 'Home';
+
+onMount(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          activeSection = entry.target.id;
+        }
+      }
+    },
+    {
+      root: scrollContainer,
+      threshold: 0.3,
+    }
+  );
+  ['Home', 'Projects', 'Resume', 'About'].forEach((id) => {
+    const section = document.getElementById(id);
+    if (section) observer.observe(section);
+  });
+});
 </script>
+
+<style>
+  progress.custom-progress::-webkit-progress-value {
+    background-color: #c14953;
+  }
+  progress.custom-progress::-moz-progress-bar {
+    background-color: #c14953;
+  }
+</style>
 
 <!-- https://tailwindcss.com/docs/responsive-design -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- MENU -->
 <div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-2 backdrop-blur-xs">
+  <progress class="progress custom-progress w-90 block mx-auto" value={progress} max="100"></progress>
   <ul class="justify-center pt-6">
     <li>
-      <a on:click={() => scrollToSection('Home')} class="hover:underline decoration-[#c14153]">
+      <a on:click={() => scrollToSection('Home')} class="hover:underline"
+        class:selected={activeSection === 'Home'}
+        class:text-[#c14953]={activeSection === 'Home'}
+      >
         <Fa icon={faHome}/>
         <span class="font-bold"> home </span>
       </a>
     </li>
     <li>
-      <a on:click={() => scrollToSection('Projects')} class="hover:underline decoration-[#c14153]">
+      <a on:click={() => scrollToSection('Projects')} class="hover:underline"
+        class:selected={activeSection === 'Projects'}
+        class:text-[#c14953]={activeSection === 'Projects'}
+      >
         <Fa icon={faFolder}/>
         <span class="font-bold"> projects </span>
       </a>
     </li>
     <li>
-      <a on:click={() => scrollToSection('Resume')} class="hover:underline decoration-[#c14153]">
+      <a on:click={() => scrollToSection('Resume')} class="hover:underline"
+        class:selected={activeSection === 'Resume'}
+        class:text-[#c14953]={activeSection === 'Resume'}
+      >
         <Fa icon={faFile}/>
         <span class="font-bold"> resume </span>
       </a>
     </li>
     <li>
-      <a on:click={() => scrollToSection('About')} class="hover:underline decoration-[#c14153]">
+      <a on:click={() => scrollToSection('About')} class="hover:underline"
+        class:selected={activeSection === 'About'}
+        class:text-[#c14953]={activeSection === 'About'}
+      >
         <Fa icon={faCircleInfo}/>
         <span class="font-bold"> about </span>
       </a>
     </li>
   </ul>
 </div>
-
 
 <!-- PAGES -->
 <div bind:this={scrollContainer} class="content h-screen overflow-y-scroll snap-y snap-proximity">
