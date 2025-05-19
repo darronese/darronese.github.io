@@ -78,6 +78,7 @@ onMount(() => {
 onMount(() => {
 
 })
+// progress for totoro
 $: pointerLeft = `${progress}%`;
 </script>
 
@@ -95,17 +96,17 @@ progress.custom-progress::-moz-progress-bar {
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- MENU -->
 <div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-2 backdrop-blur-xs">
-<div class="w-90 mx-auto relative">  <!-- ← add `relative` here -->
-  <progress class="progress custom-progress w-full" value={progress} max="100"></progress>
-  <div
-    class="absolute -top-8 pointer-events-none select-none transform -translate-x-1/2"
-    style="left: {pointerLeft};"
-  >
-    <div class="w-12 h-20">
-      <DotLottieSvelte src="/totoro.lottie" autoplay loop />
+  <div class="w-90 mx-auto relative">
+    <progress class="progress custom-progress w-full" value={progress} max="100"></progress>
+    <div
+      class="absolute -top-8 pointer-events-none select-none transform -translate-x-1/2"
+      style="left: {pointerLeft};"
+    >
+      <div class="w-12 h-20">
+        <DotLottieSvelte src="/totoro.lottie" autoplay loop />
+      </div>
     </div>
   </div>
-    </div>
   <ul class="justify-center">
     <li>
       <a on:click={() => scrollToSection('Home')} class="hover:underline"
