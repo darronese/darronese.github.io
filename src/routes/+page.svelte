@@ -25,6 +25,9 @@ import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
+// lottie animation
+import { DotLottieSvelte } from '@lottiefiles/dotlottie-svelte';
+
 // smooth scrolling function (from google ai: adjusted)
 let scrollContainer: HTMLDivElement;
 
@@ -69,23 +72,41 @@ onMount(() => {
     if (section) observer.observe(section);
   });
 });
+
+
+// Animate the transforms properties of .car the motion path values
+onMount(() => {
+
+})
+$: pointerLeft = `${progress}%`;
 </script>
 
+<!-- change color of progress bar -->
 <style>
-  progress.custom-progress::-webkit-progress-value {
-    background-color: #c14953;
-  }
-  progress.custom-progress::-moz-progress-bar {
-    background-color: #c14953;
-  }
+progress.custom-progress::-webkit-progress-value {
+  background-color: #c14953;
+}
+progress.custom-progress::-moz-progress-bar {
+  background-color: #c14953;
+}
 </style>
 
 <!-- https://tailwindcss.com/docs/responsive-design -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- MENU -->
 <div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-2 backdrop-blur-xs">
-  <progress class="progress custom-progress w-90 block mx-auto" value={progress} max="100"></progress>
-  <ul class="justify-center pt-6">
+<div class="w-90 mx-auto relative">  <!-- ← add `relative` here -->
+  <progress class="progress custom-progress w-full" value={progress} max="100"></progress>
+  <div
+    class="absolute -top-8 pointer-events-none select-none transform -translate-x-1/2"
+    style="left: {pointerLeft};"
+  >
+    <div class="w-12 h-20">
+      <DotLottieSvelte src="/totoro.lottie" autoplay loop />
+    </div>
+  </div>
+    </div>
+  <ul class="justify-center">
     <li>
       <a on:click={() => scrollToSection('Home')} class="hover:underline"
         class:selected={activeSection === 'Home'}
@@ -93,6 +114,15 @@ onMount(() => {
       >
         <Fa icon={faHome}/>
         <span class="font-bold"> home </span>
+      </a>
+    </li>
+    <li>
+      <a on:click={() => scrollToSection('About')} class="hover:underline"
+        class:selected={activeSection === 'About'}
+        class:text-[#c14953]={activeSection === 'About'}
+      >
+        <Fa icon={faCircleInfo}/>
+        <span class="font-bold"> about </span>
       </a>
     </li>
     <li>
@@ -113,15 +143,6 @@ onMount(() => {
         <span class="font-bold"> resume </span>
       </a>
     </li>
-    <li>
-      <a on:click={() => scrollToSection('About')} class="hover:underline"
-        class:selected={activeSection === 'About'}
-        class:text-[#c14953]={activeSection === 'About'}
-      >
-        <Fa icon={faCircleInfo}/>
-        <span class="font-bold"> about </span>
-      </a>
-    </li>
   </ul>
 </div>
 
@@ -130,13 +151,13 @@ onMount(() => {
   <section id="Home" class="snap-start min-h-screen">
     <Home />
   </section>
+  <section id="About" class="snap-start min-h-screen">
+    <About />
+  </section>
   <section id="Projects" class="snap-start min-h-screen">
     <Projects scrollContainer={scrollContainer}/>
   </section>
   <section id="Resume" class="snap-start min-h-screen">
     <Resume />
-  </section>
-  <section id="About" class="snap-start min-h-screen">
-    <About />
   </section>
 </div>
