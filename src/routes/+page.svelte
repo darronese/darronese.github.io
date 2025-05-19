@@ -15,6 +15,7 @@ import { createAnimatable, utils } from 'animejs';
 
 // import new components as pages
 import MagicParticles from '$lib/components/particles.svelte'
+import Cursor from '$lib/components/cursor.svelte'
 import Home from '$lib/home.svelte'
 import Projects from '$lib/projects.svelte'
 import About from '$lib/about.svelte'
@@ -100,7 +101,8 @@ progress.custom-progress::-moz-progress-bar {
 <MagicParticles
   className="fixed inset-0 pointer-events-none z-1"
 />
-
+<!-- Cursor -->
+<Cursor gradientColor="#505050" gradientSize={300} gradientOpacity={0.8}>
 <!-- MENU -->
 <div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-10 backdrop-blur-xs">
   <div class="w-90 mx-auto relative">
@@ -169,3 +171,4 @@ progress.custom-progress::-moz-progress-bar {
     <Resume />
   </section>
 </div>
+  </Cursor>

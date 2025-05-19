@@ -22,6 +22,7 @@
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
     "svelte-fa": "^4.0.4",
+    "svelte-motion": "^0.12.2",
     "typescript": "^5.0.0",
     "vite": "^6.2.6"
   },
@@ -32,8 +33,10 @@
     "@lottiefiles/dotlottie-svelte": "^0.5.3",
     "@tailwindcss/vite": "^4.1.5",
     "animejs": "^4.0.2",
+    "clsx": "^2.1.1",
     "flowbite-svelte-icons": "^2.1.1",
     "motion": "^12.11.0",
+    "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.5"
   }
 }
