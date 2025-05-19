@@ -14,6 +14,7 @@ import { onMount } from 'svelte';
 import { createAnimatable, utils } from 'animejs';
 
 // import new components as pages
+import MagicParticles from '$lib/components/particles.svelte'
 import Home from '$lib/home.svelte'
 import Projects from '$lib/projects.svelte'
 import About from '$lib/about.svelte'
@@ -94,8 +95,14 @@ progress.custom-progress::-moz-progress-bar {
 
 <!-- https://tailwindcss.com/docs/responsive-design -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- PARTICLES BACKGROUND -->
+<MagicParticles
+  className="fixed inset-0 pointer-events-none z-1"
+/>
+
 <!-- MENU -->
-<div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-2 backdrop-blur-xs">
+<div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-10 backdrop-blur-xs">
   <div class="w-90 mx-auto relative">
     <progress class="progress custom-progress w-full" value={progress} max="100"></progress>
     <div
@@ -148,7 +155,7 @@ progress.custom-progress::-moz-progress-bar {
 </div>
 
 <!-- PAGES -->
-<div bind:this={scrollContainer} class="content h-screen overflow-y-scroll snap-y snap-proximity">
+<div bind:this={scrollContainer} class="content h-screen overflow-y-scroll snap-y snap-proximity z-2">
   <section id="Home" class="snap-start min-h-screen">
     <Home />
   </section>
