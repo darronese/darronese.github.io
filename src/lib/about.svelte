@@ -15,11 +15,11 @@ onMount(() => {
         "There are no men like me. There's only me."
       </p>
       <p>
-        - <a class="underline">Jaime</a> <a class="underline">Lannister</a> (ASOIAF)
+        - <span class="underline">Jaime</span> <span class="underline">Lannister</span> (ASOIAF)
       </p>
     </div>
   </div>
   <p class="object-contain text-xl sm:basis-1/3 sm:w-30 p-4 sm:pt-60 sm:pr-8 text-center">
-    Hi there! My name is <a class="underline">Darron</a> and I am an aspiring <a class="underline">software</a> engineer with a passion for music. While impatiently waiting for <a class="underline"> Winds of Winter </a> to come out, I have been exploring the different <a class="underline">technologies</a> of <a class="underline">software</a> engineering. I love learning about new technlogies and systems, even if they seem to bore me (<a class="underline">cybersecurity</a>).
+    Hi there! My name is <span class="underline">Darron</span> and I am an aspiring <span class="underline">software</span> engineer with a passion for music. While impatiently waiting for <span class="underline"> Winds of Winter </span> to come out, I have been exploring the different <span class="underline">technologies</span> of <span class="underline">software</span> engineering. I love learning about new technlogies and systems, even if they seem to bore me (<span class="underline">cybersecurity</span>).
   </p>
 </div>

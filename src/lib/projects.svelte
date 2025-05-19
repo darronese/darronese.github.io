@@ -18,7 +18,7 @@ export let scrollContainer: HTMLDivElement;
   <div class="basis-auto p-6 text-center">
     <h1 class="font-bold text-7xl sm:text-9xl text-[#E5DCC5] pt-12 sm:pt-30">projects</h1>
     <p class="text-center italic p-6 sm:pr-8"> "A mind needs books as a sword needs a whetstone, if it is to keep its edge."</p>
-    <p class="text-center"> - <a class="underline">Tyrion</a> <a class="underline">Lannister</a>(ASOIAF)</p>
+    <p class="text-center"> - <span class="underline">Tyrion</span> <span class="underline">Lannister</span>(ASOIAF)</p>
     <div class="chat chat-start">
       <div class="chat-image avatar">
         <div class="w-10 rounded-full">
@@ -80,7 +80,7 @@ export let scrollContainer: HTMLDivElement;
         </div>
         <!-- description -->
         <p class="list-col-wrap text-xs pr-10">
-          A <a class="underline">revised</a> and more <a class="underline">efficient</a> Pullman transit real-time bus <a class="underline">tracking</a> app with <a class="underline">WebSockets</a>!
+          A <span class="underline">revised</span> and more <span class="underline">efficient</span> Pullman transit real-time bus <span class="underline">tracking</span> app with <span class="underline">WebSockets</span>!
         </p>
         <!-- buttons -->
         <a href="https://github.com/darronese/pt-better-beacon" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
@@ -102,7 +102,7 @@ export let scrollContainer: HTMLDivElement;
         </div>
         <!-- description -->
         <p class="list-col-wrap text-xs pr-10">
-          A postscript <a class="underline">interpreter</a> that is <a class="underline">blazingly</a> fast. Built <a class="underline">with</a> Rust!
+          A postscript <span class="underline">interpreter</span> that is <span class="underline">blazingly</span> fast. Built <span class="underline">with</span> Rust!
         </p>
         <!-- buttons -->
         <a href="https://github.com/darronese/postscript" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
@@ -125,7 +125,7 @@ export let scrollContainer: HTMLDivElement;
         </div>
         <!-- description -->
         <p class="list-col-wrap text-xs pr-10">
-          A <a class="underline">dead</a> by daylight/among-us <a class="underline">inspired</a> game. A fun <a class="underline">experience</a> using SFML!
+          A <span class="underline">dead</span> by daylight/among-us <span class="underline">inspired</span> game. A fun <span class="underline">experience</span> using SFML!
         </p>
         <!-- buttons -->
         <a href="https://github.com/darronese/Dark-Ship" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
@@ -158,7 +158,7 @@ export let scrollContainer: HTMLDivElement;
             </div>
             <!-- description -->
             <p class="list-col-wrap text-xs pr-10">
-              A machine learning model with Pytorch's Random Forest to predict future snowpack across Washington! <span class="line-through"> also won first place </span>
+              A <span class="underline">machine</span> learning model with <span class="underline">Pytorch's</span> Random Forest to <span class="underline">predict</span> future snowpack across <span class="underline">Washington</span>! <span class="line-through"> also won first place </span>
             </p>
             <!-- buttons -->
             <a href="https://github.com/mathletedev/agath0n" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">

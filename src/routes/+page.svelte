@@ -102,73 +102,73 @@ progress.custom-progress::-moz-progress-bar {
   className="fixed inset-0 pointer-events-none z-1"
 />
 <!-- Cursor -->
-<Cursor gradientColor="#505050" gradientSize={300} gradientOpacity={0.8}>
-<!-- MENU -->
-<div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-10 backdrop-blur-xs">
-  <div class="w-90 mx-auto relative">
-    <progress class="progress custom-progress w-full" value={progress} max="100"></progress>
-    <div
-      class="absolute -top-8 pointer-events-none select-none transform -translate-x-1/2"
-      style="left: {pointerLeft};"
-    >
-      <div class="w-12 h-20">
-        <DotLottieSvelte src="/totoro.lottie" autoplay loop />
+<Cursor gradientColor="#505050" gradientSize={300} gradientOpacity={0.1}>
+  <!-- MENU -->
+  <div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-10 backdrop-blur-xs">
+    <div class="w-90 mx-auto relative">
+      <progress class="progress custom-progress w-full" value={progress} max="100"></progress>
+      <div
+        class="absolute -top-8 pointer-events-none select-none transform -translate-x-1/2"
+        style="left: {pointerLeft};"
+      >
+        <div class="w-12 h-20">
+          <DotLottieSvelte src="/totoro.lottie" autoplay loop />
+        </div>
       </div>
     </div>
+    <ul class="justify-center">
+      <li>
+        <button on:click={() => scrollToSection('Home')} class="hover:underline"
+          class:selected={activeSection === 'Home'}
+          class:text-[#c14953]={activeSection === 'Home'}
+        >
+          <Fa icon={faHome}/>
+          <span class="font-bold"> home </span>
+        </button>
+      </li>
+      <li>
+        <button on:click={() => scrollToSection('About')} class="hover:underline"
+          class:selected={activeSection === 'About'}
+          class:text-[#c14953]={activeSection === 'About'}
+        >
+          <Fa icon={faCircleInfo}/>
+          <span class="font-bold"> about </span>
+        </button>
+      </li>
+      <li>
+        <button on:click={() => scrollToSection('Projects')} class="hover:underline"
+          class:selected={activeSection === 'Projects'}
+          class:text-[#c14953]={activeSection === 'Projects'}
+        >
+          <Fa icon={faFolder}/>
+          <span class="font-bold"> projects </span>
+        </button>
+      </li>
+      <li>
+        <button on:click={() => scrollToSection('Resume')} class="hover:underline"
+          class:selected={activeSection === 'Resume'}
+          class:text-[#c14953]={activeSection === 'Resume'}
+        >
+          <Fa icon={faFile}/>
+          <span class="font-bold"> resume </span>
+        </button>
+      </li>
+    </ul>
   </div>
-  <ul class="justify-center">
-    <li>
-      <a on:click={() => scrollToSection('Home')} class="hover:underline"
-        class:selected={activeSection === 'Home'}
-        class:text-[#c14953]={activeSection === 'Home'}
-      >
-        <Fa icon={faHome}/>
-        <span class="font-bold"> home </span>
-      </a>
-    </li>
-    <li>
-      <a on:click={() => scrollToSection('About')} class="hover:underline"
-        class:selected={activeSection === 'About'}
-        class:text-[#c14953]={activeSection === 'About'}
-      >
-        <Fa icon={faCircleInfo}/>
-        <span class="font-bold"> about </span>
-      </a>
-    </li>
-    <li>
-      <a on:click={() => scrollToSection('Projects')} class="hover:underline"
-        class:selected={activeSection === 'Projects'}
-        class:text-[#c14953]={activeSection === 'Projects'}
-      >
-        <Fa icon={faFolder}/>
-        <span class="font-bold"> projects </span>
-      </a>
-    </li>
-    <li>
-      <a on:click={() => scrollToSection('Resume')} class="hover:underline"
-        class:selected={activeSection === 'Resume'}
-        class:text-[#c14953]={activeSection === 'Resume'}
-      >
-        <Fa icon={faFile}/>
-        <span class="font-bold"> resume </span>
-      </a>
-    </li>
-  </ul>
-</div>
 
-<!-- PAGES -->
-<div bind:this={scrollContainer} class="content h-screen overflow-y-scroll snap-y snap-proximity z-2">
-  <section id="Home" class="snap-start min-h-screen">
-    <Home />
-  </section>
-  <section id="About" class="snap-start min-h-screen">
-    <About />
-  </section>
-  <section id="Projects" class="snap-start min-h-screen">
-    <Projects scrollContainer={scrollContainer}/>
-  </section>
-  <section id="Resume" class="snap-start min-h-screen">
-    <Resume />
-  </section>
-</div>
-  </Cursor>
+  <!-- PAGES -->
+  <div bind:this={scrollContainer} class="content h-screen overflow-y-scroll snap-y snap-proximity z-2">
+    <section id="Home" class="snap-start min-h-screen">
+      <Home />
+    </section>
+    <section id="About" class="snap-start min-h-screen">
+      <About />
+    </section>
+    <section id="Projects" class="snap-start min-h-screen">
+      <Projects scrollContainer={scrollContainer}/>
+    </section>
+    <section id="Resume" class="snap-start min-h-screen">
+      <Resume />
+    </section>
+  </div>
+</Cursor>

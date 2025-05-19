@@ -10,10 +10,22 @@ function setRandomLinkColor() {
   Array.from(document.getElementsByTagName("a")).forEach((e) => {
     e.style.textDecorationColor = getRandomColor();
   });
+  Array.from(document.getElementsByTagName("button")).forEach((e) => {
+    e.style.textDecorationColor = getRandomColor();
+  });
+  Array.from(document.getElementsByTagName("span")).forEach((e) => {
+    e.style.textDecorationColor = getRandomColor();
+  });
 }
 
 function setColorHoverListener() {
-  Array.from(document.querySelectorAll("a, button")).forEach((e) => {
+  Array.from(document.querySelectorAll("a")).forEach((e) => {
+    e.addEventListener("mouseover", setRandomLinkColor);
+  });
+  Array.from(document.querySelectorAll("button")).forEach((e) => {
+    e.addEventListener("mouseover", setRandomLinkColor);
+  });
+  Array.from(document.querySelectorAll("span")).forEach((e) => {
     e.addEventListener("mouseover", setRandomLinkColor);
   });
 }
