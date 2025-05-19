@@ -29,7 +29,7 @@ import { faBolt } from '@fortawesome/free-solid-svg-icons';
       </label>
     </div>
   </div>
-  <div class="card object-contain basis-1/6 w-84 sm:basis-1/4 p-4 sm:pt-30">
+  <div class="card object-contain basis-1/6 w-84 sm:basis-1/4 p-4 pb-24 sm:pt-30">
     <figure class="group transition-all duration-500 ease-in-out hover:scale-105 hover:rounded-xl hover:border-4 hover:border-[#c14153]">
       <a href="https://drive.google.com/file/d/1jd2WKaapmU2YjLHcehOiUCtWwxAwMZgM/view?usp=share_link" target="_blank" rel="noreferrer noopener">
         <div class="tooltip">
