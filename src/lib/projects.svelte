@@ -3,14 +3,52 @@ import { onMount } from 'svelte';
 import Fa from "svelte-fa";
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import { faTruck } from '@fortawesome/free-solid-svg-icons';
+import { createTimeline, onScroll} from 'animejs';
 
 import { initColorLinks } from '$lib/components/colorscript.svelte';
-onMount(() => {
-  initColorLinks();
-}); 
 
 export let scrollContainer: HTMLDivElement;
+const debug = true;
+const tl = createTimeline();
+
+function runAnimations() {
+  tl.set('.chat-start', { translateX: '-300%'});
+  tl.set('.chat-end', { translateX: '-300%'});
+  tl.add('.chat-start', {
+    translateX: ['-100%', '0%'],
+    duration: 500,
+    easing: 'easeOutQuad'
+  })
+  .add('.chat-end', {
+    translateX: ['100%', '0%'],
+    duration: 500,
+    easing: 'easeOutQuad'
+  }, '+=500');
+}
+
+onMount(() => {
+  initColorLinks();
+  const section = document.getElementById('Projects');
+  if (!section) return;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          runAnimations();
+          // only run once
+          observer.unobserve(section);
+        }
+      }
+    },
+    {
+      root: scrollContainer,
+      threshold: 0.3
+    }
+  );
+
+  observer.observe(section);
+});
+
 </script>
 
 <div class="flex flex-col items-center gap-y-6">
@@ -32,7 +70,7 @@ export let scrollContainer: HTMLDivElement;
         Hiring Manager
         <time class="text-xs opacity-50">12:45</time>
       </div>
-      <div class="chat-bubble bg-[#4c4c47]">What technologies have you used?</div>
+      <div class="chat-start chat-bubble bg-[#4c4c47]">What technologies have you used?</div>
     </div>
     <div class="chat chat-end">
       <div class="chat-image avatar">
@@ -47,7 +85,7 @@ export let scrollContainer: HTMLDivElement;
         Humble, Awesome, Great, Smart, Guy
         <time class="text-xs opacity-50">12:46</time>
       </div>
-      <div class="chat-bubble bg-[#4c4c47]">
+      <div class="chat-end chat-bubble bg-[#4c4c47]">
         <button class="badge badge-outline  bg-[#6749c1]">C/C++</button>
         <button class="badge badge-outline bg-[#c14953]">JavaScript</button>
         <button class="badge badge-outline bg-[#c17149]">Rust</button>

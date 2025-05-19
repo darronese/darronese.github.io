@@ -16,7 +16,7 @@ onMount(() => {
     delay: stagger(100),
     duration: stagger(100, { start: 500 }),
     easing: 'ease-out',
-    fill: 'forwards' 
+    fill: 'forwards',
   });
 }); 
 </script>

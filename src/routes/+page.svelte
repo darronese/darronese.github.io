@@ -159,7 +159,7 @@ progress.custom-progress::-moz-progress-bar {
   <!-- PAGES -->
   <div bind:this={scrollContainer} class="content h-screen overflow-y-scroll snap-y snap-proximity z-2">
     <section id="Home" class="snap-start min-h-screen">
-      <Home />
+      <Home/>
     </section>
     <section id="About" class="snap-start min-h-screen">
       <About />
