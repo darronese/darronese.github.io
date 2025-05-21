@@ -5,7 +5,7 @@
 
 TODO:
 ADD SOMETHING TO RESUME AREA
-ADD BETTER ANIMATIONS
+CHANGE PROJECTS TO SPOTIFY CAROUSEL
 -->
 <script lang="ts">
 import Fa from "svelte-fa";
@@ -16,6 +16,8 @@ import { createAnimatable, utils } from 'animejs';
 // import new components as pages
 import MagicParticles from '$lib/components/particles.svelte'
 import Cursor from '$lib/components/cursor.svelte'
+
+// pages
 import Home from '$lib/home.svelte'
 import Projects from '$lib/projects.svelte'
 import About from '$lib/about.svelte'

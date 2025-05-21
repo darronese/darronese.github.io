@@ -19,11 +19,11 @@ function runAnimations() {
     duration: 500,
     easing: 'easeOutQuad'
   })
-  .add('.chat-end', {
-    translateX: ['100%', '0%'],
-    duration: 500,
-    easing: 'easeOutQuad'
-  }, '+=500');
+    .add('.chat-end', {
+      translateX: ['100%', '0%'],
+      duration: 500,
+      easing: 'easeOutQuad'
+    }, '+=500');
 }
 
 onMount(() => {
@@ -124,7 +124,7 @@ onMount(() => {
         <a href="https://github.com/darronese/pt-better-beacon" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
           <Fa icon={faGithub}/>
         </a>
-        <a href="" class="btn btn-disabled bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
+        <a href="/bus" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500">
           <Fa icon={faPlay}/>
         </a>
       </li>
@@ -146,7 +146,7 @@ onMount(() => {
         <a href="https://github.com/darronese/postscript" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
           <Fa icon={faGithub}/>
         </a>
-        <a href="/postscript" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
+        <a href="/postscript" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500">
           <Fa icon={faPlay}/>
         </a>
       </li>
@@ -169,7 +169,7 @@ onMount(() => {
         <a href="https://github.com/darronese/Dark-Ship" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
           <Fa icon={faGithub}/>
         </a>
-        <a href="" class="btn btn-disabled bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
+        <a href="/game" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500">
           <Fa icon={faPlay}/>
         </a>
       </li>
@@ -202,7 +202,7 @@ onMount(() => {
             <a href="https://github.com/mathletedev/agath0n" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
               <Fa icon={faGithub}/>
             </a>
-            <a href="" class="btn btn-disabled bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500" target="_blank" rel="noopener noreferrer">
+            <a href="/agathon" class="btn bg-[#c14953] rounded-xl hover:bg-[#772a30] hover:rounded-md duration-500">
               <Fa icon={faPlay}/>
             </a>
           </li>

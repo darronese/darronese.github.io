@@ -54,22 +54,11 @@ onMount(async () => {
     <div class="basis-auto sm:basis-2/3 p-6 text-center">
       <h1 class="font-bold text-7xl text-[#E5DCC5] pt-12 sm:pt-4">PostScript Interpreter</h1>
       <p class="text-balance pt-12">
-        Originally a <span class="underline">project</span> from one of my <span class="underline">classes</span>, I really <span class="underline">liked</span> how it <span class="underline">turned</span> out and I <span class="underline">decided</span> to continue <span class="underline">adjusting</span> and adding nice <span class="underline">touches</span> to my code! It was my first <span class="underline">project</span> using <span class="underline">Rust</span> and the code is <span class="line-through"> horrible </span>.
+        WIP
       </p>
-    </div>
-    <div class="sm:basis-1/3 mockup-code w-full flex flex-col justify-between p-4">
-      <pre data-prefix="ps>" class="flex items-center gap-2">
-        <input
-          type="text"
-          id="input"
-          placeholder="Enter PostScript command"
-          class="bg-transparent text-white border border-gray-600 rounded px-2 py-1 w-full"
-        />
-      </pre>
-      <div class="w-full flex justify-end pt-4">
-        <button id="run" class="btn btn-sm bg-[#7bc149] rounded-xl hover:bg-[#54b555] hover:rounded-md duration-500 btn-outline">Run</button>
-      </div>
-      <div id="output"></div>
     </div>
   </div>
 </Cursor>
+
+
+
