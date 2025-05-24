@@ -19,7 +19,7 @@ onMount(() => {
       </p>
     </div>
   </div>
-  <p class="object-contain text-xl sm:basis-1/3 sm:w-30 p-4 sm:pt-60 sm:pr-8 text-center">
+  <p class="object-contain basis-1/6 sm:basis-1/4 p-4 text-xl sm:pt-48 text-center">
     Hi there! My name is <span class="underline">Darron</span> and I am an aspiring <span class="underline">software</span> engineer with a passion for music. While impatiently waiting for <span class="underline"> Winds of Winter </span> to come out, I have been exploring the different <span class="underline">technologies</span> of <span class="underline">software</span> engineering. I love learning about new technlogies and systems, even if they seem to bore me (<span class="underline">cybersecurity</span>).
   </p>
 </div>

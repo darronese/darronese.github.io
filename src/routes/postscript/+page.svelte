@@ -52,7 +52,7 @@ onMount(async () => {
   </div>
   <div class="h-screen flex flex-col sm:flex-row items-center gap-y-6">
     <div class="basis-auto sm:basis-2/3 p-6 text-center">
-      <h1 class="font-bold text-7xl text-[#E5DCC5] pt-12 sm:pt-4">PostScript Interpreter</h1>
+      <h1 class="font-bold text-6xl sm:text-8xl text-[#E5DCC5] pt-12 sm:pt-4">PostScript Interpreter</h1>
       <p class="text-balance pt-12">
         Originally a <span class="underline">project</span> from one of my <span class="underline">classes</span>, I really <span class="underline">liked</span> how it <span class="underline">turned</span> out and I <span class="underline">decided</span> to continue <span class="underline">adjusting</span> and adding nice <span class="underline">touches</span> to my code! It was my first <span class="underline">project</span> using <span class="underline">Rust</span> and the code is <span class="line-through"> horrible </span>.
       </p>
