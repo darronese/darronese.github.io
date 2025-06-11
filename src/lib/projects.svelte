@@ -54,7 +54,7 @@ onMount(() => {
 <div class="flex flex-col items-center gap-y-6">
   <!-- TITLE -->
   <div class="basis-auto p-6 text-center">
-    <h1 class="font-bold text-7xl sm:text-9xl text-[#E5DCC5] pt-12 sm:pt-30">projects</h1>
+    <h1 class="font-bold text-7xl sm:text-8xl text-[#E5DCC5] pt-12 sm:pt-30">projects</h1>
     <p class="text-center italic p-6 sm:pr-8"> "A mind needs books as a sword needs a whetstone, if it is to keep its edge."</p>
     <p class="text-center"> - <span class="underline">Tyrion</span> <span class="underline">Lannister</span>(ASOIAF)</p>
     <div class="chat chat-start">
