@@ -13,6 +13,8 @@ const OVERSHOOT = 0.12;
 // it only snaps once scrolling stops and a section top is close enough.
 export function createSectionSnap(container: HTMLElement, ids: string[]) {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // auto-snapping fights free scrolling on phones, so only do it at tailwind's sm and up
+  const smallScreen = window.matchMedia('(max-width: 639px)');
   const pos = { y: container.scrollTop };
   let anim: ReturnType<typeof animate> | null = null;
   let autoScrolling = false;
@@ -59,7 +61,7 @@ export function createSectionSnap(container: HTMLElement, ids: string[]) {
   }
 
   function snap() {
-    if (touching || autoScrolling) return;
+    if (touching || autoScrolling || smallScreen.matches) return;
     const top = container.scrollTop;
     const vh = container.clientHeight;
     const all = tops();
