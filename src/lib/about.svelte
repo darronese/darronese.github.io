@@ -1,12 +1,8 @@
-<!--
-  About section as a tiny language model: "Darron is ___".
-  Each fact is a candidate next token with a logit; we softmax with the temperature
-  slider, sample one, and the picked token unfolds into the fact behind it.
--->
 <script lang="ts">
 import { onMount, tick } from 'svelte';
 import { animate } from 'animejs';
 import { facts, type Fact } from '$lib/data/facts';
+import Stone from '$lib/components/stone.svelte';
 
 let temperature = 1;
 let remaining: Fact[] = [...facts];
@@ -108,7 +104,8 @@ onMount(() => {
     <p class="text-sm opacity-60 pt-4">"There are no men like me. There's only me." - <span class="underline">Jaime</span> <span class="underline">Lannister</span> (ASOIAF)</p>
   </div>
 
-  <div class="w-full max-w-3xl rounded-box bg-[#4c4c47]/90 shadow-md p-5 sm:p-8 text-left">
+  <div class="relative w-full max-w-3xl rounded-box bg-[#4c4c47]/90 shadow-md p-5 sm:p-8 text-left">
+    <Stone id="mind" class="absolute top-3 right-3" />
     <!-- MODEL + PROMPT -->
     <div class="flex items-start gap-4">
       <svg class="robot shrink-0 w-14 sm:w-16" class:thinking viewBox="0 0 64 64" aria-hidden="true">

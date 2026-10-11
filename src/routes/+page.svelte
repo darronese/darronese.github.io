@@ -9,7 +9,9 @@ import { onMount } from 'svelte';
 
 // import new components as pages
 import MagicParticles from '$lib/components/particles.svelte'
+import Ambient from '$lib/components/ambient.svelte'
 import Cursor from '$lib/components/cursor.svelte'
+import GauntletHud from '$lib/components/gauntlethud.svelte'
 
 // pages
 import Home from '$lib/home.svelte'
@@ -120,53 +122,56 @@ progress.custom-progress::-moz-progress-bar {
   <meta name="description" content="Darron Li: software engineer. Projects, music, and about." />
 </svelte:head>
 
+<!-- SCROLL-BLENDED BACKGROUND -->
+<Ambient scrollContainer={scrollContainer} ids={sections.map((s) => s.id)} />
 <!-- PARTICLES BACKGROUND -->
 <MagicParticles
   className="fixed inset-0 pointer-events-none z-1"
 />
-<!-- Cursor -->
-<Cursor gradientColor="#505050" gradientSize={300} gradientOpacity={0.1}>
-  <!-- MENU -->
-  <div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-10 backdrop-blur-xs">
-    <div class="w-90 mx-auto relative">
-      <progress class="progress custom-progress w-full" value={progress} max="100"></progress>
-      <div
-        class="absolute -top-8 pointer-events-none select-none transform -translate-x-1/2"
-        style="left: {pointerLeft};"
-      >
-        <div class="totoro w-12 h-20" class:forward={facingForward}>
-          <DotLottieSvelte src="/totoro.lottie" autoplay loop />
-        </div>
+<!-- CURSOR (portal / millennium eye / normal, switchable) -->
+<Cursor />
+<!-- INFINITY STONE HUNT: corner gauntlet + the snap -->
+<GauntletHud root={scrollContainer} />
+<!-- MENU -->
+<div class="breadcrumbs text-sm fixed mx-auto inset-x-0 z-10 backdrop-blur-xs">
+  <div class="w-90 mx-auto relative">
+    <progress class="progress custom-progress w-full" value={progress} max="100"></progress>
+    <div
+      class="absolute -top-8 pointer-events-none select-none transform -translate-x-1/2"
+      style="left: {pointerLeft};"
+    >
+      <div class="totoro w-12 h-20" class:forward={facingForward}>
+        <DotLottieSvelte src="/totoro.lottie" autoplay loop />
       </div>
     </div>
-    <ul class="justify-center">
-      {#each sections as { id, label, icon }}
-        <li>
-          <button on:click={() => scrollToSection(id)} class="hover:underline"
-            class:text-[#c14953]={activeSection === id}
-            aria-current={activeSection === id ? 'true' : undefined}
-          >
-            <Fa {icon}/>
-            <span class="font-bold"> {label} </span>
-          </button>
-        </li>
-      {/each}
-    </ul>
   </div>
+  <ul class="justify-center">
+    {#each sections as { id, label, icon }}
+      <li>
+        <button on:click={() => scrollToSection(id)} class="hover:underline"
+          class:text-[#c14953]={activeSection === id}
+          aria-current={activeSection === id ? 'true' : undefined}
+        >
+          <Fa {icon}/>
+          <span class="font-bold"> {label} </span>
+        </button>
+      </li>
+    {/each}
+  </ul>
+</div>
 
-  <!-- PAGES -->
-  <div bind:this={scrollContainer} class="content relative h-screen overflow-y-scroll z-2">
-    <section id="Home" class="min-h-screen">
-      <Home/>
-    </section>
-    <section id="About" class="min-h-screen">
-      <About />
-    </section>
-    <section id="Projects" class="min-h-screen">
-      <Projects scrollContainer={scrollContainer}/>
-    </section>
-    <section id="Music" class="min-h-screen">
-      <Music scrollContainer={scrollContainer}/>
-    </section>
-  </div>
-</Cursor>
+<!-- PAGES -->
+<div bind:this={scrollContainer} class="content relative h-screen overflow-y-scroll z-2">
+  <section id="Home" class="min-h-screen">
+    <Home/>
+  </section>
+  <section id="About" class="min-h-screen">
+    <About />
+  </section>
+  <section id="Projects" class="min-h-screen">
+    <Projects scrollContainer={scrollContainer}/>
+  </section>
+  <section id="Music" class="min-h-screen">
+    <Music scrollContainer={scrollContainer}/>
+  </section>
+</div>

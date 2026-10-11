@@ -7,6 +7,7 @@ import { cubicOut } from 'svelte/easing';
 import Carousel from '$lib/components/carousel.svelte';
 import ProjectCard from '$lib/components/projectcard.svelte';
 import { projects } from '$lib/data/projects';
+import Stone from '$lib/components/stone.svelte';
 
 export let scrollContainer: HTMLDivElement;
 
@@ -163,7 +164,7 @@ onMount(() => {
   <!-- TITLE -->
   <div class="w-full basis-auto p-6 text-center">
     <h1 class="font-bold text-6xl sm:text-8xl text-[#E5DCC5] pt-12 sm:pt-30">projects</h1>
-    <p class="text-center italic p-6 sm:pr-8"> "A mind needs books as a sword needs a whetstone, if it is to keep its edge."</p>
+    <p class="text-center italic p-6 sm:pr-8"> "A mind needs books as a sword needs a whetstone, if it is to keep its edge." <Stone id="power" /></p>
     <p class="text-center"> - <span class="underline">Tyrion</span> <span class="underline">Lannister</span> (ASOIAF)</p>
 
     <!-- CHAT: min height is reserved so the cards below don't jump as messages arrive -->
@@ -253,7 +254,7 @@ onMount(() => {
                 </div>
               </div>
               {#if g === skillGroups.length - 1 && stage >= SEEN_STAGE}
-                <div class="seen chat-footer opacity-50">Seen at 12:46</div>
+                <div class="seen chat-footer opacity-50">Seen at 12:46 <Stone id="time" /></div>
               {/if}
             </div>
           {/if}

@@ -3,6 +3,7 @@ import { onMount } from 'svelte';
 import { animate, stagger } from 'animejs';
 import Carousel from '$lib/components/carousel.svelte';
 import { albums } from '$lib/data/music';
+import Stone from '$lib/components/stone.svelte';
 
 export let scrollContainer: HTMLDivElement;
 
@@ -57,7 +58,7 @@ onMount(() => {
   <!-- TITLE -->
   <div class="basis-auto p-6 text-center">
     <h1 class="font-bold text-6xl sm:text-8xl text-[#E5DCC5] pt-12 sm:pt-30">music</h1>
-    <p class="text-center italic p-6">albums I keep on <span class="underline">repeat</span></p>
+    <p class="text-center italic p-6">albums I keep on <span class="underline">repeat</span> <Stone id="soul" /></p>
   </div>
 
   <!-- RECORD SHELF -->
@@ -189,18 +190,8 @@ onMount(() => {
 
   @media (prefers-reduced-motion: reduce) {
     .vinyl,
-    /* records away from the center shrink and fade, coverflow style */
-  .tilt {
-    transform-origin: bottom center;
-    transform: scale(0.82);
-    opacity: 0.55;
-    transition: transform 400ms ease-out, opacity 400ms ease-out;
-  }
-  .record.active .tilt {
-    transform: scale(1);
-    opacity: 1;
-  }
-  .sleeve {
+    .tilt,
+    .sleeve {
       transition: none;
     }
     .record.active .label {
