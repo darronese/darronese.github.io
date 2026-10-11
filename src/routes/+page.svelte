@@ -2,16 +2,10 @@
 12 columns for desktop
 8 columns for tablet
 4 columns for mobile
-
-TODO:
-ADD SOMETHING TO RESUME AREA
-CHANGE PROJECTS TO SPOTIFY CAROUSEL
 -->
 <script lang="ts">
 import Fa from "svelte-fa";
 import { onMount } from 'svelte';
-
-import { createAnimatable, utils } from 'animejs';
 
 // import new components as pages
 import MagicParticles from '$lib/components/particles.svelte'
@@ -21,41 +15,62 @@ import Cursor from '$lib/components/cursor.svelte'
 import Home from '$lib/home.svelte'
 import Projects from '$lib/projects.svelte'
 import About from '$lib/about.svelte'
-import Resume from '$lib/resume.svelte'
+import Music from '$lib/music.svelte'
+import { initColorLinks } from '$lib/components/colorscript.svelte';
 
 // FONT AWESOME
 import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { faFile } from '@fortawesome/free-solid-svg-icons';
+import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
 // lottie animation
 import { DotLottieSvelte } from '@lottiefiles/dotlottie-svelte';
 
-// smooth scrolling function (from google ai: adjusted)
+// animated section snapping + nav scrolling
+import { createSectionSnap } from '$lib/sectionsnap';
 let scrollContainer: HTMLDivElement;
-
+let snapper: ReturnType<typeof createSectionSnap> | undefined;
 
 function scrollToSection(id: string) {
-  const section = document.getElementById(id);
-  if (section && scrollContainer) {
-    scrollContainer.scrollTo({
-      top: section.offsetTop,
-      behavior: 'smooth'
-    });
-  }
+  snapper?.scrollToSection(id);
 }
 
 // animated progress bar
 let progress = 0;
+// the totoro artwork faces backwards, so mirror it while scrolling down
+// and show the original when scrolling back up
+let facingForward = true;
+let lastScrollTop = 0;
 onMount(() => {
-  scrollContainer.addEventListener('scroll', () => {
+  // run once for the whole page instead of once per section
+  initColorLinks();
+  const onScroll = () => {
     const maxScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
-    progress = (scrollContainer.scrollTop / maxScroll) * 100;
-  })
+    progress = maxScroll > 0 ? (scrollContainer.scrollTop / maxScroll) * 100 : 0;
+    const delta = scrollContainer.scrollTop - lastScrollTop;
+    // ignore tiny jitters so it doesn't flicker back and forth
+    if (Math.abs(delta) > 2) {
+      facingForward = delta > 0;
+      lastScrollTop = scrollContainer.scrollTop;
+    }
+  };
+  scrollContainer.addEventListener('scroll', onScroll, { passive: true });
+  snapper = createSectionSnap(scrollContainer, sections.map((s) => s.id));
+  return () => {
+    scrollContainer.removeEventListener('scroll', onScroll);
+    snapper?.destroy();
+  };
 });
 
 let activeSection = 'Home';
+
+const sections = [
+  { id: 'Home', label: 'home', icon: faHome },
+  { id: 'About', label: 'about', icon: faCircleInfo },
+  { id: 'Projects', label: 'projects', icon: faFolder },
+  { id: 'Music', label: 'music', icon: faMusic },
+];
 
 onMount(() => {
   const observer = new IntersectionObserver(
@@ -68,20 +83,18 @@ onMount(() => {
     },
     {
       root: scrollContainer,
-      threshold: 0.3,
+      // a section is "active" while it crosses the middle of the viewport,
+      // so tall sections (taller than the screen on mobile) still register
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: 0,
     }
   );
-  ['Home', 'Projects', 'Resume', 'About'].forEach((id) => {
+  sections.forEach(({ id }) => {
     const section = document.getElementById(id);
     if (section) observer.observe(section);
   });
+  return () => observer.disconnect();
 });
-
-
-// Animate the transforms properties of .car the motion path values
-onMount(() => {
-
-})
 // progress for totoro
 $: pointerLeft = `${progress}%`;
 </script>
@@ -94,10 +107,18 @@ progress.custom-progress::-webkit-progress-value {
 progress.custom-progress::-moz-progress-bar {
   background-color: #c14953;
 }
+.totoro {
+  transition: scale 250ms ease-out;
+}
+.totoro.forward {
+  scale: -1 1;
+}
 </style>
 
-<!-- https://tailwindcss.com/docs/responsive-design -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<svelte:head>
+  <title>darron li</title>
+  <meta name="description" content="Darron Li: software engineer. Projects, music, and about." />
+</svelte:head>
 
 <!-- PARTICLES BACKGROUND -->
 <MagicParticles
@@ -113,64 +134,39 @@ progress.custom-progress::-moz-progress-bar {
         class="absolute -top-8 pointer-events-none select-none transform -translate-x-1/2"
         style="left: {pointerLeft};"
       >
-        <div class="w-12 h-20">
+        <div class="totoro w-12 h-20" class:forward={facingForward}>
           <DotLottieSvelte src="/totoro.lottie" autoplay loop />
         </div>
       </div>
     </div>
     <ul class="justify-center">
-      <li>
-        <button on:click={() => scrollToSection('Home')} class="hover:underline"
-          class:selected={activeSection === 'Home'}
-          class:text-[#c14953]={activeSection === 'Home'}
-        >
-          <Fa icon={faHome}/>
-          <span class="font-bold"> home </span>
-        </button>
-      </li>
-      <li>
-        <button on:click={() => scrollToSection('About')} class="hover:underline"
-          class:selected={activeSection === 'About'}
-          class:text-[#c14953]={activeSection === 'About'}
-        >
-          <Fa icon={faCircleInfo}/>
-          <span class="font-bold"> about </span>
-        </button>
-      </li>
-      <li>
-        <button on:click={() => scrollToSection('Projects')} class="hover:underline"
-          class:selected={activeSection === 'Projects'}
-          class:text-[#c14953]={activeSection === 'Projects'}
-        >
-          <Fa icon={faFolder}/>
-          <span class="font-bold"> projects </span>
-        </button>
-      </li>
-      <li>
-        <button on:click={() => scrollToSection('Resume')} class="hover:underline"
-          class:selected={activeSection === 'Resume'}
-          class:text-[#c14953]={activeSection === 'Resume'}
-        >
-          <Fa icon={faFile}/>
-          <span class="font-bold"> resume </span>
-        </button>
-      </li>
+      {#each sections as { id, label, icon }}
+        <li>
+          <button on:click={() => scrollToSection(id)} class="hover:underline"
+            class:text-[#c14953]={activeSection === id}
+            aria-current={activeSection === id ? 'true' : undefined}
+          >
+            <Fa {icon}/>
+            <span class="font-bold"> {label} </span>
+          </button>
+        </li>
+      {/each}
     </ul>
   </div>
 
   <!-- PAGES -->
-  <div bind:this={scrollContainer} class="content h-screen overflow-y-scroll snap-y snap-proximity z-2">
-    <section id="Home" class="snap-start min-h-screen">
+  <div bind:this={scrollContainer} class="content relative h-screen overflow-y-scroll z-2">
+    <section id="Home" class="min-h-screen">
       <Home/>
     </section>
-    <section id="About" class="snap-start min-h-screen">
+    <section id="About" class="min-h-screen">
       <About />
     </section>
-    <section id="Projects" class="snap-start min-h-screen">
+    <section id="Projects" class="min-h-screen">
       <Projects scrollContainer={scrollContainer}/>
     </section>
-    <section id="Resume" class="snap-start min-h-screen">
-      <Resume />
+    <section id="Music" class="min-h-screen">
+      <Music scrollContainer={scrollContainer}/>
     </section>
   </div>
 </Cursor>
