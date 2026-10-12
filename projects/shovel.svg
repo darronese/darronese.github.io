@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#2d2d2a"/>
+  <!-- dirt / memory blocks -->
+  <rect x="8" y="46" width="10" height="8" rx="1.5" fill="#4c4c47"/>
+  <rect x="20" y="46" width="10" height="8" rx="1.5" fill="#c1a349"/>
+  <rect x="32" y="46" width="10" height="8" rx="1.5" fill="#4c4c47"/>
+  <rect x="44" y="46" width="10" height="8" rx="1.5" fill="#4c4c47"/>
+  <!-- shovel -->
+  <line x1="48" y1="10" x2="30" y2="32" stroke="#e5dcc5" stroke-width="3" stroke-linecap="round"/>
+  <line x1="44" y1="7" x2="52" y2="13" stroke="#e5dcc5" stroke-width="3" stroke-linecap="round"/>
+  <path d="M30 32 L22 30 L18 40 L24 44 L32 38 Z" fill="#c14953"/>
+</svg>
