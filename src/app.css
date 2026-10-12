@@ -19,5 +19,7 @@
   body {
     font-family: "JetBrains Mono", monospace;
     background-color: #262626;
+    /* ensure white description color always */
+    color: oklch(97.807% 0.029 256.847);
   }
 }
